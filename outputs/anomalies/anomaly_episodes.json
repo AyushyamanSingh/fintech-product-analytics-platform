@@ -1,0 +1,264 @@
+{
+  "method": "same-weekday rolling median / MAD, |robust z| >= 4 and |deviation| >= 25%",
+  "flagged_days": 64,
+  "episodes": [
+    {
+      "metric": "dau",
+      "metric_label": "Daily active users",
+      "direction": "spike",
+      "start": "2024-10-21",
+      "end": "2024-10-22",
+      "days_flagged": 2,
+      "peak_date": "2024-10-22",
+      "peak_value": 427.0,
+      "peak_value_fmt": "427",
+      "expected_value": 313.0,
+      "expected_fmt": "313",
+      "peak_robust_z": 4.3,
+      "peak_deviation_pct": 36.4,
+      "severity": "medium",
+      "known_context": "Festive campaign 2024 (Diwali)",
+      "classification": "expected (known event)",
+      "drivers": [
+        {
+          "dimension_value": "android",
+          "actual": 327.0,
+          "expected": 246.0,
+          "share_of_deviation_pct": 80.2
+        },
+        {
+          "dimension_value": "ios",
+          "actual": 80.0,
+          "expected": 61.5,
+          "share_of_deviation_pct": 18.3
+        }
+      ],
+      "headline": "Daily active users spiked to 427 on 22 Oct 2024 (expected 313, robust z 4.3); main driver: platform = android (80% of the deviation)"
+    },
+    {
+      "metric": "dau",
+      "metric_label": "Daily active users",
+      "direction": "spike",
+      "start": "2024-10-28",
+      "end": "2024-11-12",
+      "days_flagged": 14,
+      "peak_date": "2024-10-28",
+      "peak_value": 483.0,
+      "peak_value_fmt": "483",
+      "expected_value": 309.0,
+      "expected_fmt": "309",
+      "peak_robust_z": 6.6,
+      "peak_deviation_pct": 56.3,
+      "severity": "high",
+      "known_context": "Festive campaign 2024 (Diwali)",
+      "classification": "expected (known event)",
+      "drivers": [
+        {
+          "dimension_value": "android",
+          "actual": 370.0,
+          "expected": 244.5,
+          "share_of_deviation_pct": 81.2
+        },
+        {
+          "dimension_value": "ios",
+          "actual": 89.0,
+          "expected": 66.0,
+          "share_of_deviation_pct": 14.9
+        }
+      ],
+      "headline": "Daily active users spiked to 483 on 28 Oct 2024 (expected 309, robust z 6.6); main driver: platform = android (81% of the deviation)"
+    },
+    {
+      "metric": "kyc_tracking_ratio",
+      "metric_label": "Tracked / backend KYC completions",
+      "direction": "drop",
+      "start": "2025-05-12",
+      "end": "2025-05-29",
+      "days_flagged": 14,
+      "peak_date": "2025-05-13",
+      "peak_value": 0.3392857142857143,
+      "peak_value_fmt": "33.9%",
+      "expected_value": 1.0,
+      "expected_fmt": "100.0%",
+      "peak_robust_z": -13.2,
+      "peak_deviation_pct": -66.1,
+      "severity": "high",
+      "known_context": "App release 5.2.0 (hotfix 5.2.1 on 16 May)",
+      "classification": "expected (known event)",
+      "drivers": [
+        {
+          "dimension_value": "android",
+          "actual": 37.0,
+          "expected": 0.0,
+          "share_of_deviation_pct": 100.0
+        }
+      ],
+      "headline": "Tracked / backend KYC completions dropped to 33.9% on 13 May 2025 (expected 100.0%, robust z -13.2); main driver: platform (untracked completions) = android (100% of the deviation)"
+    },
+    {
+      "metric": "support_tickets",
+      "metric_label": "Support tickets",
+      "direction": "spike",
+      "start": "2025-08-14",
+      "end": "2025-08-14",
+      "days_flagged": 1,
+      "peak_date": "2025-08-14",
+      "peak_value": 32.0,
+      "peak_value_fmt": "32",
+      "expected_value": 6.5,
+      "expected_fmt": "6",
+      "peak_robust_z": 6.7,
+      "peak_deviation_pct": 392.3,
+      "severity": "medium",
+      "known_context": null,
+      "classification": "investigate",
+      "drivers": [
+        {
+          "dimension_value": "payment_failure",
+          "actual": 22.0,
+          "expected": 0.0,
+          "share_of_deviation_pct": 81.5
+        },
+        {
+          "dimension_value": "application_status",
+          "actual": 2.0,
+          "expected": 0.0,
+          "share_of_deviation_pct": 7.4
+        }
+      ],
+      "headline": "Support tickets spiked to 32 on 14 Aug 2025 (expected 6, robust z 6.7); main driver: ticket category = payment_failure (82% of the deviation)"
+    },
+    {
+      "metric": "payment_failure_rate",
+      "metric_label": "EMI payment failure rate",
+      "direction": "spike",
+      "start": "2025-08-14",
+      "end": "2025-08-15",
+      "days_flagged": 2,
+      "peak_date": "2025-08-15",
+      "peak_value": 0.47058823529411764,
+      "peak_value_fmt": "47.1%",
+      "expected_value": 0.08941272099166836,
+      "expected_fmt": "8.9%",
+      "peak_robust_z": 15.6,
+      "peak_deviation_pct": 426.3,
+      "severity": "high",
+      "known_context": null,
+      "classification": "investigate",
+      "drivers": [
+        {
+          "dimension_value": "gateway_timeout",
+          "actual": 54.0,
+          "expected": 0.0,
+          "share_of_deviation_pct": 96.4
+        },
+        {
+          "dimension_value": "upi_txn_declined",
+          "actual": 5.0,
+          "expected": 3.0,
+          "share_of_deviation_pct": 3.6
+        }
+      ],
+      "headline": "EMI payment failure rate spiked to 47.1% on 15 Aug 2025 (expected 8.9%, robust z 15.6); main driver: failure reason (excess failed debits) = gateway_timeout (96% of the deviation)"
+    },
+    {
+      "metric": "signups",
+      "metric_label": "Signups",
+      "direction": "spike",
+      "start": "2025-09-08",
+      "end": "2025-09-21",
+      "days_flagged": 14,
+      "peak_date": "2025-09-15",
+      "peak_value": 222.0,
+      "peak_value_fmt": "222",
+      "expected_value": 113.0,
+      "expected_fmt": "113",
+      "peak_robust_z": 6.8,
+      "peak_deviation_pct": 96.5,
+      "severity": "high",
+      "known_context": null,
+      "classification": "investigate",
+      "drivers": [
+        {
+          "dimension_value": "affiliate",
+          "actual": 111.0,
+          "expected": 15.5,
+          "share_of_deviation_pct": 86.8
+        },
+        {
+          "dimension_value": "paid_search",
+          "actual": 32.0,
+          "expected": 22.0,
+          "share_of_deviation_pct": 9.1
+        }
+      ],
+      "headline": "Signups spiked to 222 on 15 Sep 2025 (expected 113, robust z 6.8); main driver: acquisition channel = affiliate (87% of the deviation)"
+    },
+    {
+      "metric": "dau",
+      "metric_label": "Daily active users",
+      "direction": "spike",
+      "start": "2025-09-13",
+      "end": "2025-09-20",
+      "days_flagged": 6,
+      "peak_date": "2025-09-16",
+      "peak_value": 920.0,
+      "peak_value_fmt": "920",
+      "expected_value": 691.5,
+      "expected_fmt": "692",
+      "peak_robust_z": 5.8,
+      "peak_deviation_pct": 33.0,
+      "severity": "high",
+      "known_context": null,
+      "classification": "investigate",
+      "drivers": [
+        {
+          "dimension_value": "android",
+          "actual": 747.0,
+          "expected": 524.0,
+          "share_of_deviation_pct": 93.5
+        },
+        {
+          "dimension_value": "ios",
+          "actual": 143.0,
+          "expected": 127.5,
+          "share_of_deviation_pct": 6.5
+        }
+      ],
+      "headline": "Daily active users spiked to 920 on 16 Sep 2025 (expected 692, robust z 5.8); main driver: platform = android (94% of the deviation)"
+    },
+    {
+      "metric": "applications_submitted",
+      "metric_label": "Applications submitted",
+      "direction": "spike",
+      "start": "2025-09-17",
+      "end": "2025-09-18",
+      "days_flagged": 2,
+      "peak_date": "2025-09-18",
+      "peak_value": 94.0,
+      "peak_value_fmt": "94",
+      "expected_value": 46.0,
+      "expected_fmt": "46",
+      "peak_robust_z": 4.7,
+      "peak_deviation_pct": 104.3,
+      "severity": "medium",
+      "known_context": null,
+      "classification": "investigate",
+      "drivers": [
+        {
+          "dimension_value": "affiliate",
+          "actual": 38.0,
+          "expected": 5.0,
+          "share_of_deviation_pct": 68.8
+        },
+        {
+          "dimension_value": "partnerships",
+          "actual": 15.0,
+          "expected": 9.0,
+          "share_of_deviation_pct": 12.5
+        }
+      ],
+      "headline": "Applications submitted spiked to 94 on 18 Sep 2025 (expected 46, robust z 4.7); main driver: acquisition channel = affiliate (69% of the deviation)"
+    }
+  ]
+}

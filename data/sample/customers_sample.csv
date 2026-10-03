@@ -1,0 +1,201 @@
+customer_id,signup_ts,acquisition_channel,campaign_id,signup_platform,city,state,city_tier,age,employment_type,monthly_income,credit_score,kyc_status,kyc_started_ts,kyc_completed_ts,kyc_method,marketing_opt_in
+C000001,2024-07-01 00:45:11,partnerships,CMP-202407-PTN,android,Jaipur,Rajasthan,tier_2,23,salaried,66000.0,,verified,2024-07-01 00:46:53,2024-07-01 00:54:46,aadhaar_okyc,False
+C000002,2024-07-01 00:57:25,paid_social,CMP-202407-PSO,android,Siliguri,West Bengal,tier_3,21,self_employed,56000.0,703.0,pending,2024-07-01 01:03:07,,,True
+C000003,2024-07-01 01:13:14,paid_social,CMP-202407-PSO,android,Surat,Gujarat,tier_2,44,salaried,24000.0,765.0,verified,2024-07-01 01:14:23,2024-07-01 01:40:00,digilocker,True
+C000004,2024-07-01 01:13:23,referral,CMP-202407-REF,android,Ranchi,Jharkhand,tier_3,33,salaried,29500.0,716.0,verified,2024-07-01 01:34:02,2024-07-01 01:48:41,digilocker,True
+C000005,2024-07-01 04:50:10,organic,,android,Kolkata,West Bengal,tier_1,44,self_employed,100500.0,645.0,verified,2024-07-01 04:50:57,2024-07-01 04:53:53,digilocker,False
+C000006,2024-07-01 05:08:31,paid_search,CMP-202407-PSR,android,Patna,Bihar,tier_2,35,salaried,54000.0,,pending,2024-07-01 05:19:13,,,False
+C000007,2024-07-01 06:10:11,paid_search,CMP-202407-PSR,android,Hyderabad,Telangana,tier_1,25,salaried,31500.0,689.0,verified,2024-07-01 06:17:06,2024-07-01 06:26:40,digilocker,True
+C000008,2024-07-01 07:11:28,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,31,self_employed,90000.0,717.0,verified,2024-07-01 07:20:56,2024-07-01 10:44:37,digilocker,False
+C000009,2024-07-01 07:16:01,paid_social,CMP-202407-PSO,android,Bathinda,Punjab,tier_3,27,salaried,,673.0,pending,2024-07-02 08:50:25,,,True
+C000010,2024-07-01 08:17:34,organic,,ios,Kota,Rajasthan,tier_3,29,gig_worker,28000.0,671.0,not_started,,,,True
+C000011,2024-07-01 09:05:58,organic,,web,Delhi,Delhi,tier_1,34,self_employed,77000.0,705.0,pending,2024-07-01 09:07:55,,,True
+C000012,2024-07-01 09:24:28,affiliate,CMP-202407-AFF,android,Siliguri,West Bengal,tier_3,27,salaried,40000.0,701.0,verified,2024-07-01 09:38:51,2024-07-02 09:42:25,digilocker,True
+C000013,2024-07-01 09:43:20,organic,,android,Ludhiana,Punjab,tier_2,32,self_employed,79500.0,740.0,pending,2024-07-07 08:30:42,,,True
+C000014,2024-07-01 09:54:51,referral,CMP-202407-REF,android,Lucknow,Uttar Pradesh,tier_2,41,self_employed,25500.0,679.0,verified,2024-07-01 09:55:56,2024-07-01 10:02:42,aadhaar_okyc,False
+C000015,2024-07-01 10:05:46,referral,CMP-202407-REF,android,Ludhiana,Punjab,tier_2,31,self_employed,58500.0,783.0,pending,2024-07-01 10:10:43,,,False
+C000016,2024-07-01 10:14:28,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,31,salaried,72000.0,675.0,verified,2024-07-01 10:16:39,2024-07-01 10:19:48,aadhaar_okyc,True
+C000017,2024-07-01 10:18:36,paid_social,CMP-202407-PSO,ios,Mohali,Punjab,tier_2,43,gig_worker,11000.0,648.0,not_started,,,,False
+C000018,2024-07-01 10:59:00,paid_search,CMP-202407-PSR,android,Pune,Maharashtra,tier_1,29,salaried,34500.0,806.0,not_started,,,,True
+C000019,2024-07-01 11:01:45,affiliate,CMP-202407-AFF,android,Belagavi,Karnataka,tier_3,35,salaried,38500.0,776.0,not_started,,,,True
+C000020,2024-07-01 11:23:50,paid_social,CMP-202407-PSO,web,Udaipur,Rajasthan,tier_3,38,salaried,38000.0,,verified,2024-07-11 05:55:01,2024-07-11 05:58:28,ckyc,True
+C000021,2024-07-01 11:30:37,paid_search,CMP-202407-PSR,android,Ahmedabad,Gujarat,tier_1,36,self_employed,21500.0,553.0,failed,2024-07-01 11:35:38,,,False
+C000022,2024-07-01 11:40:43,organic,,ios,Lucknow,Uttar Pradesh,tier_2,33,self_employed,118500.0,,verified,2024-07-01 11:43:37,2024-07-01 11:54:50,ckyc,True
+C000023,2024-07-01 12:19:47,paid_social,CMP-202407-PSO,android,Nagpur,Maharashtra,tier_2,39,self_employed,38000.0,,verified,2024-07-05 17:56:42,2024-07-15 03:49:43,aadhaar_okyc,False
+C000024,2024-07-01 12:30:32,organic,,android,Coimbatore,Tamil Nadu,tier_2,27,self_employed,83000.0,773.0,not_started,,,,False
+C000025,2024-07-01 12:49:22,partnerships,CMP-202407-PTN,android,Mumbai,Maharashtra,tier_1,28,salaried,53500.0,709.0,verified,2024-07-01 12:55:01,2024-07-01 13:07:33,digilocker,True
+C000026,2024-07-01 13:08:37,organic,,android,Ahmedabad,Gujarat,tier_1,38,self_employed,74500.0,773.0,verified,2024-07-01 13:17:04,2024-07-01 13:19:34,video_kyc,False
+C000027,2024-07-01 13:16:37,organic,,android,Chennai,Tamil Nadu,tier_1,27,self_employed,26500.0,749.0,pending,2024-07-01 13:19:16,,,True
+C000028,2024-07-01 13:22:43,paid_social,CMP-202407-PSO,android,Ludhiana,Punjab,tier_2,45,gig_worker,28000.0,,failed,2024-07-01 13:25:46,,,True
+C000029,2024-07-01 13:32:41,partnerships,CMP-202407-PTN,ios,Udaipur,Rajasthan,tier_3,29,salaried,68500.0,729.0,verified,2024-07-01 13:40:42,2024-07-01 13:43:28,aadhaar_okyc,True
+C000030,2024-07-01 13:35:08,organic,,android,Siliguri,West Bengal,tier_3,33,salaried,92000.0,706.0,failed,2024-07-01 13:47:06,,,True
+C000031,2024-07-01 13:50:58,referral,CMP-202407-REF,android,Visakhapatnam,Andhra Pradesh,tier_2,39,salaried,70000.0,,pending,2024-07-01 14:02:24,,,True
+C000032,2024-07-01 13:59:01,partnerships,CMP-202407-PTN,android,Pune,Maharashtra,tier_1,28,salaried,40500.0,,pending,2024-07-04 11:01:24,,,True
+C000033,2024-07-01 14:01:30,paid_social,CMP-202407-PSO,android,Hyderabad,Telangana,tier_1,24,salaried,35000.0,786.0,verified,2024-07-01 14:03:49,2024-07-01 14:08:14,digilocker,True
+C000034,2024-07-01 14:24:05,paid_search,CMP-202407-PSR,android,Ahmedabad,Gujarat,tier_1,23,gig_worker,16500.0,,verified,2024-07-01 14:26:17,2024-07-01 14:42:45,aadhaar_okyc,False
+C000035,2024-07-01 14:26:27,paid_social,CMP-202407-PSO,android,Mumbai,Maharashtra,tier_1,30,salaried,31000.0,757.0,not_started,,,,True
+C000036,2024-07-01 14:26:58,organic,,android,Mumbai,Maharashtra,tier_1,40,salaried,40500.0,804.0,not_started,,,,True
+C000037,2024-07-01 14:36:01,paid_social,CMP-202407-PSO,android,Bengaluru,Karnataka,tier_1,34,salaried,58000.0,759.0,not_started,,,,False
+C000038,2024-07-01 14:37:32,paid_search,CMP-202407-PSR,android,Vadodara,Gujarat,tier_2,33,self_employed,47000.0,642.0,failed,2024-07-06 20:27:32,,,False
+C000039,2024-07-01 14:45:38,affiliate,CMP-202407-AFF,android,Pune,Maharashtra,tier_1,38,self_employed,61000.0,,pending,2024-07-01 14:50:45,,,True
+C000040,2024-07-01 15:08:17,paid_search,CMP-202407-PSR,web,Chandigarh,Chandigarh,tier_2,34,self_employed,25000.0,710.0,pending,2024-07-01 15:15:29,,,True
+C000041,2024-07-01 15:15:40,partnerships,CMP-202407-PTN,android,Indore,Madhya Pradesh,tier_2,21,salaried,33500.0,731.0,verified,2024-07-01 15:17:30,2024-07-01 16:03:46,aadhaar_okyc,True
+C000042,2024-07-01 15:47:35,organic,,android,Dehradun,Uttarakhand,tier_3,32,salaried,45000.0,738.0,verified,2024-07-01 15:49:49,2024-07-01 15:52:32,digilocker,False
+C000043,2024-07-01 15:54:59,affiliate,CMP-202407-AFF,web,Udaipur,Rajasthan,tier_3,31,salaried,85000.0,754.0,not_started,,,,True
+C000044,2024-07-01 16:24:51,referral,CMP-202407-REF,ios,Chennai,Tamil Nadu,tier_1,24,gig_worker,14500.0,753.0,not_started,,,,True
+C000045,2024-07-01 16:35:23,partnerships,CMP-202407-PTN,android,Mumbai,Maharashtra,tier_1,42,salaried,37500.0,711.0,pending,2024-07-01 16:39:59,,,True
+C000046,2024-07-01 16:36:28,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,51,salaried,47000.0,763.0,not_started,,,,True
+C000047,2024-07-01 16:43:29,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,21,salaried,41000.0,,pending,2024-07-01 16:45:18,,,True
+C000048,2024-07-01 16:44:22,paid_search,CMP-202407-PSR,android,Vadodara,Gujarat,tier_2,21,salaried,71500.0,,verified,2024-07-01 16:47:35,2024-07-05 12:13:58,video_kyc,True
+C000049,2024-07-01 16:50:40,paid_social,CMP-202407-PSO,android,Delhi,Delhi,tier_1,21,salaried,17000.0,718.0,pending,2024-07-01 16:52:01,,,True
+C000050,2024-07-01 17:05:46,paid_social,CMP-202407-PSO,web,Chennai,Tamil Nadu,tier_1,21,salaried,42500.0,,not_started,,,,True
+C000051,2024-07-01 17:53:00,affiliate,CMP-202407-AFF,ios,Coimbatore,Tamil Nadu,tier_2,32,salaried,17500.0,715.0,failed,2024-07-01 17:58:32,,,True
+C000052,2024-07-01 17:57:31,referral,CMP-202407-REF,android,Hyderabad,Telangana,tier_1,42,self_employed,26000.0,773.0,pending,2024-07-01 18:07:32,,,False
+C000053,2024-07-01 18:00:04,organic,,android,Chennai,Tamil Nadu,tier_1,41,salaried,77000.0,723.0,verified,2024-07-01 18:02:12,2024-07-01 18:05:39,aadhaar_okyc,True
+C000054,2024-07-01 18:41:05,paid_social,CMP-202407-PSO,android,Ahmedabad,Gujarat,tier_1,31,salaried,36500.0,626.0,verified,2024-07-01 18:48:28,2024-07-01 19:11:28,digilocker,True
+C000055,2024-07-01 19:01:09,paid_social,CMP-202407-PSO,android,Lucknow,Uttar Pradesh,tier_2,30,salaried,69500.0,665.0,verified,2024-07-10 23:54:30,2024-07-10 23:59:35,aadhaar_okyc,False
+C000056,2024-07-01 19:10:59,affiliate,CMP-202407-AFF,android,Visakhapatnam,Andhra Pradesh,tier_2,26,self_employed,118000.0,,verified,2024-07-03 02:24:47,2024-07-03 02:36:07,digilocker,True
+C000057,2024-07-01 19:13:59,organic,,ios,Kota,Rajasthan,tier_3,18,student,8500.0,,pending,2024-07-01 19:19:01,,,True
+C000058,2024-07-01 19:22:39,paid_social,CMP-202407-PSO,android,Mumbai,Maharashtra,tier_1,28,salaried,44000.0,,not_started,,,,True
+C000059,2024-07-01 19:23:52,partnerships,CMP-202407-PTN,android,Lucknow,Uttar Pradesh,tier_2,40,salaried,33500.0,689.0,verified,2024-07-05 14:36:09,2024-07-05 14:49:39,aadhaar_okyc,False
+C000060,2024-07-01 19:26:38,organic,,ios,Bengaluru,Karnataka,tier_1,30,gig_worker,36000.0,,verified,2024-07-01 19:30:48,2024-07-01 19:33:00,digilocker,False
+C000061,2024-07-01 19:28:41,organic,,android,Kolkata,West Bengal,tier_1,34,self_employed,36000.0,777.0,verified,2024-07-01 19:38:02,2024-07-01 19:52:00,ckyc,True
+C000062,2024-07-01 19:44:33,organic,,android,Ahmedabad,Gujarat,tier_1,33,salaried,57500.0,735.0,pending,2024-07-01 19:56:34,,,False
+C000063,2024-07-01 19:54:28,organic,,ios,Pune,Maharashtra,tier_1,35,salaried,51500.0,,verified,2024-07-01 20:00:06,2024-07-01 20:05:57,aadhaar_okyc,False
+C000064,2024-07-01 19:58:13,affiliate,CMP-202407-AFF,android,Coimbatore,Tamil Nadu,tier_2,29,salaried,38500.0,659.0,not_started,,,,True
+C000065,2024-07-01 20:10:06,organic,,android,Delhi,Delhi,tier_1,33,salaried,53500.0,805.0,failed,2024-07-03 01:32:46,,,True
+C000066,2024-07-01 20:21:05,affiliate,CMP-202407-AFF,android,Chennai,Tamil Nadu,tier_1,45,salaried,37500.0,,pending,2024-07-01 20:29:54,,,False
+C000067,2024-07-01 20:32:39,organic,,android,Delhi,Delhi,tier_1,22,student,21000.0,,pending,2024-07-01 20:38:38,,,False
+C000068,2024-07-01 20:45:49,partnerships,CMP-202407-PTN,ios,Pune,Maharashtra,tier_1,36,salaried,41500.0,717.0,verified,2024-07-01 20:48:43,2024-07-01 20:57:37,aadhaar_okyc,False
+C000069,2024-07-01 20:47:16,paid_search,CMP-202407-PSR,android,Mumbai,Maharashtra,tier_1,36,self_employed,43500.0,648.0,verified,2024-07-01 20:50:27,2024-07-01 20:57:59,digilocker,False
+C000070,2024-07-01 20:54:00,organic,,android,Hyderabad,Telangana,tier_1,42,gig_worker,21500.0,,pending,2024-07-07 10:07:47,,,True
+C000071,2024-07-01 20:59:21,organic,,android,Hyderabad,Telangana,tier_1,28,salaried,55000.0,724.0,verified,2024-07-01 21:00:40,2024-07-01 21:10:20,aadhaar_okyc,True
+C000072,2024-07-01 21:02:32,organic,,ios,Patna,Bihar,tier_2,19,student,10500.0,672.0,pending,2024-07-01 21:05:24,,,True
+C000073,2024-07-01 21:22:57,paid_social,CMP-202407-PSO,ios,Jaipur,Rajasthan,tier_2,20,student,5000.0,,pending,2024-07-01 21:28:23,,,True
+C000074,2024-07-01 21:26:53,paid_social,CMP-202407-PSO,android,Chennai,Tamil Nadu,tier_1,46,gig_worker,16000.0,660.0,verified,2024-07-06 09:07:40,2024-07-06 09:15:31,digilocker,True
+C000075,2024-07-01 21:38:03,partnerships,CMP-202407-PTN,android,Belagavi,Karnataka,tier_3,34,salaried,57500.0,785.0,not_started,,,,True
+C000076,2024-07-01 21:39:57,affiliate,CMP-202407-AFF,android,Ahmedabad,Gujarat,tier_1,37,salaried,32500.0,,not_started,,,,True
+C000077,2024-07-01 21:41:52,paid_social,CMP-202407-PSO,android,Udaipur,Rajasthan,tier_3,23,salaried,43500.0,,pending,2024-07-01 21:51:23,,,False
+C000078,2024-07-01 21:55:56,paid_social,CMP-202407-PSO,android,Pune,Maharashtra,tier_1,34,self_employed,13500.0,,verified,2024-07-01 22:00:41,2024-07-01 22:20:54,ckyc,False
+C000079,2024-07-01 22:10:27,paid_social,CMP-202407-PSO,ios,Vadodara,Gujarat,tier_2,39,salaried,31000.0,761.0,pending,2024-07-01 22:41:29,,,False
+C000080,2024-07-01 22:16:17,partnerships,CMP-202407-PTN,android,Gorakhpur,Uttar Pradesh,tier_3,36,salaried,69500.0,743.0,not_started,,,,True
+C000081,2024-07-01 22:28:21,organic,,web,Pune,Maharashtra,tier_1,21,salaried,34000.0,730.0,verified,2024-07-02 03:15:38,2024-07-02 16:55:43,aadhaar_okyc,False
+C000082,2024-07-01 22:30:09,affiliate,CMP-202407-AFF,android,Ahmedabad,Gujarat,tier_1,33,salaried,44000.0,630.0,not_started,,,,True
+C000083,2024-07-01 22:40:32,partnerships,CMP-202407-PTN,android,Kolkata,West Bengal,tier_1,31,salaried,35000.0,706.0,pending,2024-07-02 05:43:34,,,True
+C000084,2024-07-01 22:45:05,paid_search,CMP-202407-PSR,android,Ahmedabad,Gujarat,tier_1,35,salaried,88500.0,792.0,verified,2024-07-01 22:54:40,2024-07-01 23:01:03,video_kyc,False
+C000085,2024-07-01 22:47:11,organic,,android,Gorakhpur,Uttar Pradesh,tier_3,29,salaried,34000.0,,failed,2024-07-01 22:48:41,,,False
+C000086,2024-07-01 23:22:03,paid_social,CMP-202407-PSO,android,Jaipur,Rajasthan,tier_2,27,salaried,62000.0,769.0,pending,2024-07-06 06:25:43,,,False
+C000087,2024-07-01 23:36:22,paid_search,CMP-202407-PSR,android,Pune,Maharashtra,tier_1,31,salaried,24500.0,783.0,verified,2024-07-01 23:43:29,2024-07-02 00:11:41,aadhaar_okyc,False
+C000088,2024-07-02 00:26:45,organic,,ios,Indore,Madhya Pradesh,tier_2,33,salaried,141000.0,,verified,2024-07-04 00:48:07,2024-07-04 01:05:00,aadhaar_okyc,True
+C000089,2024-07-02 08:38:04,affiliate,CMP-202407-AFF,ios,Patna,Bihar,tier_2,33,salaried,39000.0,717.0,verified,2024-07-02 08:39:19,2024-07-05 16:37:51,aadhaar_okyc,False
+C000090,2024-07-02 08:42:59,organic,,android,Siliguri,West Bengal,tier_3,28,salaried,41000.0,764.0,verified,2024-07-02 08:43:47,2024-07-03 18:04:55,aadhaar_okyc,True
+C000091,2024-07-02 09:17:42,paid_search,CMP-202407-PSR,android,Delhi,Delhi,tier_1,46,self_employed,71500.0,733.0,verified,2024-07-05 19:16:19,2024-07-06 09:42:53,aadhaar_okyc,False
+C000092,2024-07-02 09:19:12,paid_search,CMP-202407-PSR,web,Pune,Maharashtra,tier_1,32,salaried,115000.0,674.0,not_started,,,,True
+C000093,2024-07-02 09:26:30,organic,,android,Delhi,Delhi,tier_1,28,salaried,38000.0,676.0,verified,2024-07-02 09:58:54,2024-07-02 10:08:38,ckyc,False
+C000094,2024-07-02 09:36:56,paid_search,CMP-202407-PSR,android,Chennai,Tamil Nadu,tier_1,36,salaried,88000.0,,failed,2024-07-02 09:51:44,,,False
+C000095,2024-07-02 09:50:30,organic,,android,Kolkata,West Bengal,tier_1,32,salaried,55500.0,693.0,pending,2024-07-02 09:54:21,,,True
+C000096,2024-07-02 09:55:58,partnerships,CMP-202407-PTN,android,Ludhiana,Punjab,tier_2,39,salaried,31500.0,789.0,pending,2024-07-02 10:01:07,,,True
+C000097,2024-07-02 10:15:59,affiliate,CMP-202407-AFF,android,Patna,Bihar,tier_2,22,salaried,16500.0,748.0,verified,2024-07-02 10:30:11,2024-07-02 10:42:29,digilocker,False
+C000098,2024-07-02 10:24:43,paid_social,CMP-202407-PSO,ios,,Tamil Nadu,tier_2,41,gig_worker,18500.0,,pending,2024-07-02 10:33:21,,,False
+C000099,2024-07-02 10:27:53,paid_search,CMP-202407-PSR,android,Chandigarh,Chandigarh,tier_2,33,salaried,85000.0,832.0,verified,2024-07-04 05:34:27,2024-07-04 05:41:04,digilocker,True
+C000100,2024-07-02 10:34:41,paid_search,CMP-202407-PSR,ios,Indore,Madhya Pradesh,tier_2,38,gig_worker,33500.0,,pending,2024-07-02 13:57:49,,,True
+C000101,2024-07-02 10:35:01,paid_search,CMP-202407-PSR,android,Ahmedabad,Gujarat,tier_1,36,salaried,11500.0,729.0,verified,2024-07-02 10:36:13,2024-07-02 20:45:34,aadhaar_okyc,True
+C000102,2024-07-02 10:48:56,partnerships,CMP-202407-PTN,android,Bathinda,Punjab,tier_3,47,salaried,35500.0,758.0,failed,2024-07-02 10:51:52,,,True
+C000103,2024-07-02 10:51:25,paid_social,CMP-202407-PSO,android,Kolkata,West Bengal,tier_1,34,gig_worker,21500.0,,not_started,,,,False
+C000104,2024-07-02 10:52:04,referral,CMP-202407-REF,android,Bengaluru,Karnataka,tier_1,21,student,3500.0,,pending,2024-07-02 10:52:58,,,True
+C000105,2024-07-02 11:34:47,partnerships,CMP-202407-PTN,android,Gorakhpur,Uttar Pradesh,tier_3,36,salaried,109500.0,697.0,verified,2024-07-04 08:26:58,2024-07-04 08:38:21,aadhaar_okyc,True
+C000106,2024-07-02 12:06:50,partnerships,CMP-202407-PTN,android,Ludhiana,Punjab,tier_2,44,salaried,26500.0,711.0,verified,2024-07-03 02:44:28,2024-07-03 02:50:34,digilocker,False
+C000107,2024-07-02 12:35:20,organic,,android,Hyderabad,Telangana,tier_1,44,gig_worker,25500.0,688.0,pending,2024-07-07 04:38:25,,,True
+C000108,2024-07-02 12:42:12,organic,,android,Indore,Madhya Pradesh,tier_2,30,salaried,37500.0,693.0,verified,2024-07-02 12:48:09,2024-07-06 18:51:57,ckyc,True
+C000109,2024-07-02 12:44:39,paid_social,CMP-202407-PSO,android,Patna,Bihar,tier_2,39,salaried,45500.0,728.0,verified,2024-07-02 12:46:45,2024-07-07 11:38:36,aadhaar_okyc,False
+C000110,2024-07-02 12:45:02,paid_search,CMP-202407-PSR,android,Chennai,Tamil Nadu,tier_1,33,salaried,37500.0,686.0,verified,2024-07-02 12:57:18,2024-07-02 13:13:50,aadhaar_okyc,False
+C000111,2024-07-02 12:53:17,referral,CMP-202407-REF,android,Chennai,Tamil Nadu,tier_1,21,gig_worker,28500.0,742.0,verified,2024-07-02 12:54:30,2024-07-02 13:45:51,ckyc,False
+C000112,2024-07-02 13:08:35,paid_social,CMP-202407-PSO,android,Bengaluru,Karnataka,tier_1,21,gig_worker,13500.0,629.0,pending,2024-07-02 13:13:44,,,True
+C000113,2024-07-02 13:34:30,referral,CMP-202407-REF,ios,Gorakhpur,Uttar Pradesh,tier_3,21,salaried,24500.0,,verified,2024-07-02 13:37:05,2024-07-02 22:16:51,aadhaar_okyc,False
+C000114,2024-07-02 14:25:29,partnerships,CMP-202407-PTN,android,Nagpur,Maharashtra,tier_2,34,salaried,33500.0,647.0,verified,2024-07-02 14:36:13,2024-07-02 14:47:08,digilocker,True
+C000115,2024-07-02 14:34:54,organic,,ios,Pune,Maharashtra,tier_1,36,salaried,29000.0,721.0,failed,2024-07-02 14:37:31,,,True
+C000116,2024-07-02 14:41:05,paid_search,CMP-202407-PSR,android,Chennai,Tamil Nadu,tier_1,34,salaried,33500.0,739.0,verified,2024-07-02 14:48:49,2024-07-02 14:57:04,aadhaar_okyc,True
+C000117,2024-07-02 14:41:29,organic,,ios,Mumbai,Maharashtra,tier_1,30,self_employed,109000.0,740.0,verified,2024-07-02 14:50:43,2024-07-02 15:55:29,aadhaar_okyc,True
+C000118,2024-07-02 14:56:42,organic,,android,Hyderabad,Telangana,tier_1,43,self_employed,143000.0,,verified,2024-07-02 14:58:58,2024-07-03 04:33:05,video_kyc,True
+C000119,2024-07-02 15:03:25,paid_search,CMP-202407-PSR,web,Mumbai,Maharashtra,tier_1,36,self_employed,43500.0,725.0,verified,2024-07-02 15:10:48,2024-07-10 22:42:28,digilocker,True
+C000120,2024-07-02 15:17:13,organic,,android,Warangal,Telangana,tier_3,35,salaried,36500.0,788.0,pending,2024-07-02 15:19:52,,,True
+C000121,2024-07-02 15:18:50,organic,,ios,Bengaluru,Karnataka,tier_1,150,gig_worker,19500.0,,verified,2024-07-02 15:22:46,2024-07-02 15:31:57,aadhaar_okyc,False
+C000122,2024-07-02 15:35:36,paid_search,CMP-202407-PSR,ios,Surat,Gujarat,tier_2,32,salaried,57000.0,,verified,2024-07-02 15:37:20,2024-07-02 16:28:28,aadhaar_okyc,False
+C000123,2024-07-02 16:16:04,paid_social,CMP-202407-PSO,android,Visakhapatnam,Andhra Pradesh,tier_2,33,salaried,32000.0,700.0,pending,2024-07-02 16:18:07,,,True
+C000124,2024-07-02 16:24:39,paid_search,CMP-202407-PSR,android,Gorakhpur,Uttar Pradesh,tier_3,35,self_employed,102000.0,,not_started,,,,True
+C000125,2024-07-02 16:54:18,paid_search,CMP-202407-PSR,ios,Pune,Maharashtra,tier_1,23,gig_worker,21500.0,721.0,verified,2024-07-03 12:41:32,2024-07-13 02:32:37,aadhaar_okyc,True
+C000126,2024-07-02 17:54:33,affiliate,CMP-202407-AFF,android,Ludhiana,Punjab,tier_2,43,salaried,38500.0,651.0,verified,2024-07-07 03:38:11,2024-07-07 03:40:56,digilocker,True
+C000127,2024-07-02 17:58:23,paid_search,CMP-202407-PSR,android,Hyderabad,Telangana,tier_1,35,salaried,46000.0,733.0,verified,2024-07-02 18:03:42,2024-07-03 21:28:20,aadhaar_okyc,False
+C000128,2024-07-02 18:02:47,paid_search,CMP-202407-PSR,android,Chennai,Tamil Nadu,tier_1,38,self_employed,77000.0,736.0,failed,2024-07-02 18:06:46,,,True
+C000129,2024-07-02 18:13:56,paid_social,CMP-202407-PSO,android,Kota,Rajasthan,tier_3,32,salaried,49000.0,703.0,not_started,,,,False
+C000130,2024-07-02 18:28:09,paid_social,CMP-202407-PSO,android,Hyderabad,Telangana,tier_1,36,salaried,56500.0,742.0,not_started,,,,True
+C000131,2024-07-02 18:29:08,paid_social,CMP-202407-PSO,android,Ahmedabad,Gujarat,tier_1,34,salaried,25000.0,669.0,not_started,,,,False
+C000132,2024-07-02 18:29:26,organic,,android,Mumbai,Maharashtra,tier_1,34,self_employed,57500.0,,pending,2024-07-03 11:02:14,,,False
+C000133,2024-07-02 19:04:03,affiliate,CMP-202407-AFF,ios,Dehradun,Uttarakhand,tier_3,19,student,12000.0,,pending,2024-07-02 19:18:20,,,True
+C000134,2024-07-02 19:09:21,paid_social,CMP-202407-PSO,android,Patna,Bihar,tier_2,35,salaried,16000.0,,verified,2024-07-04 05:45:51,2024-07-04 06:19:43,aadhaar_okyc,True
+C000135,2024-07-02 19:11:56,paid_search,CMP-202407-PSR,android,Kochi,Kerala,tier_2,27,salaried,83500.0,751.0,pending,2024-07-02 19:13:28,,,True
+C000136,2024-07-02 19:16:16,organic,,ios,Udaipur,Rajasthan,tier_3,40,gig_worker,15000.0,672.0,verified,2024-07-02 19:26:28,2024-07-02 19:33:38,aadhaar_okyc,True
+C000137,2024-07-02 19:20:04,organic,,android,Gorakhpur,Uttar Pradesh,tier_3,34,salaried,12500.0,,pending,2024-07-02 19:23:44,,,False
+C000138,2024-07-02 19:20:30,partnerships,CMP-202407-PTN,android,Indore,Madhya Pradesh,tier_2,36,salaried,25000.0,674.0,verified,2024-07-02 19:21:26,2024-07-02 19:57:04,digilocker,False
+C000139,2024-07-02 19:59:10,affiliate,CMP-202407-AFF,android,Lucknow,Uttar Pradesh,tier_2,43,salaried,44500.0,700.0,verified,2024-07-02 20:02:07,2024-07-02 20:21:12,ckyc,True
+C000140,2024-07-02 20:00:01,affiliate,CMP-202407-AFF,ios,Vadodara,Gujarat,tier_2,26,self_employed,80000.0,692.0,verified,2024-07-02 20:03:42,2024-07-02 20:34:43,aadhaar_okyc,False
+C000141,2024-07-02 20:26:46,referral,CMP-202407-REF,android,Kolkata,West Bengal,tier_1,37,gig_worker,28500.0,627.0,verified,2024-07-05 01:11:17,2024-07-05 01:42:37,aadhaar_okyc,True
+C000142,2024-07-02 20:29:08,paid_social,CMP-202407-PSO,android,Coimbatore,Tamil Nadu,tier_2,22,self_employed,29500.0,654.0,pending,2024-07-02 20:51:41,,,True
+C000143,2024-07-02 20:45:53,organic,,web,Indore,Madhya Pradesh,tier_2,24,salaried,32000.0,,verified,2024-07-02 20:48:09,2024-07-02 20:59:58,aadhaar_okyc,True
+C000144,2024-07-02 20:48:06,paid_search,CMP-202407-PSR,web,Chennai,Tamil Nadu,tier_1,30,salaried,24500.0,705.0,pending,2024-07-02 20:50:14,,,False
+C000145,2024-07-02 20:59:24,paid_search,CMP-202407-PSR,android,Delhi,Delhi,tier_1,25,salaried,50000.0,714.0,verified,2024-07-02 21:07:10,2024-07-02 21:36:36,aadhaar_okyc,False
+C000146,2024-07-02 21:25:27,paid_social,CMP-202407-PSO,android,Lucknow,Uttar Pradesh,tier_2,29,self_employed,75500.0,746.0,pending,2024-07-02 21:29:31,,,True
+C000147,2024-07-02 21:35:56,referral,CMP-202407-REF,ios,Mohali,Punjab,tier_2,26,gig_worker,14000.0,664.0,pending,2024-07-02 21:37:49,,,True
+C000148,2024-07-02 21:38:31,paid_social,CMP-202407-PSO,android,Indore,Madhya Pradesh,tier_2,38,salaried,70000.0,588.0,pending,2024-07-02 21:48:47,,,True
+C000149,2024-07-02 21:41:42,paid_search,CMP-202407-PSR,ios,Kochi,Kerala,tier_2,27,self_employed,91500.0,673.0,pending,2024-07-02 21:45:50,,,True
+C000150,2024-07-02 21:44:22,paid_social,CMP-202407-PSO,android,Ahmedabad,Gujarat,tier_1,34,salaried,44000.0,603.0,failed,2024-07-03 18:20:53,,,True
+C000151,2024-07-02 22:03:19,affiliate,CMP-202407-AFF,android,Chennai,Tamil Nadu,tier_1,21,student,8000.0,,pending,2024-07-02 22:05:46,,,True
+C000152,2024-07-02 22:03:27,organic,,android,Nagpur,Maharashtra,tier_2,19,student,5500.0,678.0,verified,2024-07-02 22:09:13,2024-07-04 00:10:06,ckyc,False
+C000153,2024-07-02 22:06:08,referral,CMP-202407-REF,ios,Ahmedabad,Gujarat,tier_1,37,self_employed,138000.0,770.0,verified,2024-07-06 16:50:31,2024-07-06 16:54:15,digilocker,True
+C000154,2024-07-02 22:44:03,paid_social,CMP-202407-PSO,android,Kolkata,West Bengal,tier_1,46,self_employed,21000.0,720.0,not_started,,,,False
+C000155,2024-07-02 22:46:11,paid_search,CMP-202407-PSR,ios,Delhi,Delhi,tier_1,40,salaried,61500.0,782.0,verified,2024-07-02 22:51:14,2024-07-02 22:58:44,digilocker,False
+C000156,2024-07-03 00:16:50,organic,,android,Indore,Madhya Pradesh,tier_2,28,salaried,57000.0,729.0,verified,2024-07-03 04:53:22,2024-07-09 21:36:49,video_kyc,False
+C000157,2024-07-03 01:31:14,paid_social,CMP-202407-PSO,android,Udaipur,Rajasthan,tier_3,38,self_employed,27000.0,746.0,verified,2024-07-03 01:34:05,2024-07-03 01:37:27,digilocker,True
+C000158,2024-07-03 02:01:16,organic,,android,Lucknow,Uttar Pradesh,tier_2,29,self_employed,86500.0,656.0,verified,2024-07-03 02:14:07,2024-07-02 23:10:47,aadhaar_okyc,True
+C000159,2024-07-03 07:08:52,referral,CMP-202407-REF,android,Mohali,Punjab,tier_2,34,gig_worker,19000.0,741.0,verified,2024-07-03 07:09:42,2024-07-03 07:51:20,digilocker,True
+C000160,2024-07-03 07:15:54,affiliate,CMP-202407-AFF,ios,Patna,Bihar,tier_2,25,salaried,21000.0,,verified,2024-07-09 10:31:19,2024-07-09 10:39:38,aadhaar_okyc,True
+C000161,2024-07-03 07:19:34,partnerships,CMP-202407-PTN,ios,Lucknow,Uttar Pradesh,tier_2,49,salaried,92500.0,,verified,2024-07-05 23:09:18,2024-07-05 23:21:10,aadhaar_okyc,True
+C000162,2024-07-03 08:30:19,paid_search,CMP-202407-PSR,web,Udaipur,Rajasthan,tier_3,21,salaried,37000.0,847.0,verified,2024-07-03 08:37:22,2024-07-03 08:40:27,aadhaar_okyc,True
+C000163,2024-07-03 08:39:42,affiliate,CMP-202407-AFF,android,Chennai,Tamil Nadu,tier_1,27,salaried,37000.0,693.0,pending,2024-07-03 08:47:46,,,True
+C000164,2024-07-03 08:40:15,organic,,android,Chennai,Tamil Nadu,tier_1,33,self_employed,96000.0,811.0,pending,2024-07-03 09:14:43,,,False
+C000165,2024-07-03 09:01:39,paid_search,CMP-202407-PSR,android,Mumbai,Maharashtra,tier_1,28,gig_worker,18500.0,,verified,2024-07-03 09:20:18,2024-07-03 09:45:11,aadhaar_okyc,False
+C000166,2024-07-03 09:04:38,paid_search,CMP-202407-PSR,android,Delhi,Delhi,tier_1,26,salaried,31000.0,,verified,2024-07-03 09:29:41,2024-07-03 09:37:44,digilocker,True
+C000167,2024-07-03 09:22:39,paid_social,CMP-202407-PSO,android,Delhi,Delhi,tier_1,31,salaried,54500.0,710.0,pending,2024-07-03 09:27:43,,,False
+C000168,2024-07-03 09:42:35,organic,,android,Dehradun,Uttarakhand,tier_3,37,salaried,36500.0,676.0,verified,2024-07-03 09:51:42,2024-07-03 10:03:46,digilocker,True
+C000169,2024-07-03 10:06:23,affiliate,CMP-202407-AFF,android,Pune,Maharashtra,tier_1,24,student,3000.0,,not_started,,,,True
+C000170,2024-07-03 10:16:52,affiliate,CMP-202407-AFF,android,Ahmedabad,Gujarat,tier_1,23,gig_worker,19500.0,,pending,2024-07-03 10:18:41,,,False
+C000171,2024-07-03 10:25:55,partnerships,CMP-202407-PTN,android,Mumbai,Maharashtra,tier_1,40,salaried,82000.0,,verified,2024-07-03 10:27:48,2024-07-03 10:59:06,aadhaar_okyc,False
+C000172,2024-07-03 10:30:45,paid_search,CMP-202407-PSR,android,Kochi,Kerala,tier_2,27,salaried,65000.0,770.0,verified,2024-07-03 17:02:00,2024-07-06 17:02:06,aadhaar_okyc,False
+C000173,2024-07-03 10:54:49,paid_social,CMP-202407-PSO,android,Kolkata,West Bengal,tier_1,32,salaried,46500.0,659.0,pending,2024-07-03 11:04:55,,,False
+C000174,2024-07-03 11:07:26,organic,,android,Lucknow,Uttar Pradesh,tier_2,28,salaried,51500.0,808.0,verified,2024-07-03 15:21:12,2024-07-03 15:39:40,digilocker,False
+C000175,2024-07-03 11:09:04,paid_social,CMP-202407-PSO,android,Vadodara,Gujarat,tier_2,34,gig_worker,17500.0,,not_started,,,,False
+C000176,2024-07-03 11:16:11,partnerships,CMP-202407-PTN,android,Kolkata,West Bengal,tier_1,33,salaried,19000.0,812.0,verified,2024-07-03 11:28:04,2024-07-03 11:42:08,ckyc,True
+C000177,2024-07-03 11:17:56,organic,,android,Pune,Maharashtra,tier_1,29,salaried,50500.0,712.0,verified,2024-07-03 11:20:03,2024-07-03 10:09:52,aadhaar_okyc,False
+C000178,2024-07-03 11:26:06,paid_social,CMP-202407-PSO,android,Pune,Maharashtra,tier_1,20,student,16000.0,,failed,2024-07-03 11:30:23,,,True
+C000179,2024-07-03 11:30:06,partnerships,CMP-202407-PTN,android,Chandigarh,Chandigarh,tier_2,34,salaried,54000.0,831.0,verified,2024-07-03 11:36:19,2024-07-07 02:20:59,aadhaar_okyc,True
+C000180,2024-07-03 11:38:00,affiliate,CMP-202407-AFF,android,Guntur,Andhra Pradesh,tier_3,40,salaried,47000.0,745.0,pending,2024-07-03 11:39:38,,,True
+C000181,2024-07-03 12:17:26,paid_search,CMP-202407-PSR,android,Chennai,Tamil Nadu,tier_1,39,salaried,98500.0,736.0,verified,2024-07-03 12:31:07,2024-07-03 23:30:05,aadhaar_okyc,False
+C000182,2024-07-03 12:21:58,paid_search,CMP-202407-PSR,android,Kota,Rajasthan,tier_3,37,gig_worker,13000.0,,verified,2024-07-03 12:23:01,2024-07-03 12:43:59,digilocker,False
+C000183,2024-07-03 12:23:22,paid_search,CMP-202407-PSR,android,Ludhiana,Punjab,tier_2,42,salaried,41000.0,749.0,verified,2024-07-04 03:24:59,2024-07-06 20:48:19,aadhaar_okyc,True
+C000184,2024-07-03 13:03:14,organic,,android,Dehradun,Uttarakhand,tier_3,21,salaried,51000.0,728.0,verified,2024-07-03 13:15:39,2024-07-03 13:29:53,digilocker,True
+C000185,2024-07-03 13:06:10,organic,,ios,Ahmedabad,Gujarat,tier_1,42,self_employed,435500.0,609.0,verified,2024-07-05 19:13:49,2024-07-05 19:29:55,video_kyc,False
+C000186,2024-07-03 13:27:54,affiliate,CMP-202407-AFF,android,Pune,Maharashtra,tier_1,18,student,11000.0,,pending,2024-07-03 13:33:47,,,False
+C000187,2024-07-03 13:38:44,paid_social,CMP-202407-PSO,android,Ranchi,Jharkhand,tier_3,35,salaried,25000.0,737.0,verified,2024-07-03 13:47:23,2024-07-03 13:59:12,aadhaar_okyc,False
+C000188,2024-07-03 13:50:05,organic,,android,Bengaluru,Karnataka,tier_1,49,self_employed,93500.0,760.0,verified,2024-07-12 22:16:48,2024-07-12 23:07:19,aadhaar_okyc,False
+C000189,2024-07-03 13:51:31,paid_search,CMP-202407-PSR,android,Ludhiana,Punjab,tier_2,33,salaried,43000.0,765.0,verified,2024-07-03 14:04:11,2024-07-03 14:10:30,digilocker,False
+C000190,2024-07-03 13:59:51,organic,,android,Kolkata,West Bengal,tier_1,36,self_employed,,720.0,verified,2024-07-03 14:03:57,2024-07-04 08:34:31,aadhaar_okyc,True
+C000191,2024-07-03 14:09:55,paid_social,CMP-202407-PSO,android,Mumbai,Maharashtra,tier_1,28,gig_worker,18500.0,,pending,2024-07-03 14:11:56,,,False
+C000192,2024-07-03 14:35:54,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,30,gig_worker,33000.0,,verified,2024-07-03 14:43:42,2024-07-03 14:59:29,aadhaar_okyc,False
+C000193,2024-07-03 14:53:47,paid_search,CMP-202407-PSR,android,Warangal,Telangana,tier_3,36,salaried,48500.0,754.0,pending,2024-07-07 19:15:52,,,False
+C000194,2024-07-03 14:58:23,organic,,android,Chandigarh,Chandigarh,tier_2,27,salaried,,,pending,2024-07-03 14:59:10,,,True
+C000195,2024-07-03 15:22:04,paid_search,CMP-202407-PSR,android,Bengaluru,Karnataka,tier_1,30,salaried,26500.0,767.0,not_started,,,,False
+C000196,2024-07-03 16:02:26,paid_social,CMP-202407-PSO,ios,Pune,Maharashtra,tier_1,19,student,9500.0,664.0,pending,2024-07-03 16:11:59,,,False
+C000197,2024-07-03 16:32:38,organic,,ios,Hyderabad,Telangana,tier_1,38,self_employed,35000.0,,verified,2024-07-03 16:46:53,2024-07-06 01:51:02,video_kyc,True
+C000198,2024-07-03 16:34:22,paid_search,CMP-202407-PSR,web,Jammu,Jammu and Kashmir,tier_3,28,salaried,56500.0,682.0,verified,2024-07-03 16:39:38,2024-07-03 16:50:55,aadhaar_okyc,False
+C000199,2024-07-03 16:48:07,paid_social,CMP-202407-PSO,android,Udaipur,Rajasthan,tier_3,28,gig_worker,14000.0,640.0,not_started,,,,False
+C000200,2024-07-03 17:03:00,paid_search,CMP-202407-PSR,android,Bathinda,Punjab,tier_3,36,salaried,49500.0,547.0,not_started,,,,True

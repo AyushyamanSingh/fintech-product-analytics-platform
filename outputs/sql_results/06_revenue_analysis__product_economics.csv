@@ -1,0 +1,8 @@
+product_id,product_name,revenue_model,loans,disbursed,avg_ticket,avg_apr_pct,revenue,credit_loss,net_margin_on_disbursed_pct,revenue_share_pct
+P01,Instant Personal Loan,interest_and_fees,4293,405313000.0,94413.0,21.71,41966451.0,7294281.0,8.55,53.27
+P05,Business Micro Loan,interest_and_fees,640,105685000.0,165133.0,25.29,15842178.0,4366257.0,10.86,20.11
+P02,Salary Advance,interest_and_fees,6910,151376000.0,21907.0,26.6,7267418.0,771244.0,4.29,9.22
+P04,Consumer Durable Loan,interest_and_fees,2109,85394000.0,40490.0,17.87,7235560.0,1273449.0,6.98,9.18
+P07,Flexi Credit Line,interest_and_fees,940,40321000.0,42895.0,25.6,2852941.0,363176.0,6.17,3.62
+P06,P2P Marketplace Loan,platform_fee,800,69955000.0,87444.0,20.13,2565216.0,0.0,3.67,3.26
+P03,Pay Later,interest_and_fees,4969,31821600.0,6404.0,13.42,1056963.0,284299.0,2.43,1.34

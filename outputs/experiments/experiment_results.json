@@ -1,0 +1,373 @@
+{
+  "EXP-ONB-2026-01": {
+    "experiment_id": "EXP-ONB-2026-01",
+    "name": "Onboarding redesign: trust signals + progress indicator",
+    "design": {
+      "unit": "new app signup (android/ios)",
+      "allocation": "50/50 random at first app open",
+      "window": "2026-01-12 to 2026-02-22 (6 weeks)",
+      "primary_metric": "KYC completed within 7 days of signup",
+      "alpha": 0.05,
+      "power": 0.8,
+      "pre_period_baseline": 0.5743232547095141,
+      "planned_mde_abs": 0.04,
+      "required_n_per_arm": 2365,
+      "pre_period_weekly_app_signups": 803.9818181818182,
+      "weeks_needed": 6
+    },
+    "srm": {
+      "control_n": 2543,
+      "treatment_n": 2407,
+      "treatment_share": 0.4862626262626263,
+      "chi_square": 3.7365656565656566,
+      "p_value": 0.053233755221521045,
+      "srm_detected": false
+    },
+    "primary": {
+      "control_n": 2543,
+      "control_x": 1488,
+      "control_rate": 0.5851356665355879,
+      "treatment_n": 2407,
+      "treatment_x": 1487,
+      "treatment_rate": 0.6177814707104279,
+      "diff_abs": 0.032645804174839976,
+      "ci_low": 0.0053776952683993635,
+      "ci_high": 0.05991391308128059,
+      "relative_uplift": 0.055791854849877726,
+      "rel_ci_low": 0.008961012573513116,
+      "rel_ci_high": 0.10479634681238803,
+      "z": 2.3443052539154974,
+      "p_value": 0.019062562722982124,
+      "significant": true
+    },
+    "achieved_power_at_observed_effect": 0.6385216752254991,
+    "mde_at_realised_n": 0.03947073880015623,
+    "secondary": {
+      "application_submitted_14d": {
+        "control_n": 2543,
+        "control_x": 768,
+        "control_rate": 0.3020055053086905,
+        "treatment_n": 2407,
+        "treatment_x": 762,
+        "treatment_rate": 0.3165766514333195,
+        "diff_abs": 0.014571146124628953,
+        "ci_low": -0.011191729972281947,
+        "ci_high": 0.04033402222153985,
+        "relative_uplift": 0.04824794869131696,
+        "rel_ci_low": -0.03552009605366657,
+        "rel_ci_high": 0.13929150564934512,
+        "z": 1.1087886450191378,
+        "p_value": 0.2675213700866039,
+        "significant": false
+      },
+      "loan_disbursed_30d": {
+        "control_n": 2543,
+        "control_x": 388,
+        "control_rate": 0.1525756979944947,
+        "treatment_n": 2407,
+        "treatment_x": 419,
+        "treatment_rate": 0.17407561279601164,
+        "diff_abs": 0.021499914801516945,
+        "ci_low": 0.0008899501460210221,
+        "ci_high": 0.04210987945701287,
+        "relative_uplift": 0.14091310139241647,
+        "rel_ci_low": 0.005502102357359373,
+        "rel_ci_high": 0.2945599038302553,
+        "z": 2.04671008540621,
+        "p_value": 0.040686558424887664,
+        "significant": true
+      }
+    },
+    "guardrails": {
+      "approval_rate": {
+        "control_n": 855,
+        "control_x": 443,
+        "control_rate": 0.5181286549707602,
+        "treatment_n": 870,
+        "treatment_x": 478,
+        "treatment_rate": 0.5494252873563218,
+        "diff_abs": 0.031296632385561574,
+        "ci_low": -0.01576543392601578,
+        "ci_high": 0.07835869869713893,
+        "relative_uplift": 0.06040320697439085,
+        "rel_ci_low": -0.029230322514419593,
+        "rel_ci_high": 0.1583128186224949,
+        "z": 1.3027977580763739,
+        "p_value": 0.1926438163745674,
+        "significant": false,
+        "margin": 0.02,
+        "higher_is_worse": false,
+        "population": "users with an underwriting decision within 30 days",
+        "status": "pass"
+      },
+      "fpd30_rate": {
+        "control_n": 437,
+        "control_x": 14,
+        "control_rate": 0.032036613272311214,
+        "treatment_n": 463,
+        "treatment_x": 8,
+        "treatment_rate": 0.017278617710583154,
+        "diff_abs": -0.01475799556172806,
+        "ci_low": -0.035092158986113293,
+        "ci_high": 0.005576167862657175,
+        "relative_uplift": -0.4606602900339401,
+        "rel_ci_low": -0.7714908515348236,
+        "rel_ci_high": 0.27297889253043683,
+        "z": -1.4329176948956996,
+        "p_value": 0.15188135979554684,
+        "significant": false,
+        "margin": 0.015,
+        "higher_is_worse": true,
+        "population": "first loans with a matured first EMI",
+        "status": "pass"
+      },
+      "kyc_support_ticket_rate": {
+        "control_n": 2543,
+        "control_x": 89,
+        "control_rate": 0.034998033818324815,
+        "treatment_n": 2407,
+        "treatment_x": 88,
+        "treatment_rate": 0.036560033236393855,
+        "diff_abs": 0.0015619994180690391,
+        "ci_low": -0.008793321852207145,
+        "ci_high": 0.011917320688345223,
+        "relative_uplift": 0.04463106202415243,
+        "rel_ci_low": -0.21781268786695385,
+        "rel_ci_high": 0.39513136919829206,
+        "z": 0.295809653052087,
+        "p_value": 0.7673754506758879,
+        "significant": false,
+        "margin": 0.01,
+        "higher_is_worse": true,
+        "population": "all randomised users",
+        "status": "inconclusive"
+      }
+    },
+    "bayesian": {
+      "prob_treatment_better": 0.9903,
+      "expected_loss_if_ship": 4.638364496089977e-05,
+      "credible_low": 0.00524293744587622,
+      "credible_high": 0.059702741225447165
+    },
+    "weekly_effect": [
+      {
+        "assignment_week": "2026-01-12 00:00:00",
+        "users": 815,
+        "diff_abs": 0.03896933817234771,
+        "ci_low": -0.027458213050395544,
+        "ci_high": 0.10539688939509097
+      },
+      {
+        "assignment_week": "2026-01-19 00:00:00",
+        "users": 792,
+        "diff_abs": 0.04523218807201945,
+        "ci_low": -0.02316948172741215,
+        "ci_high": 0.11363385787145105
+      },
+      {
+        "assignment_week": "2026-01-26 00:00:00",
+        "users": 801,
+        "diff_abs": 0.03649334613801625,
+        "ci_low": -0.03168600330502648,
+        "ci_high": 0.10467269558105897
+      },
+      {
+        "assignment_week": "2026-02-02 00:00:00",
+        "users": 844,
+        "diff_abs": 0.060562434014780675,
+        "ci_low": -0.004840213573962332,
+        "ci_high": 0.12596508160352368
+      },
+      {
+        "assignment_week": "2026-02-09 00:00:00",
+        "users": 859,
+        "diff_abs": 0.008556010380134427,
+        "ci_low": -0.05710918489348117,
+        "ci_high": 0.07422120565375002
+      },
+      {
+        "assignment_week": "2026-02-16 00:00:00",
+        "users": 839,
+        "diff_abs": 0.011207092521027473,
+        "ci_low": -0.05538522551697486,
+        "ci_high": 0.07779941055902981
+      }
+    ],
+    "segments": [
+      {
+        "dimension": "platform",
+        "segment": "android",
+        "users": 4007,
+        "control_rate": 0.578745811393011,
+        "treatment_rate": 0.6105318039624609,
+        "diff_abs": 0.03178599256944992,
+        "ci_low": 0.0013793490315522905,
+        "ci_high": 0.06219263610734754,
+        "p_value": 0.04068637991597934,
+        "p_value_holm": 0.16274551966391737,
+        "significant_after_holm": false
+      },
+      {
+        "dimension": "platform",
+        "segment": "ios",
+        "users": 943,
+        "control_rate": 0.6145374449339207,
+        "treatment_rate": 0.6462167689161554,
+        "diff_abs": 0.03167932398223472,
+        "ci_low": -0.02996743555172253,
+        "ci_high": 0.09332608351619197,
+        "p_value": 0.3137826416784335,
+        "p_value_holm": 0.8568823019211698,
+        "significant_after_holm": false
+      },
+      {
+        "dimension": "city_tier",
+        "segment": "tier_1",
+        "users": 2307,
+        "control_rate": 0.5852036575228595,
+        "treatment_rate": 0.6295289855072463,
+        "diff_abs": 0.04432532798438682,
+        "ci_low": 0.004492648762343815,
+        "ci_high": 0.08415800720642982,
+        "p_value": 0.02948696536487061,
+        "p_value_holm": 0.14743482682435305,
+        "significant_after_holm": false
+      },
+      {
+        "dimension": "city_tier",
+        "segment": "tier_2",
+        "users": 1704,
+        "control_rate": 0.5858823529411765,
+        "treatment_rate": 0.6112412177985949,
+        "diff_abs": 0.02535886485741834,
+        "ci_low": -0.02117491250100048,
+        "ci_high": 0.07189264221583716,
+        "p_value": 0.28562743397372325,
+        "p_value_holm": 0.8568823019211698,
+        "significant_after_holm": false
+      },
+      {
+        "dimension": "city_tier",
+        "segment": "tier_3",
+        "users": 939,
+        "control_rate": 0.5836734693877551,
+        "treatment_rate": 0.6013363028953229,
+        "diff_abs": 0.01766283350756781,
+        "ci_low": -0.045234538136446914,
+        "ci_high": 0.08056020515158253,
+        "p_value": 0.582219551218079,
+        "p_value_holm": 0.8568823019211698,
+        "significant_after_holm": false
+      }
+    ],
+    "impact": {
+      "annual_app_signups_run_rate": 46008.09917355372,
+      "incremental_kyc_per_year": 1501.9713960764516,
+      "kyc_to_first_loan_30d": 0.2575460257964943,
+      "incremental_first_loans_per_year": 386.8267639195024,
+      "net_revenue_per_first_loan": 4288.138335158817,
+      "incremental_net_revenue_per_year": 1658766.675428648,
+      "assumptions": "Uplift applied to the post-rollout app-signup run rate; downstream conversion and revenue per first loan held at historical averages (no repeat-loan value counted - conservative)."
+    },
+    "decision": "SHIP with post-launch monitoring of kyc_support_ticket_rate"
+  },
+  "EXP-RPY-2025-11": {
+    "experiment_id": "EXP-RPY-2025-11",
+    "name": "Autopay nudge at disbursal",
+    "srm": {
+      "control_n": 785,
+      "treatment_n": 753,
+      "treatment_share": 0.4895968790637191,
+      "chi_square": 0.6657997399219766,
+      "p_value": 0.4145198529802938,
+      "srm_detected": false
+    },
+    "primary_metric": "autopay",
+    "primary": {
+      "control_n": 785,
+      "control_x": 366,
+      "control_rate": 0.4662420382165605,
+      "treatment_n": 753,
+      "treatment_x": 484,
+      "treatment_rate": 0.6427622841965471,
+      "diff_abs": 0.1765202459799866,
+      "ci_low": 0.12764051888549902,
+      "ci_high": 0.2253999730744742,
+      "relative_uplift": 0.3786021669242882,
+      "rel_ci_low": 0.25761090557370014,
+      "rel_ci_high": 0.5112336623554867,
+      "z": 6.959873180791977,
+      "p_value": 3.4057201503401302e-12,
+      "significant": true
+    },
+    "planned_mde_abs": 0.08,
+    "required_n_per_arm": 612,
+    "mde_at_realised_n": 0.07213510975936908,
+    "bayesian": {
+      "prob_treatment_better": 1.0,
+      "expected_loss_if_ship": 0.0,
+      "credible_low": 0.12702197418990444,
+      "credible_high": 0.22463332681182627
+    },
+    "secondary": {
+      "first_emi_on_time": {
+        "control_n": 785,
+        "control_x": 678,
+        "control_rate": 0.8636942675159236,
+        "treatment_n": 753,
+        "treatment_x": 655,
+        "treatment_rate": 0.8698539176626826,
+        "diff_abs": 0.00615965014675901,
+        "ci_low": -0.027805613744906456,
+        "ci_high": 0.040124914038424477,
+        "relative_uplift": 0.007131748326262276,
+        "rel_ci_low": -0.03157086003568266,
+        "rel_ci_high": 0.047381079966353656,
+        "z": 0.35528307984926677,
+        "p_value": 0.7223775300355475,
+        "significant": false
+      }
+    },
+    "decision": "SHIP"
+  },
+  "EXP-PRC-2025-06": {
+    "experiment_id": "EXP-PRC-2025-06",
+    "name": "Upfront fee transparency on the offer screen",
+    "srm": {
+      "control_n": 410,
+      "treatment_n": 410,
+      "treatment_share": 0.5,
+      "chi_square": 0.0,
+      "p_value": 1.0,
+      "srm_detected": false
+    },
+    "primary_metric": "accepted",
+    "primary": {
+      "control_n": 410,
+      "control_x": 364,
+      "control_rate": 0.8878048780487805,
+      "treatment_n": 410,
+      "treatment_x": 373,
+      "treatment_rate": 0.9097560975609756,
+      "diff_abs": 0.02195121951219514,
+      "ci_low": -0.01931002953654235,
+      "ci_high": 0.06321246856093263,
+      "relative_uplift": 0.02472527472527475,
+      "rel_ci_low": -0.02131724983854333,
+      "rel_ci_high": 0.07293388842048887,
+      "z": 1.0420214176352687,
+      "p_value": 0.29740174924852303,
+      "significant": false
+    },
+    "planned_mde_abs": 0.03,
+    "required_n_per_arm": 1530,
+    "mde_at_realised_n": 0.054477945855718544,
+    "bayesian": {
+      "prob_treatment_better": 0.849625,
+      "expected_loss_if_ship": 0.0016459536171674674,
+      "credible_low": -0.019517444582589197,
+      "credible_high": 0.0635326895841176
+    },
+    "decision": "INCONCLUSIVE - underpowered: needed 1,530 users per arm for a 3.0 pp MDE, had 410"
+  }
+}

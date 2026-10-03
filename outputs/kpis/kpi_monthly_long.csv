@@ -1,0 +1,673 @@
+month_start,kpi_id,value,kpi_name,category,unit,direction
+2024-07-01,new_customers,2398.0,New customers,Acquisition,count,up_good
+2024-08-01,new_customers,2394.0,New customers,Acquisition,count,up_good
+2024-09-01,new_customers,2370.0,New customers,Acquisition,count,up_good
+2024-10-01,new_customers,3070.0,New customers,Acquisition,count,up_good
+2024-11-01,new_customers,2720.0,New customers,Acquisition,count,up_good
+2024-12-01,new_customers,2641.0,New customers,Acquisition,count,up_good
+2025-01-01,new_customers,2795.0,New customers,Acquisition,count,up_good
+2025-02-01,new_customers,2627.0,New customers,Acquisition,count,up_good
+2025-03-01,new_customers,2818.0,New customers,Acquisition,count,up_good
+2025-04-01,new_customers,2890.0,New customers,Acquisition,count,up_good
+2025-05-01,new_customers,3071.0,New customers,Acquisition,count,up_good
+2025-06-01,new_customers,3182.0,New customers,Acquisition,count,up_good
+2025-07-01,new_customers,3265.0,New customers,Acquisition,count,up_good
+2025-08-01,new_customers,3311.0,New customers,Acquisition,count,up_good
+2025-09-01,new_customers,4575.0,New customers,Acquisition,count,up_good
+2025-10-01,new_customers,5077.0,New customers,Acquisition,count,up_good
+2025-11-01,new_customers,4276.0,New customers,Acquisition,count,up_good
+2025-12-01,new_customers,3847.0,New customers,Acquisition,count,up_good
+2026-01-01,new_customers,3769.0,New customers,Acquisition,count,up_good
+2026-02-01,new_customers,3627.0,New customers,Acquisition,count,up_good
+2026-03-01,new_customers,4090.0,New customers,Acquisition,count,up_good
+2026-04-01,new_customers,3973.0,New customers,Acquisition,count,up_good
+2026-05-01,new_customers,4158.0,New customers,Acquisition,count,up_good
+2026-06-01,new_customers,4256.0,New customers,Acquisition,count,up_good
+2024-07-01,kyc_completion_rate_7d,0.5562969140950792,KYC completion (7-day),Onboarding,pct,up_good
+2024-08-01,kyc_completion_rate_7d,0.565998329156224,KYC completion (7-day),Onboarding,pct,up_good
+2024-09-01,kyc_completion_rate_7d,0.5472573839662447,KYC completion (7-day),Onboarding,pct,up_good
+2024-10-01,kyc_completion_rate_7d,0.5628664495114006,KYC completion (7-day),Onboarding,pct,up_good
+2024-11-01,kyc_completion_rate_7d,0.5580882352941177,KYC completion (7-day),Onboarding,pct,up_good
+2024-12-01,kyc_completion_rate_7d,0.5736463460810299,KYC completion (7-day),Onboarding,pct,up_good
+2025-01-01,kyc_completion_rate_7d,0.5531305903398926,KYC completion (7-day),Onboarding,pct,up_good
+2025-02-01,kyc_completion_rate_7d,0.552341073467834,KYC completion (7-day),Onboarding,pct,up_good
+2025-03-01,kyc_completion_rate_7d,0.559971611071682,KYC completion (7-day),Onboarding,pct,up_good
+2025-04-01,kyc_completion_rate_7d,0.5539792387543253,KYC completion (7-day),Onboarding,pct,up_good
+2025-05-01,kyc_completion_rate_7d,0.5630087919244545,KYC completion (7-day),Onboarding,pct,up_good
+2025-06-01,kyc_completion_rate_7d,0.5631678189817725,KYC completion (7-day),Onboarding,pct,up_good
+2025-07-01,kyc_completion_rate_7d,0.5580398162327718,KYC completion (7-day),Onboarding,pct,up_good
+2025-08-01,kyc_completion_rate_7d,0.5804892781636968,KYC completion (7-day),Onboarding,pct,up_good
+2025-09-01,kyc_completion_rate_7d,0.5387978142076503,KYC completion (7-day),Onboarding,pct,up_good
+2025-10-01,kyc_completion_rate_7d,0.5611581642702383,KYC completion (7-day),Onboarding,pct,up_good
+2025-11-01,kyc_completion_rate_7d,0.5680542563143124,KYC completion (7-day),Onboarding,pct,up_good
+2025-12-01,kyc_completion_rate_7d,0.5755133870548479,KYC completion (7-day),Onboarding,pct,up_good
+2026-01-01,kyc_completion_rate_7d,0.5720350225524011,KYC completion (7-day),Onboarding,pct,up_good
+2026-02-01,kyc_completion_rate_7d,0.580093741384064,KYC completion (7-day),Onboarding,pct,up_good
+2026-03-01,kyc_completion_rate_7d,0.6188264058679707,KYC completion (7-day),Onboarding,pct,up_good
+2026-04-01,kyc_completion_rate_7d,0.6146488799395923,KYC completion (7-day),Onboarding,pct,up_good
+2026-05-01,kyc_completion_rate_7d,0.6322751322751323,KYC completion (7-day),Onboarding,pct,up_good
+2026-06-01,kyc_completion_rate_7d,0.6230414746543779,KYC completion (7-day),Onboarding,pct,up_good
+2024-07-01,signup_to_disbursal_30d,0.1555462885738115,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-08-01,signup_to_disbursal_30d,0.14619883040935672,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-09-01,signup_to_disbursal_30d,0.15316455696202533,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-10-01,signup_to_disbursal_30d,0.1495114006514658,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-11-01,signup_to_disbursal_30d,0.14301470588235293,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-12-01,signup_to_disbursal_30d,0.15335100340780008,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-01-01,signup_to_disbursal_30d,0.15491949910554562,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-02-01,signup_to_disbursal_30d,0.1427483821850019,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-03-01,signup_to_disbursal_30d,0.1376863023420866,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-04-01,signup_to_disbursal_30d,0.15916955017301038,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-05-01,signup_to_disbursal_30d,0.1566265060240964,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-06-01,signup_to_disbursal_30d,0.1508485229415462,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-07-01,signup_to_disbursal_30d,0.1467075038284839,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-08-01,signup_to_disbursal_30d,0.1546360616128058,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-09-01,signup_to_disbursal_30d,0.11234972677595628,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-10-01,signup_to_disbursal_30d,0.1414220996651566,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-11-01,signup_to_disbursal_30d,0.14593077642656688,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2025-12-01,signup_to_disbursal_30d,0.15492591629841435,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-01-01,signup_to_disbursal_30d,0.1557442292385248,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-02-01,signup_to_disbursal_30d,0.1588089330024814,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-03-01,signup_to_disbursal_30d,0.17090464547677262,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-04-01,signup_to_disbursal_30d,0.17971306317644098,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-05-01,signup_to_disbursal_30d,0.1697931697931698,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2026-06-01,signup_to_disbursal_30d,,Activation rate (first loan in 30 days),Onboarding,pct,up_good
+2024-07-01,applications_submitted,673.0,Applications submitted,Lending,count,up_good
+2024-08-01,applications_submitted,843.0,Applications submitted,Lending,count,up_good
+2024-09-01,applications_submitted,910.0,Applications submitted,Lending,count,up_good
+2024-10-01,applications_submitted,1153.0,Applications submitted,Lending,count,up_good
+2024-11-01,applications_submitted,1136.0,Applications submitted,Lending,count,up_good
+2024-12-01,applications_submitted,1211.0,Applications submitted,Lending,count,up_good
+2025-01-01,applications_submitted,1257.0,Applications submitted,Lending,count,up_good
+2025-02-01,applications_submitted,1139.0,Applications submitted,Lending,count,up_good
+2025-03-01,applications_submitted,1298.0,Applications submitted,Lending,count,up_good
+2025-04-01,applications_submitted,1372.0,Applications submitted,Lending,count,up_good
+2025-05-01,applications_submitted,1478.0,Applications submitted,Lending,count,up_good
+2025-06-01,applications_submitted,1475.0,Applications submitted,Lending,count,up_good
+2025-07-01,applications_submitted,1536.0,Applications submitted,Lending,count,up_good
+2025-08-01,applications_submitted,1646.0,Applications submitted,Lending,count,up_good
+2025-09-01,applications_submitted,2040.0,Applications submitted,Lending,count,up_good
+2025-10-01,applications_submitted,2174.0,Applications submitted,Lending,count,up_good
+2025-11-01,applications_submitted,2095.0,Applications submitted,Lending,count,up_good
+2025-12-01,applications_submitted,2010.0,Applications submitted,Lending,count,up_good
+2026-01-01,applications_submitted,1924.0,Applications submitted,Lending,count,up_good
+2026-02-01,applications_submitted,1903.0,Applications submitted,Lending,count,up_good
+2026-03-01,applications_submitted,2200.0,Applications submitted,Lending,count,up_good
+2026-04-01,applications_submitted,2230.0,Applications submitted,Lending,count,up_good
+2026-05-01,applications_submitted,2271.0,Applications submitted,Lending,count,up_good
+2026-06-01,applications_submitted,2271.0,Applications submitted,Lending,count,up_good
+2024-07-01,approval_rate,0.5411061285500748,Approval rate,Lending,pct,neutral
+2024-08-01,approval_rate,0.5291319857312723,Approval rate,Lending,pct,neutral
+2024-09-01,approval_rate,0.5703296703296703,Approval rate,Lending,pct,neutral
+2024-10-01,approval_rate,0.5694323144104804,Approval rate,Lending,pct,neutral
+2024-11-01,approval_rate,0.5486415425065732,Approval rate,Lending,pct,neutral
+2024-12-01,approval_rate,0.5938792390405294,Approval rate,Lending,pct,neutral
+2025-01-01,approval_rate,0.5816733067729084,Approval rate,Lending,pct,neutral
+2025-02-01,approval_rate,0.6065140845070423,Approval rate,Lending,pct,neutral
+2025-03-01,approval_rate,0.5923076923076923,Approval rate,Lending,pct,neutral
+2025-04-01,approval_rate,0.6148796498905909,Approval rate,Lending,pct,neutral
+2025-05-01,approval_rate,0.6140825998645904,Approval rate,Lending,pct,neutral
+2025-06-01,approval_rate,0.6050305914343984,Approval rate,Lending,pct,neutral
+2025-07-01,approval_rate,0.6069100391134289,Approval rate,Lending,pct,neutral
+2025-08-01,approval_rate,0.6087484811664642,Approval rate,Lending,pct,neutral
+2025-09-01,approval_rate,0.49166666666666664,Approval rate,Lending,pct,neutral
+2025-10-01,approval_rate,0.5816751503933364,Approval rate,Lending,pct,neutral
+2025-11-01,approval_rate,0.5890214797136039,Approval rate,Lending,pct,neutral
+2025-12-01,approval_rate,0.6194029850746269,Approval rate,Lending,pct,neutral
+2026-01-01,approval_rate,0.604989604989605,Approval rate,Lending,pct,neutral
+2026-02-01,approval_rate,0.6217070600632244,Approval rate,Lending,pct,neutral
+2026-03-01,approval_rate,0.6330442720219078,Approval rate,Lending,pct,neutral
+2026-04-01,approval_rate,0.6346499102333932,Approval rate,Lending,pct,neutral
+2026-05-01,approval_rate,0.645842498900132,Approval rate,Lending,pct,neutral
+2026-06-01,approval_rate,0.6222515391380826,Approval rate,Lending,pct,neutral
+2024-07-01,offer_acceptance_rate,0.8950276243093923,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-08-01,offer_acceptance_rate,0.8741573033707866,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-09-01,offer_acceptance_rate,0.8747591522157996,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-10-01,offer_acceptance_rate,0.911042944785276,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-11-01,offer_acceptance_rate,0.9105431309904153,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-12-01,offer_acceptance_rate,0.8927576601671309,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-01-01,offer_acceptance_rate,0.9041095890410958,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-02-01,offer_acceptance_rate,0.9201741654571843,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-03-01,offer_acceptance_rate,0.9,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-04-01,offer_acceptance_rate,0.9228944246737841,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-05-01,offer_acceptance_rate,0.9228224917309813,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-06-01,offer_acceptance_rate,0.8921348314606742,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-07-01,offer_acceptance_rate,0.9044038668098818,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-08-01,offer_acceptance_rate,0.8962075848303394,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-09-01,offer_acceptance_rate,0.905284147557328,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-10-01,offer_acceptance_rate,0.8814638027048528,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-11-01,offer_acceptance_rate,0.9027552674230146,Offer acceptance (disbursal rate),Lending,pct,up_good
+2025-12-01,offer_acceptance_rate,0.9092369477911647,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-01-01,offer_acceptance_rate,0.9140893470790378,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-02-01,offer_acceptance_rate,0.9059322033898305,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-03-01,offer_acceptance_rate,0.9005046863734679,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-04-01,offer_acceptance_rate,0.9101838755304101,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-05-01,offer_acceptance_rate,0.9005449591280654,Offer acceptance (disbursal rate),Lending,pct,up_good
+2026-06-01,offer_acceptance_rate,0.9045936395759717,Offer acceptance (disbursal rate),Lending,pct,up_good
+2024-07-01,loans_disbursed,320.0,Loans disbursed,Lending,count,up_good
+2024-08-01,loans_disbursed,391.0,Loans disbursed,Lending,count,up_good
+2024-09-01,loans_disbursed,447.0,Loans disbursed,Lending,count,up_good
+2024-10-01,loans_disbursed,598.0,Loans disbursed,Lending,count,up_good
+2024-11-01,loans_disbursed,569.0,Loans disbursed,Lending,count,up_good
+2024-12-01,loans_disbursed,646.0,Loans disbursed,Lending,count,up_good
+2025-01-01,loans_disbursed,654.0,Loans disbursed,Lending,count,up_good
+2025-02-01,loans_disbursed,642.0,Loans disbursed,Lending,count,up_good
+2025-03-01,loans_disbursed,689.0,Loans disbursed,Lending,count,up_good
+2025-04-01,loans_disbursed,783.0,Loans disbursed,Lending,count,up_good
+2025-05-01,loans_disbursed,838.0,Loans disbursed,Lending,count,up_good
+2025-06-01,loans_disbursed,786.0,Loans disbursed,Lending,count,up_good
+2025-07-01,loans_disbursed,848.0,Loans disbursed,Lending,count,up_good
+2025-08-01,loans_disbursed,899.0,Loans disbursed,Lending,count,up_good
+2025-09-01,loans_disbursed,912.0,Loans disbursed,Lending,count,up_good
+2025-10-01,loans_disbursed,1112.0,Loans disbursed,Lending,count,up_good
+2025-11-01,loans_disbursed,1111.0,Loans disbursed,Lending,count,up_good
+2025-12-01,loans_disbursed,1130.0,Loans disbursed,Lending,count,up_good
+2026-01-01,loans_disbursed,1066.0,Loans disbursed,Lending,count,up_good
+2026-02-01,loans_disbursed,1071.0,Loans disbursed,Lending,count,up_good
+2026-03-01,loans_disbursed,1246.0,Loans disbursed,Lending,count,up_good
+2026-04-01,loans_disbursed,1289.0,Loans disbursed,Lending,count,up_good
+2026-05-01,loans_disbursed,1321.0,Loans disbursed,Lending,count,up_good
+2026-06-01,loans_disbursed,1293.0,Loans disbursed,Lending,count,up_good
+2024-07-01,disbursed_amount,13760900.0,Disbursed amount,Lending,inr,up_good
+2024-08-01,disbursed_amount,17594400.0,Disbursed amount,Lending,inr,up_good
+2024-09-01,disbursed_amount,19453300.0,Disbursed amount,Lending,inr,up_good
+2024-10-01,disbursed_amount,25384100.0,Disbursed amount,Lending,inr,up_good
+2024-11-01,disbursed_amount,24793300.0,Disbursed amount,Lending,inr,up_good
+2024-12-01,disbursed_amount,26096400.0,Disbursed amount,Lending,inr,up_good
+2025-01-01,disbursed_amount,25749700.0,Disbursed amount,Lending,inr,up_good
+2025-02-01,disbursed_amount,26511200.0,Disbursed amount,Lending,inr,up_good
+2025-03-01,disbursed_amount,27487700.0,Disbursed amount,Lending,inr,up_good
+2025-04-01,disbursed_amount,33605600.0,Disbursed amount,Lending,inr,up_good
+2025-05-01,disbursed_amount,36596800.0,Disbursed amount,Lending,inr,up_good
+2025-06-01,disbursed_amount,32777400.0,Disbursed amount,Lending,inr,up_good
+2025-07-01,disbursed_amount,36554300.0,Disbursed amount,Lending,inr,up_good
+2025-08-01,disbursed_amount,39031400.0,Disbursed amount,Lending,inr,up_good
+2025-09-01,disbursed_amount,39277800.0,Disbursed amount,Lending,inr,up_good
+2025-10-01,disbursed_amount,48841100.0,Disbursed amount,Lending,inr,up_good
+2025-11-01,disbursed_amount,47202300.0,Disbursed amount,Lending,inr,up_good
+2025-12-01,disbursed_amount,49230000.0,Disbursed amount,Lending,inr,up_good
+2026-01-01,disbursed_amount,43803400.0,Disbursed amount,Lending,inr,up_good
+2026-02-01,disbursed_amount,47509500.0,Disbursed amount,Lending,inr,up_good
+2026-03-01,disbursed_amount,53863800.0,Disbursed amount,Lending,inr,up_good
+2026-04-01,disbursed_amount,58372400.0,Disbursed amount,Lending,inr,up_good
+2026-05-01,disbursed_amount,57812000.0,Disbursed amount,Lending,inr,up_good
+2026-06-01,disbursed_amount,58556800.0,Disbursed amount,Lending,inr,up_good
+2024-07-01,avg_ticket_size,43002.8125,Average ticket size,Lending,inr,neutral
+2024-08-01,avg_ticket_size,44998.46547314578,Average ticket size,Lending,inr,neutral
+2024-09-01,avg_ticket_size,43519.68680089485,Average ticket size,Lending,inr,neutral
+2024-10-01,avg_ticket_size,42448.327759197324,Average ticket size,Lending,inr,neutral
+2024-11-01,avg_ticket_size,43573.46221441125,Average ticket size,Lending,inr,neutral
+2024-12-01,avg_ticket_size,40396.9040247678,Average ticket size,Lending,inr,neutral
+2025-01-01,avg_ticket_size,39372.62996941896,Average ticket size,Lending,inr,neutral
+2025-02-01,avg_ticket_size,41294.70404984424,Average ticket size,Lending,inr,neutral
+2025-03-01,avg_ticket_size,39895.06531204644,Average ticket size,Lending,inr,neutral
+2025-04-01,avg_ticket_size,42919.02937420179,Average ticket size,Lending,inr,neutral
+2025-05-01,avg_ticket_size,43671.59904534606,Average ticket size,Lending,inr,neutral
+2025-06-01,avg_ticket_size,41701.52671755725,Average ticket size,Lending,inr,neutral
+2025-07-01,avg_ticket_size,43106.485849056604,Average ticket size,Lending,inr,neutral
+2025-08-01,avg_ticket_size,43416.462736373745,Average ticket size,Lending,inr,neutral
+2025-09-01,avg_ticket_size,43067.76315789474,Average ticket size,Lending,inr,neutral
+2025-10-01,avg_ticket_size,43921.852517985615,Average ticket size,Lending,inr,neutral
+2025-11-01,avg_ticket_size,42486.318631863185,Average ticket size,Lending,inr,neutral
+2025-12-01,avg_ticket_size,43566.37168141593,Average ticket size,Lending,inr,neutral
+2026-01-01,avg_ticket_size,41091.369606003755,Average ticket size,Lending,inr,neutral
+2026-02-01,avg_ticket_size,44359.943977591036,Average ticket size,Lending,inr,neutral
+2026-03-01,avg_ticket_size,43229.37399678973,Average ticket size,Lending,inr,neutral
+2026-04-01,avg_ticket_size,45285.02715283165,Average ticket size,Lending,inr,neutral
+2026-05-01,avg_ticket_size,43763.81529144588,Average ticket size,Lending,inr,neutral
+2026-06-01,avg_ticket_size,45287.54833720031,Average ticket size,Lending,inr,neutral
+2024-07-01,new_borrowers,320.0,New borrowers,Lending,count,up_good
+2024-08-01,new_borrowers,363.0,New borrowers,Lending,count,up_good
+2024-09-01,new_borrowers,399.0,New borrowers,Lending,count,up_good
+2024-10-01,new_borrowers,510.0,New borrowers,Lending,count,up_good
+2024-11-01,new_borrowers,450.0,New borrowers,Lending,count,up_good
+2024-12-01,new_borrowers,480.0,New borrowers,Lending,count,up_good
+2025-01-01,new_borrowers,480.0,New borrowers,Lending,count,up_good
+2025-02-01,new_borrowers,451.0,New borrowers,Lending,count,up_good
+2025-03-01,new_borrowers,429.0,New borrowers,Lending,count,up_good
+2025-04-01,new_borrowers,533.0,New borrowers,Lending,count,up_good
+2025-05-01,new_borrowers,556.0,New borrowers,Lending,count,up_good
+2025-06-01,new_borrowers,523.0,New borrowers,Lending,count,up_good
+2025-07-01,new_borrowers,544.0,New borrowers,Lending,count,up_good
+2025-08-01,new_borrowers,585.0,New borrowers,Lending,count,up_good
+2025-09-01,new_borrowers,582.0,New borrowers,Lending,count,up_good
+2025-10-01,new_borrowers,793.0,New borrowers,Lending,count,up_good
+2025-11-01,new_borrowers,716.0,New borrowers,Lending,count,up_good
+2025-12-01,new_borrowers,716.0,New borrowers,Lending,count,up_good
+2026-01-01,new_borrowers,654.0,New borrowers,Lending,count,up_good
+2026-02-01,new_borrowers,666.0,New borrowers,Lending,count,up_good
+2026-03-01,new_borrowers,779.0,New borrowers,Lending,count,up_good
+2026-04-01,new_borrowers,832.0,New borrowers,Lending,count,up_good
+2026-05-01,new_borrowers,811.0,New borrowers,Lending,count,up_good
+2026-06-01,new_borrowers,842.0,New borrowers,Lending,count,up_good
+2024-07-01,repeat_loan_share,0.0,Repeat-loan share,Retention,pct,up_good
+2024-08-01,repeat_loan_share,0.07161125319693094,Repeat-loan share,Retention,pct,up_good
+2024-09-01,repeat_loan_share,0.10738255033557047,Repeat-loan share,Retention,pct,up_good
+2024-10-01,repeat_loan_share,0.14715719063545152,Repeat-loan share,Retention,pct,up_good
+2024-11-01,repeat_loan_share,0.20913884007029876,Repeat-loan share,Retention,pct,up_good
+2024-12-01,repeat_loan_share,0.25696594427244585,Repeat-loan share,Retention,pct,up_good
+2025-01-01,repeat_loan_share,0.26605504587155965,Repeat-loan share,Retention,pct,up_good
+2025-02-01,repeat_loan_share,0.29750778816199375,Repeat-loan share,Retention,pct,up_good
+2025-03-01,repeat_loan_share,0.37735849056603776,Repeat-loan share,Retention,pct,up_good
+2025-04-01,repeat_loan_share,0.31928480204342274,Repeat-loan share,Retention,pct,up_good
+2025-05-01,repeat_loan_share,0.33651551312649164,Repeat-loan share,Retention,pct,up_good
+2025-06-01,repeat_loan_share,0.3346055979643766,Repeat-loan share,Retention,pct,up_good
+2025-07-01,repeat_loan_share,0.3584905660377358,Repeat-loan share,Retention,pct,up_good
+2025-08-01,repeat_loan_share,0.3492769744160178,Repeat-loan share,Retention,pct,up_good
+2025-09-01,repeat_loan_share,0.3618421052631579,Repeat-loan share,Retention,pct,up_good
+2025-10-01,repeat_loan_share,0.2868705035971223,Repeat-loan share,Retention,pct,up_good
+2025-11-01,repeat_loan_share,0.35553555355535554,Repeat-loan share,Retention,pct,up_good
+2025-12-01,repeat_loan_share,0.3663716814159292,Repeat-loan share,Retention,pct,up_good
+2026-01-01,repeat_loan_share,0.38649155722326456,Repeat-loan share,Retention,pct,up_good
+2026-02-01,repeat_loan_share,0.37815126050420167,Repeat-loan share,Retention,pct,up_good
+2026-03-01,repeat_loan_share,0.37479935794542535,Repeat-loan share,Retention,pct,up_good
+2026-04-01,repeat_loan_share,0.35453840186190844,Repeat-loan share,Retention,pct,up_good
+2026-05-01,repeat_loan_share,0.38607115821347465,Repeat-loan share,Retention,pct,up_good
+2026-06-01,repeat_loan_share,0.34880123743232794,Repeat-loan share,Retention,pct,up_good
+2024-07-01,autopay_adoption_rate,0.45,Autopay adoption,Repayments,pct,up_good
+2024-08-01,autopay_adoption_rate,0.47058823529411764,Autopay adoption,Repayments,pct,up_good
+2024-09-01,autopay_adoption_rate,0.5212527964205816,Autopay adoption,Repayments,pct,up_good
+2024-10-01,autopay_adoption_rate,0.4983277591973244,Autopay adoption,Repayments,pct,up_good
+2024-11-01,autopay_adoption_rate,0.4973637961335677,Autopay adoption,Repayments,pct,up_good
+2024-12-01,autopay_adoption_rate,0.48297213622291024,Autopay adoption,Repayments,pct,up_good
+2025-01-01,autopay_adoption_rate,0.4938837920489297,Autopay adoption,Repayments,pct,up_good
+2025-02-01,autopay_adoption_rate,0.5062305295950156,Autopay adoption,Repayments,pct,up_good
+2025-03-01,autopay_adoption_rate,0.4949201741654572,Autopay adoption,Repayments,pct,up_good
+2025-04-01,autopay_adoption_rate,0.4955300127713921,Autopay adoption,Repayments,pct,up_good
+2025-05-01,autopay_adoption_rate,0.5035799522673031,Autopay adoption,Repayments,pct,up_good
+2025-06-01,autopay_adoption_rate,0.4872773536895674,Autopay adoption,Repayments,pct,up_good
+2025-07-01,autopay_adoption_rate,0.5153301886792453,Autopay adoption,Repayments,pct,up_good
+2025-08-01,autopay_adoption_rate,0.4938820912124583,Autopay adoption,Repayments,pct,up_good
+2025-09-01,autopay_adoption_rate,0.5142543859649122,Autopay adoption,Repayments,pct,up_good
+2025-10-01,autopay_adoption_rate,0.5197841726618705,Autopay adoption,Repayments,pct,up_good
+2025-11-01,autopay_adoption_rate,0.5643564356435643,Autopay adoption,Repayments,pct,up_good
+2025-12-01,autopay_adoption_rate,0.5097345132743363,Autopay adoption,Repayments,pct,up_good
+2026-01-01,autopay_adoption_rate,0.6172607879924953,Autopay adoption,Repayments,pct,up_good
+2026-02-01,autopay_adoption_rate,0.6479925303454716,Autopay adoption,Repayments,pct,up_good
+2026-03-01,autopay_adoption_rate,0.6396468699839486,Autopay adoption,Repayments,pct,up_good
+2026-04-01,autopay_adoption_rate,0.6408068269976727,Autopay adoption,Repayments,pct,up_good
+2026-05-01,autopay_adoption_rate,0.6502649507948524,Autopay adoption,Repayments,pct,up_good
+2026-06-01,autopay_adoption_rate,0.6488785769528229,Autopay adoption,Repayments,pct,up_good
+2024-07-01,fpd30_rate,0.01875,First-payment default (FPD30),Risk,pct,down_good
+2024-08-01,fpd30_rate,0.01278772378516624,First-payment default (FPD30),Risk,pct,down_good
+2024-09-01,fpd30_rate,0.006711409395973154,First-payment default (FPD30),Risk,pct,down_good
+2024-10-01,fpd30_rate,0.016722408026755852,First-payment default (FPD30),Risk,pct,down_good
+2024-11-01,fpd30_rate,0.01757469244288225,First-payment default (FPD30),Risk,pct,down_good
+2024-12-01,fpd30_rate,0.020123839009287926,First-payment default (FPD30),Risk,pct,down_good
+2025-01-01,fpd30_rate,0.009174311926605505,First-payment default (FPD30),Risk,pct,down_good
+2025-02-01,fpd30_rate,0.02336448598130841,First-payment default (FPD30),Risk,pct,down_good
+2025-03-01,fpd30_rate,0.010159651669085631,First-payment default (FPD30),Risk,pct,down_good
+2025-04-01,fpd30_rate,0.021711366538952746,First-payment default (FPD30),Risk,pct,down_good
+2025-05-01,fpd30_rate,0.016706443914081145,First-payment default (FPD30),Risk,pct,down_good
+2025-06-01,fpd30_rate,0.017811704834605598,First-payment default (FPD30),Risk,pct,down_good
+2025-07-01,fpd30_rate,0.01650943396226415,First-payment default (FPD30),Risk,pct,down_good
+2025-08-01,fpd30_rate,0.02224694104560623,First-payment default (FPD30),Risk,pct,down_good
+2025-09-01,fpd30_rate,0.02631578947368421,First-payment default (FPD30),Risk,pct,down_good
+2025-10-01,fpd30_rate,0.02697841726618705,First-payment default (FPD30),Risk,pct,down_good
+2025-11-01,fpd30_rate,0.0297029702970297,First-payment default (FPD30),Risk,pct,down_good
+2025-12-01,fpd30_rate,0.016814159292035398,First-payment default (FPD30),Risk,pct,down_good
+2026-01-01,fpd30_rate,0.01876172607879925,First-payment default (FPD30),Risk,pct,down_good
+2026-02-01,fpd30_rate,0.02334267040149393,First-payment default (FPD30),Risk,pct,down_good
+2026-03-01,fpd30_rate,0.018459069020866775,First-payment default (FPD30),Risk,pct,down_good
+2026-04-01,fpd30_rate,0.01474010861132661,First-payment default (FPD30),Risk,pct,down_good
+2026-05-01,fpd30_rate,,First-payment default (FPD30),Risk,pct,down_good
+2026-06-01,fpd30_rate,,First-payment default (FPD30),Risk,pct,down_good
+2024-07-01,gross_revenue,337261.25,Gross revenue,Revenue,inr,up_good
+2024-08-01,gross_revenue,673392.5,Gross revenue,Revenue,inr,up_good
+2024-09-01,gross_revenue,964401.01,Gross revenue,Revenue,inr,up_good
+2024-10-01,gross_revenue,1363980.93,Gross revenue,Revenue,inr,up_good
+2024-11-01,gross_revenue,1646850.55,Gross revenue,Revenue,inr,up_good
+2024-12-01,gross_revenue,1872218.97,Gross revenue,Revenue,inr,up_good
+2025-01-01,gross_revenue,2023929.55,Gross revenue,Revenue,inr,up_good
+2025-02-01,gross_revenue,2244629.24,Gross revenue,Revenue,inr,up_good
+2025-03-01,gross_revenue,2430812.35,Gross revenue,Revenue,inr,up_good
+2025-04-01,gross_revenue,2704449.79,Gross revenue,Revenue,inr,up_good
+2025-05-01,gross_revenue,3010062.05,Gross revenue,Revenue,inr,up_good
+2025-06-01,gross_revenue,3134307.44,Gross revenue,Revenue,inr,up_good
+2025-07-01,gross_revenue,3365023.51,Gross revenue,Revenue,inr,up_good
+2025-08-01,gross_revenue,3615495.32,Gross revenue,Revenue,inr,up_good
+2025-09-01,gross_revenue,3794651.65,Gross revenue,Revenue,inr,up_good
+2025-10-01,gross_revenue,4203075.82,Gross revenue,Revenue,inr,up_good
+2025-11-01,gross_revenue,4400727.29,Gross revenue,Revenue,inr,up_good
+2025-12-01,gross_revenue,4672397.66,Gross revenue,Revenue,inr,up_good
+2026-01-01,gross_revenue,4809013.64,Gross revenue,Revenue,inr,up_good
+2026-02-01,gross_revenue,4842703.49,Gross revenue,Revenue,inr,up_good
+2026-03-01,gross_revenue,5338927.22,Gross revenue,Revenue,inr,up_good
+2026-04-01,gross_revenue,5570532.29,Gross revenue,Revenue,inr,up_good
+2026-05-01,gross_revenue,5837530.55,Gross revenue,Revenue,inr,up_good
+2026-06-01,gross_revenue,5930353.88,Gross revenue,Revenue,inr,up_good
+2024-07-01,net_revenue,337261.25,Net revenue,Revenue,inr,up_good
+2024-08-01,net_revenue,673392.5,Net revenue,Revenue,inr,up_good
+2024-09-01,net_revenue,964401.01,Net revenue,Revenue,inr,up_good
+2024-10-01,net_revenue,1363980.93,Net revenue,Revenue,inr,up_good
+2024-11-01,net_revenue,1646850.55,Net revenue,Revenue,inr,up_good
+2024-12-01,net_revenue,1872218.97,Net revenue,Revenue,inr,up_good
+2025-01-01,net_revenue,2023929.55,Net revenue,Revenue,inr,up_good
+2025-02-01,net_revenue,2236271.8,Net revenue,Revenue,inr,up_good
+2025-03-01,net_revenue,2008550.54,Net revenue,Revenue,inr,up_good
+2025-04-01,net_revenue,2510909.69,Net revenue,Revenue,inr,up_good
+2025-05-01,net_revenue,2172977.05,Net revenue,Revenue,inr,up_good
+2025-06-01,net_revenue,2393043.9,Net revenue,Revenue,inr,up_good
+2025-07-01,net_revenue,2450693.01,Net revenue,Revenue,inr,up_good
+2025-08-01,net_revenue,3061525.66,Net revenue,Revenue,inr,up_good
+2025-09-01,net_revenue,3419441.39,Net revenue,Revenue,inr,up_good
+2025-10-01,net_revenue,3921628.2,Net revenue,Revenue,inr,up_good
+2025-11-01,net_revenue,3832089.04,Net revenue,Revenue,inr,up_good
+2025-12-01,net_revenue,3700254.48,Net revenue,Revenue,inr,up_good
+2026-01-01,net_revenue,3903696.75,Net revenue,Revenue,inr,up_good
+2026-02-01,net_revenue,3900062.21,Net revenue,Revenue,inr,up_good
+2026-03-01,net_revenue,3857800.11,Net revenue,Revenue,inr,up_good
+2026-04-01,net_revenue,4683916.5,Net revenue,Revenue,inr,up_good
+2026-05-01,net_revenue,4103008.88,Net revenue,Revenue,inr,up_good
+2026-06-01,net_revenue,3396118.04,Net revenue,Revenue,inr,up_good
+2024-07-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2024-08-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2024-09-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2024-10-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2024-11-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2024-12-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2025-01-01,credit_losses,0.0,Credit losses (write-offs),Revenue,inr,down_good
+2025-02-01,credit_losses,8357.44,Credit losses (write-offs),Revenue,inr,down_good
+2025-03-01,credit_losses,422261.81,Credit losses (write-offs),Revenue,inr,down_good
+2025-04-01,credit_losses,193540.1,Credit losses (write-offs),Revenue,inr,down_good
+2025-05-01,credit_losses,837085.0,Credit losses (write-offs),Revenue,inr,down_good
+2025-06-01,credit_losses,741263.54,Credit losses (write-offs),Revenue,inr,down_good
+2025-07-01,credit_losses,914330.5,Credit losses (write-offs),Revenue,inr,down_good
+2025-08-01,credit_losses,553969.66,Credit losses (write-offs),Revenue,inr,down_good
+2025-09-01,credit_losses,375210.26,Credit losses (write-offs),Revenue,inr,down_good
+2025-10-01,credit_losses,281447.62,Credit losses (write-offs),Revenue,inr,down_good
+2025-11-01,credit_losses,568638.25,Credit losses (write-offs),Revenue,inr,down_good
+2025-12-01,credit_losses,972143.18,Credit losses (write-offs),Revenue,inr,down_good
+2026-01-01,credit_losses,905316.89,Credit losses (write-offs),Revenue,inr,down_good
+2026-02-01,credit_losses,942641.28,Credit losses (write-offs),Revenue,inr,down_good
+2026-03-01,credit_losses,1481127.11,Credit losses (write-offs),Revenue,inr,down_good
+2026-04-01,credit_losses,886615.79,Credit losses (write-offs),Revenue,inr,down_good
+2026-05-01,credit_losses,1734521.67,Credit losses (write-offs),Revenue,inr,down_good
+2026-06-01,credit_losses,2534235.84,Credit losses (write-offs),Revenue,inr,down_good
+2024-07-01,outstanding_principal,13738000.0,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-08-01,outstanding_principal,28577140.95,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-09-01,outstanding_principal,43116275.85,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-10-01,outstanding_principal,60676889.2,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-11-01,outstanding_principal,74787676.35,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-12-01,outstanding_principal,88211965.52,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-01-01,outstanding_principal,98833332.2,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-02-01,outstanding_principal,108795049.41,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-03-01,outstanding_principal,117066220.36,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-04-01,outstanding_principal,130188394.86,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-05-01,outstanding_principal,143851317.98,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-06-01,outstanding_principal,151489023.53,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-07-01,outstanding_principal,161348381.66,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-08-01,outstanding_principal,172583216.75,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-09-01,outstanding_principal,182689943.64,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-10-01,outstanding_principal,201353591.63,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-11-01,outstanding_principal,214750610.82,Outstanding principal (AUM),Portfolio,inr,up_good
+2025-12-01,outstanding_principal,227957847.23,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-01-01,outstanding_principal,233323189.45,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-02-01,outstanding_principal,243491907.71,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-03-01,outstanding_principal,255994344.81,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-04-01,outstanding_principal,272010614.31,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-05-01,outstanding_principal,284851420.07,Outstanding principal (AUM),Portfolio,inr,up_good
+2026-06-01,outstanding_principal,295594950.99,Outstanding principal (AUM),Portfolio,inr,up_good
+2024-07-01,par30_rate,0.0,PAR30,Risk,pct,down_good
+2024-08-01,par30_rate,0.0,PAR30,Risk,pct,down_good
+2024-09-01,par30_rate,0.0005881175843715639,PAR30,Risk,pct,down_good
+2024-10-01,par30_rate,0.009779995609926553,PAR30,Risk,pct,down_good
+2024-11-01,par30_rate,0.008345751338482386,PAR30,Risk,pct,down_good
+2024-12-01,par30_rate,0.017517469210564757,PAR30,Risk,pct,down_good
+2025-01-01,par30_rate,0.023677999192260362,PAR30,Risk,pct,down_good
+2025-02-01,par30_rate,0.032030770231716924,PAR30,Risk,pct,down_good
+2025-03-01,par30_rate,0.028035209216692267,PAR30,Risk,pct,down_good
+2025-04-01,par30_rate,0.028501602650453015,PAR30,Risk,pct,down_good
+2025-05-01,par30_rate,0.02503345127849763,PAR30,Risk,pct,down_good
+2025-06-01,par30_rate,0.02064411332997124,PAR30,Risk,pct,down_good
+2025-07-01,par30_rate,0.021228705331657802,PAR30,Risk,pct,down_good
+2025-08-01,par30_rate,0.021861327370351034,PAR30,Risk,pct,down_good
+2025-09-01,par30_rate,0.023666591186431,PAR30,Risk,pct,down_good
+2025-10-01,par30_rate,0.027911157156447094,PAR30,Risk,pct,down_good
+2025-11-01,par30_rate,0.032277229450163945,PAR30,Risk,pct,down_good
+2025-12-01,par30_rate,0.030634683187519413,PAR30,Risk,pct,down_good
+2026-01-01,par30_rate,0.03814551378703519,PAR30,Risk,pct,down_good
+2026-02-01,par30_rate,0.03963813455145729,PAR30,Risk,pct,down_good
+2026-03-01,par30_rate,0.04357833817883706,PAR30,Risk,pct,down_good
+2026-04-01,par30_rate,0.04030173718701455,PAR30,Risk,pct,down_good
+2026-05-01,par30_rate,0.037936716297024005,PAR30,Risk,pct,down_good
+2026-06-01,par30_rate,0.03572060951865584,PAR30,Risk,pct,down_good
+2024-07-01,npa_rate,0.0,NPA (90+ DPD),Risk,pct,down_good
+2024-08-01,npa_rate,0.0,NPA (90+ DPD),Risk,pct,down_good
+2024-09-01,npa_rate,0.0,NPA (90+ DPD),Risk,pct,down_good
+2024-10-01,npa_rate,0.0,NPA (90+ DPD),Risk,pct,down_good
+2024-11-01,npa_rate,0.00011174889243634057,NPA (90+ DPD),Risk,pct,down_good
+2024-12-01,npa_rate,0.004881642161146122,NPA (90+ DPD),Risk,pct,down_good
+2025-01-01,npa_rate,0.00631527174189519,NPA (90+ DPD),Risk,pct,down_good
+2025-02-01,npa_rate,0.013354347627755721,NPA (90+ DPD),Risk,pct,down_good
+2025-03-01,npa_rate,0.01544492531184339,NPA (90+ DPD),Risk,pct,down_good
+2025-04-01,npa_rate,0.019429326190864446,NPA (90+ DPD),Risk,pct,down_good
+2025-05-01,npa_rate,0.015508506152930557,NPA (90+ DPD),Risk,pct,down_good
+2025-06-01,npa_rate,0.012084643476743123,NPA (90+ DPD),Risk,pct,down_good
+2025-07-01,npa_rate,0.008843889447908579,NPA (90+ DPD),Risk,pct,down_good
+2025-08-01,npa_rate,0.007923155714386695,NPA (90+ DPD),Risk,pct,down_good
+2025-09-01,npa_rate,0.01126597725628375,NPA (90+ DPD),Risk,pct,down_good
+2025-10-01,npa_rate,0.012742055650611688,NPA (90+ DPD),Risk,pct,down_good
+2025-11-01,npa_rate,0.014944678842799857,NPA (90+ DPD),Risk,pct,down_good
+2025-12-01,npa_rate,0.015578745689841897,NPA (90+ DPD),Risk,pct,down_good
+2026-01-01,npa_rate,0.015259154601788769,NPA (90+ DPD),Risk,pct,down_good
+2026-02-01,npa_rate,0.017800228848517077,NPA (90+ DPD),Risk,pct,down_good
+2026-03-01,npa_rate,0.022058596584198505,NPA (90+ DPD),Risk,pct,down_good
+2026-04-01,npa_rate,0.02253177753944245,NPA (90+ DPD),Risk,pct,down_good
+2026-05-01,npa_rate,0.0252244161473174,NPA (90+ DPD),Risk,pct,down_good
+2026-06-01,npa_rate,0.020080100827570634,NPA (90+ DPD),Risk,pct,down_good
+2024-07-01,collection_efficiency,,Collection efficiency,Repayments,pct,up_good
+2024-08-01,collection_efficiency,0.947397632217331,Collection efficiency,Repayments,pct,up_good
+2024-09-01,collection_efficiency,0.9627692395299117,Collection efficiency,Repayments,pct,up_good
+2024-10-01,collection_efficiency,0.9687941810265153,Collection efficiency,Repayments,pct,up_good
+2024-11-01,collection_efficiency,0.9636793200110896,Collection efficiency,Repayments,pct,up_good
+2024-12-01,collection_efficiency,0.9612631122458772,Collection efficiency,Repayments,pct,up_good
+2025-01-01,collection_efficiency,0.9419382002762088,Collection efficiency,Repayments,pct,up_good
+2025-02-01,collection_efficiency,0.9392638247848962,Collection efficiency,Repayments,pct,up_good
+2025-03-01,collection_efficiency,0.9518071769965799,Collection efficiency,Repayments,pct,up_good
+2025-04-01,collection_efficiency,0.9556546400420088,Collection efficiency,Repayments,pct,up_good
+2025-05-01,collection_efficiency,0.9535930416645196,Collection efficiency,Repayments,pct,up_good
+2025-06-01,collection_efficiency,0.9526812073536576,Collection efficiency,Repayments,pct,up_good
+2025-07-01,collection_efficiency,0.9554423520332107,Collection efficiency,Repayments,pct,up_good
+2025-08-01,collection_efficiency,0.9541504744978463,Collection efficiency,Repayments,pct,up_good
+2025-09-01,collection_efficiency,0.9475331652656758,Collection efficiency,Repayments,pct,up_good
+2025-10-01,collection_efficiency,0.9450812253579081,Collection efficiency,Repayments,pct,up_good
+2025-11-01,collection_efficiency,0.9387533045941421,Collection efficiency,Repayments,pct,up_good
+2025-12-01,collection_efficiency,0.9410963771934304,Collection efficiency,Repayments,pct,up_good
+2026-01-01,collection_efficiency,0.944710954530544,Collection efficiency,Repayments,pct,up_good
+2026-02-01,collection_efficiency,0.9175200992495998,Collection efficiency,Repayments,pct,up_good
+2026-03-01,collection_efficiency,0.9347472913571642,Collection efficiency,Repayments,pct,up_good
+2026-04-01,collection_efficiency,0.930833122306218,Collection efficiency,Repayments,pct,up_good
+2026-05-01,collection_efficiency,0.9351817030663113,Collection efficiency,Repayments,pct,up_good
+2026-06-01,collection_efficiency,0.9392033026523645,Collection efficiency,Repayments,pct,up_good
+2024-07-01,payment_failure_rate,0.0,Payment failure rate,Repayments,pct,down_good
+2024-08-01,payment_failure_rate,0.08806818181818182,Payment failure rate,Repayments,pct,down_good
+2024-09-01,payment_failure_rate,0.06412213740458016,Payment failure rate,Repayments,pct,down_good
+2024-10-01,payment_failure_rate,0.06305418719211822,Payment failure rate,Repayments,pct,down_good
+2024-11-01,payment_failure_rate,0.08623087621696801,Payment failure rate,Repayments,pct,down_good
+2024-12-01,payment_failure_rate,0.07300115874855156,Payment failure rate,Repayments,pct,down_good
+2025-01-01,payment_failure_rate,0.08413926499032882,Payment failure rate,Repayments,pct,down_good
+2025-02-01,payment_failure_rate,0.07012987012987013,Payment failure rate,Repayments,pct,down_good
+2025-03-01,payment_failure_rate,0.08986615678776291,Payment failure rate,Repayments,pct,down_good
+2025-04-01,payment_failure_rate,0.08434163701067615,Payment failure rate,Repayments,pct,down_good
+2025-05-01,payment_failure_rate,0.08505154639175258,Payment failure rate,Repayments,pct,down_good
+2025-06-01,payment_failure_rate,0.08027050867391944,Payment failure rate,Repayments,pct,down_good
+2025-07-01,payment_failure_rate,0.09081051775548929,Payment failure rate,Repayments,pct,down_good
+2025-08-01,payment_failure_rate,0.1055667001003009,Payment failure rate,Repayments,pct,down_good
+2025-09-01,payment_failure_rate,0.0923226433430515,Payment failure rate,Repayments,pct,down_good
+2025-10-01,payment_failure_rate,0.09105394946505804,Payment failure rate,Repayments,pct,down_good
+2025-11-01,payment_failure_rate,0.09049111807732498,Payment failure rate,Repayments,pct,down_good
+2025-12-01,payment_failure_rate,0.09223584354932866,Payment failure rate,Repayments,pct,down_good
+2026-01-01,payment_failure_rate,0.0900684298132051,Payment failure rate,Repayments,pct,down_good
+2026-02-01,payment_failure_rate,0.0986628117094326,Payment failure rate,Repayments,pct,down_good
+2026-03-01,payment_failure_rate,0.09437478820738733,Payment failure rate,Repayments,pct,down_good
+2026-04-01,payment_failure_rate,0.09946367625548513,Payment failure rate,Repayments,pct,down_good
+2026-05-01,payment_failure_rate,0.09992337164750958,Payment failure rate,Repayments,pct,down_good
+2026-06-01,payment_failure_rate,0.1031948402579871,Payment failure rate,Repayments,pct,down_good
+2024-07-01,mau,2398.0,Monthly active users,Engagement,count,up_good
+2024-08-01,mau,3728.0,Monthly active users,Engagement,count,up_good
+2024-09-01,mau,4234.0,Monthly active users,Engagement,count,up_good
+2024-10-01,mau,5440.0,Monthly active users,Engagement,count,up_good
+2024-11-01,mau,5875.0,Monthly active users,Engagement,count,up_good
+2024-12-01,mau,6197.0,Monthly active users,Engagement,count,up_good
+2025-01-01,mau,6731.0,Monthly active users,Engagement,count,up_good
+2025-02-01,mau,6859.0,Monthly active users,Engagement,count,up_good
+2025-03-01,mau,7763.0,Monthly active users,Engagement,count,up_good
+2025-04-01,mau,8087.0,Monthly active users,Engagement,count,up_good
+2025-05-01,mau,8736.0,Monthly active users,Engagement,count,up_good
+2025-06-01,mau,9245.0,Monthly active users,Engagement,count,up_good
+2025-07-01,mau,9889.0,Monthly active users,Engagement,count,up_good
+2025-08-01,mau,10149.0,Monthly active users,Engagement,count,up_good
+2025-09-01,mau,11660.0,Monthly active users,Engagement,count,up_good
+2025-10-01,mau,13010.0,Monthly active users,Engagement,count,up_good
+2025-11-01,mau,12870.0,Monthly active users,Engagement,count,up_good
+2025-12-01,mau,12741.0,Monthly active users,Engagement,count,up_good
+2026-01-01,mau,12841.0,Monthly active users,Engagement,count,up_good
+2026-02-01,mau,12504.0,Monthly active users,Engagement,count,up_good
+2026-03-01,mau,13712.0,Monthly active users,Engagement,count,up_good
+2026-04-01,mau,13898.0,Monthly active users,Engagement,count,up_good
+2026-05-01,mau,14705.0,Monthly active users,Engagement,count,up_good
+2026-06-01,mau,14918.0,Monthly active users,Engagement,count,up_good
+2024-07-01,support_tickets,112.0,Support tickets,Support,count,down_good
+2024-08-01,support_tickets,154.0,Support tickets,Support,count,down_good
+2024-09-01,support_tickets,147.0,Support tickets,Support,count,down_good
+2024-10-01,support_tickets,199.0,Support tickets,Support,count,down_good
+2024-11-01,support_tickets,203.0,Support tickets,Support,count,down_good
+2024-12-01,support_tickets,194.0,Support tickets,Support,count,down_good
+2025-01-01,support_tickets,219.0,Support tickets,Support,count,down_good
+2025-02-01,support_tickets,198.0,Support tickets,Support,count,down_good
+2025-03-01,support_tickets,232.0,Support tickets,Support,count,down_good
+2025-04-01,support_tickets,246.0,Support tickets,Support,count,down_good
+2025-05-01,support_tickets,273.0,Support tickets,Support,count,down_good
+2025-06-01,support_tickets,248.0,Support tickets,Support,count,down_good
+2025-07-01,support_tickets,255.0,Support tickets,Support,count,down_good
+2025-08-01,support_tickets,318.0,Support tickets,Support,count,down_good
+2025-09-01,support_tickets,374.0,Support tickets,Support,count,down_good
+2025-10-01,support_tickets,400.0,Support tickets,Support,count,down_good
+2025-11-01,support_tickets,357.0,Support tickets,Support,count,down_good
+2025-12-01,support_tickets,323.0,Support tickets,Support,count,down_good
+2026-01-01,support_tickets,307.0,Support tickets,Support,count,down_good
+2026-02-01,support_tickets,289.0,Support tickets,Support,count,down_good
+2026-03-01,support_tickets,364.0,Support tickets,Support,count,down_good
+2026-04-01,support_tickets,338.0,Support tickets,Support,count,down_good
+2026-05-01,support_tickets,335.0,Support tickets,Support,count,down_good
+2026-06-01,support_tickets,361.0,Support tickets,Support,count,down_good
+2024-07-01,tickets_per_1k_mau,46.705587989991656,Tickets per 1k MAU,Support,ratio,down_good
+2024-08-01,tickets_per_1k_mau,41.30901287553648,Tickets per 1k MAU,Support,ratio,down_good
+2024-09-01,tickets_per_1k_mau,34.718941898913556,Tickets per 1k MAU,Support,ratio,down_good
+2024-10-01,tickets_per_1k_mau,36.580882352941174,Tickets per 1k MAU,Support,ratio,down_good
+2024-11-01,tickets_per_1k_mau,34.5531914893617,Tickets per 1k MAU,Support,ratio,down_good
+2024-12-01,tickets_per_1k_mau,31.305470388897852,Tickets per 1k MAU,Support,ratio,down_good
+2025-01-01,tickets_per_1k_mau,32.53602733620561,Tickets per 1k MAU,Support,ratio,down_good
+2025-02-01,tickets_per_1k_mau,28.86718180492783,Tickets per 1k MAU,Support,ratio,down_good
+2025-03-01,tickets_per_1k_mau,29.885353600412213,Tickets per 1k MAU,Support,ratio,down_good
+2025-04-01,tickets_per_1k_mau,30.41919129467046,Tickets per 1k MAU,Support,ratio,down_good
+2025-05-01,tickets_per_1k_mau,31.25,Tickets per 1k MAU,Support,ratio,down_good
+2025-06-01,tickets_per_1k_mau,26.825310978907517,Tickets per 1k MAU,Support,ratio,down_good
+2025-07-01,tickets_per_1k_mau,25.786227121043584,Tickets per 1k MAU,Support,ratio,down_good
+2025-08-01,tickets_per_1k_mau,31.33313626958321,Tickets per 1k MAU,Support,ratio,down_good
+2025-09-01,tickets_per_1k_mau,32.075471698113205,Tickets per 1k MAU,Support,ratio,down_good
+2025-10-01,tickets_per_1k_mau,30.745580322828594,Tickets per 1k MAU,Support,ratio,down_good
+2025-11-01,tickets_per_1k_mau,27.73892773892774,Tickets per 1k MAU,Support,ratio,down_good
+2025-12-01,tickets_per_1k_mau,25.35122831802841,Tickets per 1k MAU,Support,ratio,down_good
+2026-01-01,tickets_per_1k_mau,23.90779534304182,Tickets per 1k MAU,Support,ratio,down_good
+2026-02-01,tickets_per_1k_mau,23.112603966730646,Tickets per 1k MAU,Support,ratio,down_good
+2026-03-01,tickets_per_1k_mau,26.546091015169196,Tickets per 1k MAU,Support,ratio,down_good
+2026-04-01,tickets_per_1k_mau,24.320046049791337,Tickets per 1k MAU,Support,ratio,down_good
+2026-05-01,tickets_per_1k_mau,22.78136688201292,Tickets per 1k MAU,Support,ratio,down_good
+2026-06-01,tickets_per_1k_mau,24.198954283416008,Tickets per 1k MAU,Support,ratio,down_good
+2024-07-01,csat_avg,3.3333333333333335,CSAT,Support,score,up_good
+2024-08-01,csat_avg,3.4927536231884058,CSAT,Support,score,up_good
+2024-09-01,csat_avg,3.423076923076923,CSAT,Support,score,up_good
+2024-10-01,csat_avg,3.5921052631578947,CSAT,Support,score,up_good
+2024-11-01,csat_avg,3.5052631578947366,CSAT,Support,score,up_good
+2024-12-01,csat_avg,3.525,CSAT,Support,score,up_good
+2025-01-01,csat_avg,3.4831460674157304,CSAT,Support,score,up_good
+2025-02-01,csat_avg,3.5,CSAT,Support,score,up_good
+2025-03-01,csat_avg,3.481132075471698,CSAT,Support,score,up_good
+2025-04-01,csat_avg,3.5555555555555554,CSAT,Support,score,up_good
+2025-05-01,csat_avg,3.5042735042735043,CSAT,Support,score,up_good
+2025-06-01,csat_avg,3.5825242718446604,CSAT,Support,score,up_good
+2025-07-01,csat_avg,3.5436893203883497,CSAT,Support,score,up_good
+2025-08-01,csat_avg,3.5478260869565217,CSAT,Support,score,up_good
+2025-09-01,csat_avg,3.509433962264151,CSAT,Support,score,up_good
+2025-10-01,csat_avg,3.4759036144578315,CSAT,Support,score,up_good
+2025-11-01,csat_avg,3.566666666666667,CSAT,Support,score,up_good
+2025-12-01,csat_avg,3.5037037037037035,CSAT,Support,score,up_good
+2026-01-01,csat_avg,3.4705882352941178,CSAT,Support,score,up_good
+2026-02-01,csat_avg,3.581967213114754,CSAT,Support,score,up_good
+2026-03-01,csat_avg,3.5126582278481013,CSAT,Support,score,up_good
+2026-04-01,csat_avg,3.5267175572519083,CSAT,Support,score,up_good
+2026-05-01,csat_avg,3.4825174825174825,CSAT,Support,score,up_good
+2026-06-01,csat_avg,3.4586466165413534,CSAT,Support,score,up_good
+2024-07-01,marketing_spend,680912.9699999976,Marketing spend,Marketing,inr,neutral
+2024-08-01,marketing_spend,641580.2300000006,Marketing spend,Marketing,inr,neutral
+2024-09-01,marketing_spend,655030.7300000021,Marketing spend,Marketing,inr,neutral
+2024-10-01,marketing_spend,851095.9893750014,Marketing spend,Marketing,inr,neutral
+2024-11-01,marketing_spend,741709.070625,Marketing spend,Marketing,inr,neutral
+2024-12-01,marketing_spend,649433.409999999,Marketing spend,Marketing,inr,neutral
+2025-01-01,marketing_spend,704519.5600000013,Marketing spend,Marketing,inr,neutral
+2025-02-01,marketing_spend,584919.5299999982,Marketing spend,Marketing,inr,neutral
+2025-03-01,marketing_spend,771054.2799999977,Marketing spend,Marketing,inr,neutral
+2025-04-01,marketing_spend,765250.1700000007,Marketing spend,Marketing,inr,neutral
+2025-05-01,marketing_spend,775754.7699999991,Marketing spend,Marketing,inr,neutral
+2025-06-01,marketing_spend,792623.6599999978,Marketing spend,Marketing,inr,neutral
+2025-07-01,marketing_spend,920368.6800000006,Marketing spend,Marketing,inr,neutral
+2025-08-01,marketing_spend,916351.120000001,Marketing spend,Marketing,inr,neutral
+2025-09-01,marketing_spend,1458701.5300000042,Marketing spend,Marketing,inr,neutral
+2025-10-01,marketing_spend,1966790.031304345,Marketing spend,Marketing,inr,neutral
+2025-11-01,marketing_spend,1218913.4986956534,Marketing spend,Marketing,inr,neutral
+2025-12-01,marketing_spend,958219.1299999998,Marketing spend,Marketing,inr,neutral
+2026-01-01,marketing_spend,1070509.7699999984,Marketing spend,Marketing,inr,neutral
+2026-02-01,marketing_spend,950373.6799999988,Marketing spend,Marketing,inr,neutral
+2026-03-01,marketing_spend,1046655.9800000017,Marketing spend,Marketing,inr,neutral
+2026-04-01,marketing_spend,965740.599999998,Marketing spend,Marketing,inr,neutral
+2026-05-01,marketing_spend,1081711.5199999993,Marketing spend,Marketing,inr,neutral
+2026-06-01,marketing_spend,1162023.8699999955,Marketing spend,Marketing,inr,neutral
+2024-07-01,blended_cac,283.95036280233427,Blended CAC,Marketing,inr,down_good
+2024-08-01,blended_cac,267.99508354218904,Blended CAC,Marketing,inr,down_good
+2024-09-01,blended_cac,276.3842742616043,Blended CAC,Marketing,inr,down_good
+2024-10-01,blended_cac,277.2299639657985,Blended CAC,Marketing,inr,down_good
+2024-11-01,blended_cac,272.6871583180147,Blended CAC,Marketing,inr,down_good
+2024-12-01,blended_cac,245.90435819765202,Blended CAC,Marketing,inr,down_good
+2025-01-01,blended_cac,252.06424329159262,Blended CAC,Marketing,inr,down_good
+2025-02-01,blended_cac,222.65684430909712,Blended CAC,Marketing,inr,down_good
+2025-03-01,blended_cac,273.6175585521638,Blended CAC,Marketing,inr,down_good
+2025-04-01,blended_cac,264.79244636678226,Blended CAC,Marketing,inr,down_good
+2025-05-01,blended_cac,252.6065678931941,Blended CAC,Marketing,inr,down_good
+2025-06-01,blended_cac,249.09605908233746,Blended CAC,Marketing,inr,down_good
+2025-07-01,blended_cac,281.8893353751916,Blended CAC,Marketing,inr,down_good
+2025-08-01,blended_cac,276.7596254907886,Blended CAC,Marketing,inr,down_good
+2025-09-01,blended_cac,318.84186448087524,Blended CAC,Marketing,inr,down_good
+2025-10-01,blended_cac,387.3921668907514,Blended CAC,Marketing,inr,down_good
+2025-11-01,blended_cac,285.05928407288434,Blended CAC,Marketing,inr,down_good
+2025-12-01,blended_cac,249.08217572134126,Blended CAC,Marketing,inr,down_good
+2026-01-01,blended_cac,284.0301857256562,Blended CAC,Marketing,inr,down_good
+2026-02-01,blended_cac,262.0274827681276,Blended CAC,Marketing,inr,down_good
+2026-03-01,blended_cac,255.9061075794625,Blended CAC,Marketing,inr,down_good
+2026-04-01,blended_cac,243.07591240875863,Blended CAC,Marketing,inr,down_good
+2026-05-01,blended_cac,260.15188071188055,Blended CAC,Marketing,inr,down_good
+2026-06-01,blended_cac,273.0319243421042,Blended CAC,Marketing,inr,down_good
+2024-07-01,cost_per_new_borrower,2127.8530312499925,Cost per new borrower,Marketing,inr,down_good
+2024-08-01,cost_per_new_borrower,1767.4386501377426,Cost per new borrower,Marketing,inr,down_good
+2024-09-01,cost_per_new_borrower,1641.6810275689274,Cost per new borrower,Marketing,inr,down_good
+2024-10-01,cost_per_new_borrower,1668.8156654411791,Cost per new borrower,Marketing,inr,down_good
+2024-11-01,cost_per_new_borrower,1648.2423791666668,Cost per new borrower,Marketing,inr,down_good
+2024-12-01,cost_per_new_borrower,1352.9862708333312,Cost per new borrower,Marketing,inr,down_good
+2025-01-01,cost_per_new_borrower,1467.749083333336,Cost per new borrower,Marketing,inr,down_good
+2025-02-01,cost_per_new_borrower,1296.9390909090869,Cost per new borrower,Marketing,inr,down_good
+2025-03-01,cost_per_new_borrower,1797.3293240093187,Cost per new borrower,Marketing,inr,down_good
+2025-04-01,cost_per_new_borrower,1435.7414071294572,Cost per new borrower,Marketing,inr,down_good
+2025-05-01,cost_per_new_borrower,1395.2423920863293,Cost per new borrower,Marketing,inr,down_good
+2025-06-01,cost_per_new_borrower,1515.5328107074529,Cost per new borrower,Marketing,inr,down_good
+2025-07-01,cost_per_new_borrower,1691.8541911764717,Cost per new borrower,Marketing,inr,down_good
+2025-08-01,cost_per_new_borrower,1566.4121709401727,Cost per new borrower,Marketing,inr,down_good
+2025-09-01,cost_per_new_borrower,2506.3600171821377,Cost per new borrower,Marketing,inr,down_good
+2025-10-01,cost_per_new_borrower,2480.189194583033,Cost per new borrower,Marketing,inr,down_good
+2025-11-01,cost_per_new_borrower,1702.393154602868,Cost per new borrower,Marketing,inr,down_good
+2025-12-01,cost_per_new_borrower,1338.2948743016757,Cost per new borrower,Marketing,inr,down_good
+2026-01-01,cost_per_new_borrower,1636.8650917431169,Cost per new borrower,Marketing,inr,down_good
+2026-02-01,cost_per_new_borrower,1426.9875075075056,Cost per new borrower,Marketing,inr,down_good
+2026-03-01,cost_per_new_borrower,1343.5891912708623,Cost per new borrower,Marketing,inr,down_good
+2026-04-01,cost_per_new_borrower,1160.745913461536,Cost per new borrower,Marketing,inr,down_good
+2026-05-01,cost_per_new_borrower,1333.7996547472248,Cost per new borrower,Marketing,inr,down_good
+2026-06-01,cost_per_new_borrower,1380.075855106883,Cost per new borrower,Marketing,inr,down_good

@@ -1,0 +1,160 @@
+month_start,product_id,product_name,gross_revenue,share_of_month_pct,rank_in_month
+2024-07-01,P01,Instant Personal Loan,183925.0,54.53,1
+2024-07-01,P05,Business Micro Loan,39750.0,11.79,2
+2024-07-01,P06,P2P Marketplace Loan,38535.0,11.43,3
+2024-07-01,P02,Salary Advance,37080.0,10.99,4
+2024-07-01,P04,Consumer Durable Loan,32940.0,9.77,5
+2024-07-01,P03,Pay Later,5032.0,1.49,6
+2024-08-01,P01,Instant Personal Loan,344356.0,51.14,1
+2024-08-01,P05,Business Micro Loan,113095.0,16.79,2
+2024-08-01,P04,Consumer Durable Loan,87706.0,13.02,3
+2024-08-01,P02,Salary Advance,79476.0,11.8,4
+2024-08-01,P06,P2P Marketplace Loan,37175.0,5.52,5
+2024-08-01,P03,Pay Later,11585.0,1.72,6
+2024-09-01,P01,Instant Personal Loan,489261.0,50.73,1
+2024-09-01,P05,Business Micro Loan,165233.0,17.13,2
+2024-09-01,P02,Salary Advance,120730.0,12.52,3
+2024-09-01,P04,Consumer Durable Loan,100083.0,10.38,4
+2024-09-01,P06,P2P Marketplace Loan,72005.0,7.47,5
+2024-09-01,P03,Pay Later,17088.0,1.77,6
+2024-10-01,P01,Instant Personal Loan,735712.0,53.94,1
+2024-10-01,P05,Business Micro Loan,214573.0,15.73,2
+2024-10-01,P02,Salary Advance,179033.0,13.13,3
+2024-10-01,P04,Consumer Durable Loan,142666.0,10.46,4
+2024-10-01,P06,P2P Marketplace Loan,69415.0,5.09,5
+2024-10-01,P03,Pay Later,22582.0,1.66,6
+2024-11-01,P01,Instant Personal Loan,884702.0,53.72,1
+2024-11-01,P05,Business Micro Loan,246067.0,14.94,2
+2024-11-01,P02,Salary Advance,210232.0,12.77,3
+2024-11-01,P04,Consumer Durable Loan,167308.0,10.16,4
+2024-11-01,P06,P2P Marketplace Loan,109242.0,6.63,5
+2024-11-01,P03,Pay Later,29300.0,1.78,6
+2024-12-01,P01,Instant Personal Loan,1049626.0,56.06,1
+2024-12-01,P05,Business Micro Loan,294128.0,15.71,2
+2024-12-01,P02,Salary Advance,228988.0,12.23,3
+2024-12-01,P04,Consumer Durable Loan,189096.0,10.1,4
+2024-12-01,P06,P2P Marketplace Loan,76849.0,4.1,5
+2024-12-01,P03,Pay Later,33532.0,1.79,6
+2025-01-01,P01,Instant Personal Loan,1113767.0,55.03,1
+2025-01-01,P05,Business Micro Loan,292310.0,14.44,2
+2025-01-01,P02,Salary Advance,253752.0,12.54,3
+2025-01-01,P04,Consumer Durable Loan,226176.0,11.18,4
+2025-01-01,P06,P2P Marketplace Loan,104371.0,5.16,5
+2025-01-01,P03,Pay Later,33554.0,1.66,6
+2025-02-01,P01,Instant Personal Loan,1281570.0,57.09,1
+2025-02-01,P05,Business Micro Loan,367447.0,16.37,2
+2025-02-01,P02,Salary Advance,258802.0,11.53,3
+2025-02-01,P04,Consumer Durable Loan,225827.0,10.06,4
+2025-02-01,P06,P2P Marketplace Loan,75042.0,3.34,5
+2025-02-01,P03,Pay Later,35941.0,1.6,6
+2025-03-01,P01,Instant Personal Loan,1328159.0,54.64,1
+2025-03-01,P05,Business Micro Loan,426951.0,17.56,2
+2025-03-01,P02,Salary Advance,290236.0,11.94,3
+2025-03-01,P04,Consumer Durable Loan,260996.0,10.74,4
+2025-03-01,P06,P2P Marketplace Loan,85531.0,3.52,5
+2025-03-01,P03,Pay Later,38940.0,1.6,6
+2025-04-01,P01,Instant Personal Loan,1462954.0,54.09,1
+2025-04-01,P05,Business Micro Loan,511692.0,18.92,2
+2025-04-01,P02,Salary Advance,297436.0,11.0,3
+2025-04-01,P04,Consumer Durable Loan,261088.0,9.65,4
+2025-04-01,P06,P2P Marketplace Loan,107190.0,3.96,5
+2025-04-01,P03,Pay Later,42021.0,1.55,6
+2025-04-01,P07,Flexi Credit Line,22068.0,0.82,7
+2025-05-01,P01,Instant Personal Loan,1659589.0,55.13,1
+2025-05-01,P05,Business Micro Loan,592760.0,19.69,2
+2025-05-01,P02,Salary Advance,302077.0,10.04,3
+2025-05-01,P04,Consumer Durable Loan,273864.0,9.1,4
+2025-05-01,P06,P2P Marketplace Loan,81447.0,2.71,5
+2025-05-01,P07,Flexi Credit Line,57587.0,1.91,6
+2025-05-01,P03,Pay Later,42738.0,1.42,7
+2025-06-01,P01,Instant Personal Loan,1752784.0,55.92,1
+2025-06-01,P05,Business Micro Loan,584765.0,18.66,2
+2025-06-01,P02,Salary Advance,298548.0,9.53,3
+2025-06-01,P04,Consumer Durable Loan,293220.0,9.36,4
+2025-06-01,P07,Flexi Credit Line,86272.0,2.75,5
+2025-06-01,P06,P2P Marketplace Loan,75826.0,2.42,6
+2025-06-01,P03,Pay Later,42893.0,1.37,7
+2025-07-01,P01,Instant Personal Loan,1807109.0,53.7,1
+2025-07-01,P05,Business Micro Loan,670134.0,19.91,2
+2025-07-01,P02,Salary Advance,308930.0,9.18,3
+2025-07-01,P04,Consumer Durable Loan,291303.0,8.66,4
+2025-07-01,P06,P2P Marketplace Loan,123864.0,3.68,5
+2025-07-01,P07,Flexi Credit Line,117082.0,3.48,6
+2025-07-01,P03,Pay Later,46602.0,1.38,7
+2025-08-01,P01,Instant Personal Loan,1958169.0,54.16,1
+2025-08-01,P05,Business Micro Loan,733098.0,20.28,2
+2025-08-01,P02,Salary Advance,336724.0,9.31,3
+2025-08-01,P04,Consumer Durable Loan,325797.0,9.01,4
+2025-08-01,P07,Flexi Credit Line,135913.0,3.76,5
+2025-08-01,P06,P2P Marketplace Loan,78035.0,2.16,6
+2025-08-01,P03,Pay Later,47760.0,1.32,7
+2025-09-01,P01,Instant Personal Loan,1996702.0,52.62,1
+2025-09-01,P05,Business Micro Loan,788449.0,20.78,2
+2025-09-01,P02,Salary Advance,345484.0,9.1,3
+2025-09-01,P04,Consumer Durable Loan,339572.0,8.95,4
+2025-09-01,P07,Flexi Credit Line,149221.0,3.93,5
+2025-09-01,P06,P2P Marketplace Loan,127396.0,3.36,6
+2025-09-01,P03,Pay Later,47827.0,1.26,7
+2025-10-01,P01,Instant Personal Loan,2182634.0,51.93,1
+2025-10-01,P05,Business Micro Loan,862455.0,20.52,2
+2025-10-01,P04,Consumer Durable Loan,381228.0,9.07,3
+2025-10-01,P02,Salary Advance,369503.0,8.79,4
+2025-10-01,P07,Flexi Credit Line,179903.0,4.28,5
+2025-10-01,P06,P2P Marketplace Loan,175773.0,4.18,6
+2025-10-01,P03,Pay Later,51580.0,1.23,7
+2025-11-01,P01,Instant Personal Loan,2297720.0,52.21,1
+2025-11-01,P05,Business Micro Loan,934272.0,21.23,2
+2025-11-01,P04,Consumer Durable Loan,419351.0,9.53,3
+2025-11-01,P02,Salary Advance,385155.0,8.75,4
+2025-11-01,P07,Flexi Credit Line,204753.0,4.65,5
+2025-11-01,P06,P2P Marketplace Loan,102285.0,2.32,6
+2025-11-01,P03,Pay Later,57191.0,1.3,7
+2025-12-01,P01,Instant Personal Loan,2431269.0,52.03,1
+2025-12-01,P05,Business Micro Loan,996591.0,21.33,2
+2025-12-01,P04,Consumer Durable Loan,438111.0,9.38,3
+2025-12-01,P02,Salary Advance,395427.0,8.46,4
+2025-12-01,P07,Flexi Credit Line,231354.0,4.95,5
+2025-12-01,P06,P2P Marketplace Loan,123024.0,2.63,6
+2025-12-01,P03,Pay Later,56623.0,1.21,7
+2026-01-01,P01,Instant Personal Loan,2461260.0,51.18,1
+2026-01-01,P05,Business Micro Loan,1076840.0,22.39,2
+2026-01-01,P04,Consumer Durable Loan,443076.0,9.21,3
+2026-01-01,P02,Salary Advance,402573.0,8.37,4
+2026-01-01,P07,Flexi Credit Line,248157.0,5.16,5
+2026-01-01,P06,P2P Marketplace Loan,117355.0,2.44,6
+2026-01-01,P03,Pay Later,59753.0,1.24,7
+2026-02-01,P01,Instant Personal Loan,2576778.0,53.21,1
+2026-02-01,P05,Business Micro Loan,1001544.0,20.68,2
+2026-02-01,P04,Consumer Durable Loan,437463.0,9.03,3
+2026-02-01,P02,Salary Advance,384122.0,7.93,4
+2026-02-01,P07,Flexi Credit Line,252825.0,5.22,5
+2026-02-01,P06,P2P Marketplace Loan,132660.0,2.74,6
+2026-02-01,P03,Pay Later,57312.0,1.18,7
+2026-03-01,P01,Instant Personal Loan,2824088.0,52.9,1
+2026-03-01,P05,Business Micro Loan,1140463.0,21.36,2
+2026-03-01,P04,Consumer Durable Loan,457616.0,8.57,3
+2026-03-01,P02,Salary Advance,415534.0,7.78,4
+2026-03-01,P07,Flexi Credit Line,279798.0,5.24,5
+2026-03-01,P06,P2P Marketplace Loan,152853.0,2.86,6
+2026-03-01,P03,Pay Later,68575.0,1.28,7
+2026-04-01,P01,Instant Personal Loan,2947343.0,52.91,1
+2026-04-01,P05,Business Micro Loan,1221078.0,21.92,2
+2026-04-01,P04,Consumer Durable Loan,467038.0,8.38,3
+2026-04-01,P02,Salary Advance,426194.0,7.65,4
+2026-04-01,P07,Flexi Credit Line,289467.0,5.2,5
+2026-04-01,P06,P2P Marketplace Loan,148519.0,2.67,6
+2026-04-01,P03,Pay Later,70893.0,1.27,7
+2026-05-01,P01,Instant Personal Loan,3077703.0,52.72,1
+2026-05-01,P05,Business Micro Loan,1276991.0,21.88,2
+2026-05-01,P04,Consumer Durable Loan,490090.0,8.4,3
+2026-05-01,P02,Salary Advance,471684.0,8.08,4
+2026-05-01,P07,Flexi Credit Line,295532.0,5.06,5
+2026-05-01,P06,P2P Marketplace Loan,158639.0,2.72,6
+2026-05-01,P03,Pay Later,66891.0,1.15,7
+2026-06-01,P01,Instant Personal Loan,3119274.0,52.6,1
+2026-06-01,P05,Business Micro Loan,1291492.0,21.78,2
+2026-06-01,P04,Consumer Durable Loan,483943.0,8.16,3
+2026-06-01,P02,Salary Advance,469697.0,7.92,4
+2026-06-01,P07,Flexi Credit Line,303011.0,5.11,5
+2026-06-01,P06,P2P Marketplace Loan,192185.0,3.24,6
+2026-06-01,P03,Pay Later,70752.0,1.19,7

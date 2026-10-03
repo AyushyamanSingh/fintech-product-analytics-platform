@@ -1,0 +1,123 @@
+campaign_id,campaign_name,channel,start_date,spend,signups,cost_per_signup,kyc_7d_pct,funded,cost_per_funded,first_loan_fpd30_pct,matured_first_loans,review_flag
+CMP-202509-AFFNB,Affiliate Network B | Personal Loan Push | Sep 2025,affiliate,2025-09-08,555794.0,1258,442.0,50.48,4.0,138949.0,0.0,4,inefficient_spend
+CMP-202510-PTN,Employer Partnerships | Always-on | Oct 2025,partnerships,2025-10-01,340000.0,440,773.0,71.82,142.0,2394.0,3.21,156,inefficient_spend
+CMP-202409-AFF,Affiliate | Always-on | Sep 2024,affiliate,2024-09-01,114319.0,331,345.0,45.32,14.0,8166.0,0.0,17,ok
+CMP-202509-AFF,Affiliate | Always-on | Sep 2025,affiliate,2025-09-01,111984.0,343,326.0,47.23,15.0,7466.0,12.5,16,ok
+CMP-202508-AFF,Affiliate | Always-on | Aug 2025,affiliate,2025-08-01,156009.0,389,401.0,51.41,23.0,6783.0,3.57,28,ok
+CMP-202502-AFF,Affiliate | Always-on | Feb 2025,affiliate,2025-02-01,128615.0,346,372.0,51.16,19.0,6769.0,10.0,20,ok
+CMP-202606-AFF,Affiliate | Always-on | Jun 2026,affiliate,2026-06-01,188127.0,461,408.0,54.01,28.0,6719.0,,,ok
+CMP-FEST25-PSO,Festive Season Mega Campaign 2025 | Consumer Durables | Paid Social,paid_social,2025-10-01,985337.0,2345,420.0,47.68,165.0,5972.0,5.61,196,ok
+CMP-202408-AFF,Affiliate | Always-on | Aug 2024,affiliate,2024-08-01,119044.0,312,382.0,51.6,20.0,5952.0,0.0,22,ok
+CMP-202512-AFF,Affiliate | Always-on | Dec 2025,affiliate,2025-12-01,136195.0,428,318.0,49.53,23.0,5922.0,0.0,27,ok
+CMP-202411-AFF,Affiliate | Always-on | Nov 2024,affiliate,2024-11-01,125529.0,354,355.0,56.21,22.0,5706.0,3.45,29,ok
+CMP-202504-AFF,Affiliate | Always-on | Apr 2025,affiliate,2025-04-01,148161.0,401,369.0,47.88,26.0,5698.0,0.0,32,ok
+CMP-202412-AFF,Affiliate | Always-on | Dec 2024,affiliate,2024-12-01,123352.0,342,361.0,50.88,22.0,5607.0,3.33,30,ok
+CMP-202601-AFF,Affiliate | Always-on | Jan 2026,affiliate,2026-01-01,203177.0,461,441.0,51.63,38.0,5347.0,4.55,44,ok
+CMP-202507-AFF,Affiliate | Always-on | Jul 2025,affiliate,2025-07-01,147824.0,410,361.0,54.88,28.0,5279.0,0.0,33,ok
+CMP-202605-AFF,Affiliate | Always-on | May 2026,affiliate,2026-05-01,200549.0,462,434.0,58.44,38.0,5278.0,,,ok
+CMP-202507-PSO,Paid Social | Always-on | Jul 2025,paid_social,2025-07-01,231922.0,712,326.0,46.07,44.0,5271.0,4.08,49,ok
+CMP-202603-AFF,Affiliate | Always-on | Mar 2026,affiliate,2026-03-01,168099.0,474,355.0,60.76,32.0,5253.0,8.33,36,ok
+CMP-202503-AFF,Affiliate | Always-on | Mar 2025,affiliate,2025-03-01,167735.0,373,450.0,52.55,32.0,5242.0,0.0,40,ok
+CMP-202503-PSO,Paid Social | Always-on | Mar 2025,paid_social,2025-03-01,151552.0,570,266.0,48.6,29.0,5226.0,2.86,35,ok
+CMP-202606-PSO,Paid Social | Always-on | Jun 2026,paid_social,2026-06-01,317593.0,943,337.0,47.4,61.0,5206.0,,,ok
+CMP-202512-PSO,Paid Social | Always-on | Dec 2025,paid_social,2025-12-01,221478.0,803,276.0,44.21,43.0,5151.0,1.82,55,ok
+CMP-202506-AFF,Affiliate | Always-on | Jun 2025,affiliate,2025-06-01,142880.0,418,342.0,50.72,28.0,5103.0,0.0,32,ok
+CMP-202508-PSO,Paid Social | Always-on | Aug 2025,paid_social,2025-08-01,188591.0,716,263.0,48.04,37.0,5097.0,0.0,47,ok
+CMP-202511-AFF,Affiliate | Always-on | Nov 2025,affiliate,2025-11-01,172881.0,477,362.0,56.81,34.0,5085.0,4.65,43,ok
+CMP-202511-PSO,Paid Social | Always-on | Nov 2025,paid_social,2025-11-01,113045.0,356,318.0,45.22,23.0,4915.0,0.0,28,ok
+CMP-202412-PSO,Paid Social | Always-on | Dec 2024,paid_social,2024-12-01,146111.0,559,261.0,48.84,30.0,4870.0,0.0,37,ok
+CMP-202509-PSO,Paid Social | Always-on | Sep 2025,paid_social,2025-09-01,250717.0,720,348.0,44.58,53.0,4731.0,4.84,62,ok
+CMP-202408-PSO,Paid Social | Always-on | Aug 2024,paid_social,2024-08-01,149443.0,524,285.0,46.95,32.0,4670.0,2.63,38,ok
+CMP-FEST24-PSO,Festive Season Mega Campaign 2024 | Consumer Durables | Paid Social,paid_social,2024-10-10,349560.0,1004,348.0,45.82,75.0,4661.0,2.25,89,ok
+CMP-202510-AFF,Affiliate | Always-on | Oct 2025,affiliate,2025-10-01,213597.0,569,375.0,51.49,46.0,4643.0,3.77,53,ok
+CMP-202407-AFF,Affiliate | Always-on | Jul 2024,affiliate,2024-07-01,114065.0,327,349.0,49.85,25.0,4563.0,0.0,29,ok
+CMP-202603-PSO,Paid Social | Always-on | Mar 2026,paid_social,2026-03-01,283874.0,882,322.0,51.02,64.0,4436.0,0.0,66,ok
+CMP-202411-PSO,Paid Social | Always-on | Nov 2024,paid_social,2024-11-01,103242.0,384,269.0,47.66,24.0,4302.0,0.0,26,ok
+CMP-202504-PSO,Paid Social | Always-on | Apr 2025,paid_social,2025-04-01,177926.0,621,287.0,45.73,42.0,4236.0,4.08,49,ok
+CMP-202501-AFF,Affiliate | Always-on | Jan 2025,affiliate,2025-01-01,138619.0,404,343.0,52.48,34.0,4077.0,2.86,35,ok
+CMP-202409-PSO,Paid Social | Always-on | Sep 2024,paid_social,2024-09-01,131443.0,528,249.0,48.11,33.0,3983.0,5.0,40,ok
+CMP-202510-PSR,Paid Search | Always-on | Oct 2025,paid_search,2025-10-01,633788.0,925,685.0,58.38,162.0,3912.0,2.05,195,ok
+CMP-202410-AFF,Affiliate | Always-on | Oct 2024,affiliate,2024-10-01,144224.0,403,358.0,50.62,37.0,3898.0,4.88,41,ok
+CMP-202602-AFF,Affiliate | Always-on | Feb 2026,affiliate,2026-02-01,128550.0,415,310.0,52.05,34.0,3781.0,2.78,36,ok
+CMP-202501-PSO,Paid Social | Always-on | Jan 2025,paid_social,2025-01-01,191726.0,585,328.0,43.25,51.0,3759.0,0.0,54,ok
+CMP-202407-PSR,Paid Search | Always-on | Jul 2024,paid_search,2024-07-01,342209.0,544,629.0,55.7,92.0,3720.0,3.77,106,ok
+CMP-202602-PSO,Paid Social | Always-on | Feb 2026,paid_social,2026-02-01,244344.0,781,313.0,45.71,66.0,3702.0,4.11,73,ok
+CMP-202502-PSO,Paid Social | Always-on | Feb 2025,paid_social,2025-02-01,134723.0,600,225.0,43.33,37.0,3641.0,2.13,47,ok
+CMP-202505-AFF,Affiliate | Always-on | May 2025,affiliate,2025-05-01,119871.0,385,311.0,52.99,33.0,3632.0,2.5,40,ok
+CMP-202601-PSR,Paid Search | Always-on | Jan 2026,paid_search,2026-01-01,462845.0,764,606.0,57.2,128.0,3616.0,0.68,148,ok
+CMP-202410-PSO,Paid Social | Always-on | Oct 2024,paid_social,2024-10-01,57308.0,183,313.0,55.74,16.0,3582.0,0.0,17,ok
+CMP-202601-PSO,Paid Social | Always-on | Jan 2026,paid_social,2026-01-01,185616.0,780,238.0,44.62,53.0,3502.0,0.0,60,ok
+CMP-202407-PSO,Paid Social | Always-on | Jul 2024,paid_social,2024-07-01,142811.0,530,269.0,44.34,41.0,3483.0,2.17,46,ok
+CMP-202508-PSR,Paid Search | Always-on | Aug 2025,paid_search,2025-08-01,385227.0,654,589.0,56.88,111.0,3471.0,3.94,127,ok
+CMP-202505-PSR,Paid Search | Always-on | May 2025,paid_search,2025-05-01,335093.0,625,536.0,53.44,97.0,3455.0,3.54,113,ok
+CMP-202604-PSO,Paid Social | Always-on | Apr 2026,paid_social,2026-04-01,247046.0,889,278.0,51.97,73.0,3384.0,1.67,60,ok
+CMP-202604-AFF,Affiliate | Always-on | Apr 2026,affiliate,2026-04-01,160809.0,464,347.0,56.25,48.0,3350.0,2.5,40,ok
+CMP-202605-PSO,Paid Social | Always-on | May 2026,paid_social,2026-05-01,234006.0,885,264.0,51.98,72.0,3250.0,,,ok
+CMP-202606-PSR,Paid Search | Always-on | Jun 2026,paid_search,2026-06-01,437451.0,829,528.0,61.4,135.0,3240.0,,,ok
+CMP-202507-PSR,Paid Search | Always-on | Jul 2025,paid_search,2025-07-01,380583.0,669,569.0,55.16,118.0,3225.0,1.49,134,ok
+CMP-202503-PSR,Paid Search | Always-on | Mar 2025,paid_search,2025-03-01,321284.0,629,511.0,54.85,101.0,3181.0,0.0,121,ok
+CMP-202505-PSO,Paid Social | Always-on | May 2025,paid_social,2025-05-01,162774.0,685,238.0,47.59,52.0,3130.0,5.26,57,ok
+CMP-202411-PSR,Paid Search | Always-on | Nov 2024,paid_search,2024-11-01,294074.0,590,498.0,55.93,94.0,3128.0,1.85,108,ok
+CMP-202511-PSR,Paid Search | Always-on | Nov 2025,paid_search,2025-11-01,379621.0,795,478.0,56.6,125.0,3037.0,2.72,147,ok
+CMP-202506-PSR,Paid Search | Always-on | Jun 2025,paid_search,2025-06-01,338644.0,644,526.0,56.99,112.0,3024.0,3.2,125,ok
+CMP-202509-PSR,Paid Search | Always-on | Sep 2025,paid_search,2025-09-01,369289.0,716,516.0,57.26,123.0,3002.0,0.74,135,ok
+CMP-202602-PSR,Paid Search | Always-on | Feb 2026,paid_search,2026-02-01,380505.0,708,537.0,59.04,128.0,2973.0,1.38,145,ok
+CMP-202409-PSR,Paid Search | Always-on | Sep 2024,paid_search,2024-09-01,320150.0,550,582.0,54.91,108.0,2964.0,0.85,117,ok
+CMP-202506-PSO,Paid Social | Always-on | Jun 2025,paid_social,2025-06-01,181939.0,686,265.0,47.23,62.0,2934.0,2.78,72,ok
+CMP-202605-PSR,Paid Search | Always-on | May 2026,paid_search,2026-05-01,418856.0,812,516.0,63.67,146.0,2869.0,,,ok
+CMP-202603-PSR,Paid Search | Always-on | Mar 2026,paid_search,2026-03-01,416854.0,773,539.0,61.97,149.0,2798.0,3.16,158,ok
+CMP-202512-PSR,Paid Search | Always-on | Dec 2025,paid_search,2025-12-01,393740.0,794,496.0,59.7,145.0,2715.0,1.24,161,ok
+CMP-202501-PSR,Paid Search | Always-on | Jan 2025,paid_search,2025-01-01,257248.0,605,425.0,56.69,95.0,2708.0,0.88,113,ok
+CMP-202502-PSR,Paid Search | Always-on | Feb 2025,paid_search,2025-02-01,205912.0,534,386.0,56.37,78.0,2640.0,4.35,92,ok
+CMP-202408-PSR,Paid Search | Always-on | Aug 2024,paid_search,2024-08-01,271765.0,565,481.0,58.05,103.0,2638.0,0.81,123,ok
+CMP-202410-PSR,Paid Search | Always-on | Oct 2024,paid_search,2024-10-01,302107.0,621,486.0,62.32,121.0,2497.0,2.05,146,ok
+CMP-202504-PSR,Paid Search | Always-on | Apr 2025,paid_search,2025-04-01,294718.0,653,451.0,58.81,120.0,2456.0,4.35,138,ok
+CMP-202604-PSR,Paid Search | Always-on | Apr 2026,paid_search,2026-04-01,374913.0,754,497.0,61.27,164.0,2286.0,1.45,138,ok
+CMP-202412-PSR,Paid Search | Always-on | Dec 2024,paid_search,2024-12-01,255625.0,558,458.0,61.47,114.0,2242.0,2.99,134,ok
+CMP-202408-REF,Refer & Earn | Referral bonus | Aug 2024,referral,2024-08-01,63955.0,233,274.0,62.66,49.0,1305.0,0.0,58,ok
+CMP-202503-REF,Refer & Earn | Referral bonus | Mar 2025,referral,2025-03-01,78881.0,309,255.0,65.05,63.0,1252.0,0.0,71,ok
+CMP-202511-REF,Refer & Earn | Referral bonus | Nov 2025,referral,2025-11-01,144235.0,514,281.0,65.18,119.0,1212.0,1.43,140,ok
+CMP-202512-REF,Refer & Earn | Referral bonus | Dec 2025,referral,2025-12-01,135888.0,507,268.0,69.03,114.0,1192.0,4.51,133,ok
+CMP-202505-REF,Refer & Earn | Referral bonus | May 2025,referral,2025-05-01,107211.0,372,288.0,68.01,91.0,1178.0,0.0,111,ok
+CMP-202508-REF,Refer & Earn | Referral bonus | Aug 2025,referral,2025-08-01,118671.0,469,253.0,66.1,106.0,1120.0,0.83,121,ok
+CMP-202510-REF,Refer & Earn | Referral bonus | Oct 2025,referral,2025-10-01,115374.0,557,207.0,65.71,106.0,1088.0,4.07,123,ok
+CMP-202501-REF,Refer & Earn | Referral bonus | Jan 2025,referral,2025-01-01,72613.0,298,244.0,64.77,68.0,1068.0,0.0,76,ok
+CMP-202412-REF,Refer & Earn | Referral bonus | Dec 2024,referral,2024-12-01,72930.0,293,249.0,67.24,70.0,1042.0,1.25,80,ok
+CMP-202409-REF,Refer & Earn | Referral bonus | Sep 2024,referral,2024-09-01,51692.0,204,253.0,61.27,50.0,1034.0,0.0,53,ok
+CMP-202507-REF,Refer & Earn | Referral bonus | Jul 2025,referral,2025-07-01,91347.0,387,236.0,66.67,95.0,962.0,2.91,103,ok
+CMP-202411-REF,Refer & Earn | Referral bonus | Nov 2024,referral,2024-11-01,60623.0,254,239.0,63.78,64.0,947.0,5.63,71,ok
+CMP-202602-REF,Refer & Earn | Referral bonus | Feb 2026,referral,2026-02-01,118342.0,533,222.0,63.98,125.0,947.0,2.17,138,ok
+CMP-202504-REF,Refer & Earn | Referral bonus | Apr 2025,referral,2025-04-01,84344.0,332,254.0,69.28,91.0,927.0,0.0,107,ok
+CMP-202605-REF,Refer & Earn | Referral bonus | May 2026,referral,2026-05-01,141344.0,594,238.0,68.69,153.0,924.0,,,ok
+CMP-202606-REF,Refer & Earn | Referral bonus | Jun 2026,referral,2026-06-01,142229.0,643,221.0,67.81,157.0,906.0,,,ok
+CMP-202601-REF,Refer & Earn | Referral bonus | Jan 2026,referral,2026-01-01,128459.0,557,231.0,69.12,142.0,905.0,2.5,160,ok
+CMP-202601-PTN,Employer Partnerships | Always-on | Jan 2026,partnerships,2026-01-01,90413.0,364,248.0,65.93,101.0,895.0,3.48,115,ok
+CMP-202506-REF,Refer & Earn | Referral bonus | Jun 2025,referral,2025-06-01,74711.0,356,210.0,65.45,85.0,879.0,4.21,95,ok
+CMP-202509-REF,Refer & Earn | Referral bonus | Sep 2025,referral,2025-09-01,94012.0,400,235.0,65.25,107.0,879.0,2.46,122,ok
+CMP-202410-REF,Refer & Earn | Referral bonus | Oct 2024,referral,2024-10-01,55434.0,264,210.0,64.02,65.0,853.0,1.32,76,ok
+CMP-202511-PTN,Employer Partnerships | Always-on | Nov 2025,partnerships,2025-11-01,87826.0,393,223.0,68.19,103.0,853.0,1.71,117,ok
+CMP-202604-REF,Refer & Earn | Referral bonus | Apr 2026,referral,2026-04-01,117049.0,564,208.0,68.09,138.0,848.0,0.88,113,ok
+CMP-202502-REF,Refer & Earn | Referral bonus | Feb 2025,referral,2025-02-01,68213.0,314,217.0,67.83,82.0,832.0,1.1,91,ok
+CMP-202603-REF,Refer & Earn | Referral bonus | Mar 2026,referral,2026-03-01,108114.0,511,212.0,70.65,137.0,789.0,2.78,144,ok
+CMP-202602-PTN,Employer Partnerships | Always-on | Feb 2026,partnerships,2026-02-01,78632.0,363,217.0,69.7,104.0,756.0,2.63,114,ok
+CMP-202507-PTN,Employer Partnerships | Always-on | Jul 2025,partnerships,2025-07-01,68693.0,346,199.0,65.9,94.0,731.0,2.59,116,ok
+CMP-202407-REF,Refer & Earn | Referral bonus | Jul 2024,referral,2024-07-01,40539.0,208,195.0,70.19,56.0,724.0,1.49,67,ok
+CMP-202509-PTN,Employer Partnerships | Always-on | Sep 2025,partnerships,2025-09-01,76905.0,364,211.0,66.21,109.0,706.0,3.97,126,ok
+CMP-202606-PTN,Employer Partnerships | Always-on | Jun 2026,partnerships,2026-06-01,76623.0,425,180.0,74.82,112.0,684.0,,,ok
+CMP-202503-PTN,Employer Partnerships | Always-on | Mar 2025,partnerships,2025-03-01,51602.0,269,192.0,65.06,76.0,679.0,2.38,84,ok
+CMP-202506-PTN,Employer Partnerships | Always-on | Jun 2025,partnerships,2025-06-01,54450.0,306,178.0,70.26,82.0,664.0,2.02,99,ok
+CMP-202502-PTN,Employer Partnerships | Always-on | Feb 2025,partnerships,2025-02-01,47457.0,264,180.0,69.32,73.0,650.0,2.53,79,ok
+CMP-202605-PTN,Employer Partnerships | Always-on | May 2026,partnerships,2026-05-01,86956.0,433,201.0,74.13,137.0,635.0,,,ok
+CMP-202410-PTN,Employer Partnerships | Always-on | Oct 2024,partnerships,2024-10-01,51700.0,271,191.0,69.74,82.0,630.0,1.04,96,ok
+CMP-202407-PTN,Employer Partnerships | Always-on | Jul 2024,partnerships,2024-07-01,41289.0,241,171.0,69.29,66.0,626.0,0.0,82,ok
+CMP-202411-PTN,Employer Partnerships | Always-on | Nov 2024,partnerships,2024-11-01,49004.0,265,185.0,66.79,79.0,620.0,3.3,91,ok
+CMP-202408-PTN,Employer Partnerships | Always-on | Aug 2024,partnerships,2024-08-01,37373.0,201,186.0,68.66,61.0,613.0,0.0,76,ok
+CMP-202504-PTN,Employer Partnerships | Always-on | Apr 2025,partnerships,2025-04-01,60102.0,287,209.0,67.94,98.0,613.0,1.9,105,ok
+CMP-202508-PTN,Employer Partnerships | Always-on | Aug 2025,partnerships,2025-08-01,67854.0,331,205.0,75.53,117.0,580.0,3.85,130,ok
+CMP-202604-PTN,Employer Partnerships | Always-on | Apr 2026,partnerships,2026-04-01,65924.0,379,174.0,73.35,114.0,578.0,2.17,92,ok
+CMP-202505-PTN,Employer Partnerships | Always-on | May 2025,partnerships,2025-05-01,50806.0,300,169.0,68.33,88.0,577.0,1.03,97,ok
+CMP-202412-PTN,Employer Partnerships | Always-on | Dec 2024,partnerships,2024-12-01,51416.0,276,186.0,72.46,92.0,559.0,1.92,104,ok
+CMP-202512-PTN,Employer Partnerships | Always-on | Dec 2025,partnerships,2025-12-01,70918.0,401,177.0,69.08,127.0,558.0,1.4,143,ok
+CMP-202501-PTN,Employer Partnerships | Always-on | Jan 2025,partnerships,2025-01-01,44314.0,285,155.0,70.88,87.0,509.0,0.0,101,ok
+CMP-202603-PTN,Employer Partnerships | Always-on | Mar 2026,partnerships,2026-03-01,69714.0,438,159.0,73.97,143.0,488.0,0.65,153,ok
+CMP-202409-PTN,Employer Partnerships | Always-on | Sep 2024,partnerships,2024-09-01,37426.0,255,147.0,72.16,83.0,451.0,0.0,94,ok

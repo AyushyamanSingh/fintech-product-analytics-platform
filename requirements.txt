@@ -1,0 +1,17 @@
+# Core data stack (pinned to ranges that still ship Python 3.8 wheels).
+# Parquet I/O goes through DuckDB, so pyarrow is not required.
+pandas>=2.0,<2.1
+numpy>=1.24,<1.25
+scipy>=1.10,<1.11
+scikit-learn>=1.3,<1.4
+duckdb==1.2.2
+pyyaml>=6.0
+
+# Visualisation
+matplotlib>=3.7,<3.8
+
+# AI analyst layer (optional at runtime: the pipeline falls back to a deterministic summariser without an API key)
+anthropic>=0.34
+
+# Testing
+pytest>=7.4

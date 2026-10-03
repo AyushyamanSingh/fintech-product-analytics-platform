@@ -1,0 +1,28 @@
+table,column,issue,rows_affected,expected_check,detected,detected_by
+customers,acquisition_channel,inconsistent category casing/spacing,487,accepted_values,True,accepted_values
+customers,city,missing city,974,not_null,True,not_null
+customers,monthly_income,missing income,1624,not_null,True,not_null
+customers,age,impossible age,65,range,True,range
+customers,credit_score,bureau score outside 300-900,30,range,True,range
+customers,monthly_income,income keyed with two extra zeros,119,outlier,True,outlier_robust_z
+customers,kyc_completed_ts,UTC timestamp written into IST column (KYC vendor callback),579,date_order,True,date_order
+customers,customer_id,duplicate rows re-sent by CRM sync,325,unique,True,primary_key_unique
+applications,requested_amount,negative requested amount,23,range,True,range
+applications,decision_ts,decision before submission,31,date_order,True,date_order
+applications,application_id,duplicate rows,117,unique,True,primary_key_unique
+loans,interest_rate_apr,APR stored in basis points,21,range,True,range
+loans,application_id,orphan loan (application missing in LOS extract),6,foreign_key,True,foreign_key
+repayments,paid_date,year typo puts payment in the future,15,future_date,True,future_date
+repayments,amount_paid,payment amount x100,8,outlier,True,outlier_robust_z
+transactions,loan_id,orphan transaction,26,foreign_key,True,foreign_key
+transactions,amount,sign convention error (negative amount),26,range,True,range
+transactions,transaction_id,duplicate webhook delivery,262,unique,True,primary_key_unique
+product_events,platform,platform casing from old SDK,3230,accepted_values,True,accepted_values
+product_events,event_ts,device clock in the future,41,future_date,True,future_date
+product_events,user_id,QA test accounts not in CRM,248,foreign_key,True,foreign_key
+product_events,event_id,SDK retry duplicates,3315,unique,True,primary_key_unique
+support_tickets,resolved_ts,resolved before created,6,date_order,True,date_order
+support_tickets,csat_score,numeric column exported as text with 'N/A',6446,schema_dtype,True,schema_dtype
+support_tickets,agent_id,new column added upstream without notice,6446,schema_unexpected_columns,True,schema_unexpected_columns
+marketing_campaigns,end_date,start/end dates swapped,1,date_order,True,date_order
+marketing_campaigns,spend_inr,spend 3.4x budget (agency double-billing),1,cross_field,True,cross_field:spend_within_budget

@@ -1,0 +1,401 @@
+stage,table,check,column,severity,status,failed_rows,total_rows,threshold,details,sample,failure_rate
+raw,products,schema_missing_columns,*,critical,pass,0,13,0.0,Columns required by the contract but absent: none,,0.0
+raw,products,schema_unexpected_columns,*,warning,pass,0,13,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,products,schema_dtype,min_amount,warning,pass,0,7,0.0,"expected money, received pandas dtype 'int64'",,0.0
+raw,products,schema_dtype,max_amount,warning,pass,0,7,0.0,"expected money, received pandas dtype 'int64'",,0.0
+raw,products,schema_dtype,min_tenure_months,warning,pass,0,7,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,products,schema_dtype,max_tenure_months,warning,pass,0,7,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,products,schema_dtype,base_apr_pct,warning,pass,0,7,0.0,"expected float, received pandas dtype 'float64'",,0.0
+raw,products,schema_dtype,processing_fee_pct,warning,pass,0,7,0.0,"expected float, received pandas dtype 'float64'",,0.0
+raw,products,schema_dtype,launch_date,warning,pass,0,7,0.0,expected date; unparseable values counted,,0.0
+raw,products,schema_dtype,is_secured,warning,pass,0,7,0.0,expected boolean,,0.0
+raw,products,schema_dtype,is_active,warning,pass,0,7,0.0,expected boolean,,0.0
+raw,products,not_null,product_id,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,product_name,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,product_category,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,min_amount,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,max_amount,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,min_tenure_months,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,max_tenure_months,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,base_apr_pct,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,processing_fee_pct,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,revenue_model,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,launch_date,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,is_secured,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,not_null,is_active,critical,pass,0,7,0.0,nulls in a non-nullable column,,0.0
+raw,products,primary_key_unique,product_id,critical,pass,0,7,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,products,accepted_values,product_category,critical,pass,0,7,0.0,values outside the allowed set,,0.0
+raw,products,accepted_values,revenue_model,critical,pass,0,7,0.0,values outside the allowed set,,0.0
+raw,products,range,min_amount,critical,pass,0,7,0.0,"outside [0, inf]",,0.0
+raw,products,range,max_amount,critical,pass,0,7,0.0,"outside [0, inf]",,0.0
+raw,products,range,min_tenure_months,critical,pass,0,7,0.0,"outside [1, 60]",,0.0
+raw,products,range,max_tenure_months,critical,pass,0,7,0.0,"outside [1, 60]",,0.0
+raw,products,range,base_apr_pct,critical,pass,0,7,0.0,"outside [0, 60]",,0.0
+raw,products,range,processing_fee_pct,critical,pass,0,7,0.0,"outside [0, 10]",,0.0
+raw,products,pattern,product_id,critical,pass,0,7,0.0,does not match ^P\d{2}$,,0.0
+raw,products,cross_field:amount_bounds,"min_amount,max_amount",critical,pass,0,7,0.0,min_amount <= max_amount,,0.0
+raw,products,cross_field:tenure_bounds,"min_tenure_months,max_tenure_months",critical,pass,0,7,0.0,min_tenure_months <= max_tenure_months,,0.0
+raw,products,row_count_min,*,critical,pass,0,1,0.0,7 rows (minimum 1),,0.0
+raw,products,row_count_change,*,warning,pass,0,1,0.0,7 rows vs 7 in the previous run (+0.0%),,0.0
+raw,marketing_campaigns,schema_missing_columns,*,critical,pass,0,11,0.0,Columns required by the contract but absent: none,,0.0
+raw,marketing_campaigns,schema_unexpected_columns,*,warning,pass,0,11,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,marketing_campaigns,schema_dtype,start_date,warning,pass,0,122,0.0,expected date; unparseable values counted,,0.0
+raw,marketing_campaigns,schema_dtype,end_date,warning,pass,0,122,0.0,expected date; unparseable values counted,,0.0
+raw,marketing_campaigns,schema_dtype,budget_inr,warning,pass,0,122,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,marketing_campaigns,schema_dtype,spend_inr,warning,pass,0,122,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,marketing_campaigns,schema_dtype,impressions,warning,pass,0,122,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,marketing_campaigns,schema_dtype,clicks,warning,pass,0,122,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,marketing_campaigns,not_null,campaign_id,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,campaign_name,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,channel,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,objective,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,start_date,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,end_date,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,budget_inr,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,spend_inr,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,impressions,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,not_null,clicks,critical,pass,0,122,0.0,nulls in a non-nullable column,,0.0
+raw,marketing_campaigns,primary_key_unique,campaign_id,critical,pass,0,122,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,marketing_campaigns,accepted_values,channel,critical,pass,0,122,0.0,values outside the allowed set,,0.0
+raw,marketing_campaigns,accepted_values,objective,critical,pass,0,122,0.0,values outside the allowed set,,0.0
+raw,marketing_campaigns,range,budget_inr,critical,pass,0,122,0.0,"outside [0, inf]",,0.0
+raw,marketing_campaigns,range,spend_inr,critical,pass,0,122,0.0,"outside [0, inf]",,0.0
+raw,marketing_campaigns,range,impressions,critical,pass,0,122,0.0,"outside [0, inf]",,0.0
+raw,marketing_campaigns,range,clicks,critical,pass,0,122,0.0,"outside [0, inf]",,0.0
+raw,marketing_campaigns,pattern,campaign_id,critical,pass,0,122,0.0,does not match ^CMP-,,0.0
+raw,marketing_campaigns,date_order,start_date<=end_date,critical,fail,1,122,0.0,end_date earlier than start_date,CMP-202501-REF,0.008197
+raw,marketing_campaigns,foreign_key,target_product_id,critical,pass,0,122,0.0,orphans: no matching products.product_id,,0.0
+raw,marketing_campaigns,cross_field:spend_within_budget,"budget_inr,spend_inr",warning,fail,1,122,0.0,spend_inr <= 1.5 * budget_inr,CMP-202510-PTN,0.008197
+raw,marketing_campaigns,cross_field:clicks_le_impressions,"impressions,clicks",warning,pass,0,122,0.0,clicks <= impressions,,0.0
+raw,marketing_campaigns,row_count_min,*,critical,pass,0,1,0.0,122 rows (minimum 1),,0.0
+raw,marketing_campaigns,row_count_change,*,warning,pass,0,1,0.0,122 rows vs 122 in the previous run (+0.0%),,0.0
+raw,customers,schema_missing_columns,*,critical,pass,0,17,0.0,Columns required by the contract but absent: none,,0.0
+raw,customers,schema_unexpected_columns,*,warning,pass,0,17,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,customers,schema_dtype,signup_ts,warning,pass,0,81525,0.0,expected timestamp; unparseable values counted,,0.0
+raw,customers,schema_dtype,age,warning,pass,0,81525,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,customers,schema_dtype,monthly_income,warning,pass,0,81525,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,customers,schema_dtype,credit_score,warning,pass,0,81525,0.0,"expected integer, received pandas dtype 'float64'",,0.0
+raw,customers,schema_dtype,kyc_started_ts,warning,pass,0,81525,0.0,expected timestamp; unparseable values counted,,0.0
+raw,customers,schema_dtype,kyc_completed_ts,warning,pass,0,81525,0.0,expected timestamp; unparseable values counted,,0.0
+raw,customers,schema_dtype,marketing_opt_in,warning,pass,0,81525,0.0,expected boolean,,0.0
+raw,customers,not_null,customer_id,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,signup_ts,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,acquisition_channel,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,signup_platform,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,city,warning,fail,978,81525,0.0,nulls in a non-nullable column,"C000098, C000397, C000430, C000456, C000469",0.011996
+raw,customers,not_null,state,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,city_tier,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,age,warning,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,employment_type,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,monthly_income,warning,fail,1629,81525,0.0,nulls in a non-nullable column,"C000009, C000190, C000194, C000201, C000206",0.019982
+raw,customers,not_null,kyc_status,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,not_null,marketing_opt_in,critical,pass,0,81525,0.0,nulls in a non-nullable column,,0.0
+raw,customers,primary_key_unique,customer_id,critical,fail,325,81525,0.0,duplicate keys (of which 325 are exact duplicate rows),"C063191, C074526, C078712, C027762, C042478",0.003987
+raw,customers,accepted_values,acquisition_channel,critical,fail,490,81525,0.0,values outside the allowed set,"Paid-Search, paid social,  PAID_SOCIAL, REFERRAL, Organic ",0.00601
+raw,customers,accepted_values,signup_platform,critical,pass,0,81525,0.0,values outside the allowed set,,0.0
+raw,customers,accepted_values,city_tier,critical,pass,0,81525,0.0,values outside the allowed set,,0.0
+raw,customers,accepted_values,employment_type,critical,pass,0,81525,0.0,values outside the allowed set,,0.0
+raw,customers,accepted_values,kyc_status,critical,pass,0,81525,0.0,values outside the allowed set,,0.0
+raw,customers,accepted_values,kyc_method,critical,pass,0,81525,0.0,values outside the allowed set,,0.0
+raw,customers,range,age,warning,fail,65,81525,0.0,"outside [18, 75]","150.0, 0.0, 7.0, 7.0, 7.0",0.000797
+raw,customers,range,monthly_income,warning,fail,106,81525,0.0,"outside [1000, 1500000]","3300000.0, 2650000.0, 3350000.0, 7650000.0, 3900000.0",0.0013
+raw,customers,range,credit_score,critical,fail,31,81525,0.0,"outside [300, 900]","0.0, 150.0, 1200.0, 150.0, 150.0",0.00038
+raw,customers,pattern,customer_id,critical,pass,0,81525,0.0,does not match ^C\d{6}$,,0.0
+raw,customers,date_order,signup_ts<=kyc_started_ts,critical,pass,0,81525,0.0,kyc_started_ts earlier than signup_ts,,0.0
+raw,customers,date_order,kyc_started_ts<=kyc_completed_ts,critical,fail,581,81525,0.0,kyc_completed_ts earlier than kyc_started_ts,"C000158, C000177, C000340, C000486, C000547",0.007127
+raw,customers,future_date,signup_ts,critical,pass,0,81525,0.0,later than the extract date 2026-06-30,,0.0
+raw,customers,future_date,kyc_started_ts,critical,pass,0,81525,0.0,later than the extract date 2026-06-30,,0.0
+raw,customers,future_date,kyc_completed_ts,critical,pass,0,81525,0.0,later than the extract date 2026-06-30,,0.0
+raw,customers,foreign_key,campaign_id,critical,pass,0,81525,0.0,orphans: no matching marketing_campaigns.campaign_id,,0.0
+raw,customers,outlier_robust_z,monthly_income,warning,fail,115,81525,0.0,robust z > 5 on log scale (median 37500),"3300000.0, 2650000.0, 3350000.0, 1300000.0, 7650000.0",0.001411
+raw,customers,conditional:verified_has_timestamp,kyc_completed_ts,critical,pass,0,81525,0.0,when kyc_status == 'verified' then kyc_completed_ts is required,,0.0
+raw,customers,freshness,signup_ts,critical,pass,0,1,0.0,latest signup_ts = 2026-06-30 23:59:13 (0 days before extract date; tolerance 2),,0.0
+raw,customers,row_count_min,*,critical,pass,0,1,0.0,81525 rows (minimum 1000),,0.0
+raw,customers,row_count_change,*,warning,pass,0,1,0.0,81525 rows vs 81525 in the previous run (+0.0%),,0.0
+raw,applications,schema_missing_columns,*,critical,pass,0,17,0.0,Columns required by the contract but absent: none,,0.0
+raw,applications,schema_unexpected_columns,*,warning,pass,0,17,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,applications,schema_dtype,started_ts,warning,pass,0,46988,0.0,expected timestamp; unparseable values counted,,0.0
+raw,applications,schema_dtype,submitted_ts,warning,pass,0,46988,0.0,expected timestamp; unparseable values counted,,0.0
+raw,applications,schema_dtype,requested_amount,warning,pass,0,46988,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,applications,schema_dtype,requested_tenure_months,warning,pass,0,46988,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,applications,schema_dtype,is_repeat_customer,warning,pass,0,46988,0.0,expected boolean,,0.0
+raw,applications,schema_dtype,internal_risk_score,warning,pass,0,46988,0.0,"expected float, received pandas dtype 'float64'",,0.0
+raw,applications,schema_dtype,decision_ts,warning,pass,0,46988,0.0,expected timestamp; unparseable values counted,,0.0
+raw,applications,schema_dtype,sanctioned_amount,warning,pass,0,46988,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,applications,not_null,application_id,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,customer_id,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,product_id,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,started_ts,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,requested_amount,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,requested_tenure_months,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,loan_purpose,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,application_platform,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,is_repeat_customer,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,not_null,application_status,critical,pass,0,46988,0.0,nulls in a non-nullable column,,0.0
+raw,applications,primary_key_unique,application_id,critical,fail,117,46988,0.0,duplicate keys (of which 117 are exact duplicate rows),"APP0039943, APP0030719, APP0032048, APP0034200, APP0041691",0.00249
+raw,applications,accepted_values,application_platform,critical,pass,0,46988,0.0,values outside the allowed set,,0.0
+raw,applications,accepted_values,risk_band,critical,pass,0,46988,0.0,values outside the allowed set,,0.0
+raw,applications,accepted_values,decision,critical,pass,0,46988,0.0,values outside the allowed set,,0.0
+raw,applications,accepted_values,rejection_reason,critical,pass,0,46988,0.0,values outside the allowed set,,0.0
+raw,applications,accepted_values,application_status,critical,pass,0,46988,0.0,values outside the allowed set,,0.0
+raw,applications,range,requested_amount,critical,fail,23,46988,0.0,"outside [100, 1000000]","-144000.0, -29000.0, -184000.0, -1000.0, -21000.0",0.000489
+raw,applications,range,requested_tenure_months,critical,pass,0,46988,0.0,"outside [1, 60]",,0.0
+raw,applications,range,internal_risk_score,critical,pass,0,46988,0.0,"outside [0, 100]",,0.0
+raw,applications,range,sanctioned_amount,critical,pass,0,46988,0.0,"outside [0, inf]",,0.0
+raw,applications,pattern,application_id,critical,pass,0,46988,0.0,does not match ^APP\d{7}$,,0.0
+raw,applications,date_order,started_ts<=submitted_ts,critical,pass,0,46988,0.0,submitted_ts earlier than started_ts,,0.0
+raw,applications,date_order,submitted_ts<=decision_ts,critical,fail,31,46988,0.0,decision_ts earlier than submitted_ts,"APP0000017, APP0001962, APP0003950, APP0004786, APP0005930",0.00066
+raw,applications,future_date,started_ts,critical,pass,0,46988,0.0,later than the extract date 2026-06-30,,0.0
+raw,applications,future_date,submitted_ts,critical,pass,0,46988,0.0,later than the extract date 2026-06-30,,0.0
+raw,applications,future_date,decision_ts,critical,pass,0,46988,0.0,later than the extract date 2026-06-30,,0.0
+raw,applications,foreign_key,customer_id,critical,pass,0,46988,0.0,orphans: no matching customers.customer_id,,0.0
+raw,applications,foreign_key,product_id,critical,pass,0,46988,0.0,orphans: no matching products.product_id,,0.0
+raw,applications,conditional:decided_has_timestamp,decision_ts,warning,pass,0,46988,0.0,when decision.notna() then decision_ts is required,,0.0
+raw,applications,conditional:approved_has_amount,sanctioned_amount,critical,pass,0,46988,0.0,when decision == 'approved' then sanctioned_amount is required,,0.0
+raw,applications,freshness,started_ts,critical,pass,0,1,0.0,latest started_ts = 2026-06-30 23:21:48 (0 days before extract date; tolerance 2),,0.0
+raw,applications,row_count_min,*,critical,pass,0,1,0.0,46988 rows (minimum 1),,0.0
+raw,applications,row_count_change,*,warning,pass,0,1,0.0,46988 rows vs 46988 in the previous run (+0.0%),,0.0
+raw,loans,schema_missing_columns,*,critical,pass,0,22,0.0,Columns required by the contract but absent: none,,0.0
+raw,loans,schema_unexpected_columns,*,warning,pass,0,22,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,loans,schema_dtype,disbursed_ts,warning,pass,0,20661,0.0,expected timestamp; unparseable values counted,,0.0
+raw,loans,schema_dtype,principal_amount,warning,pass,0,20661,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,processing_fee,warning,pass,0,20661,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,net_disbursed_amount,warning,pass,0,20661,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,interest_rate_apr,warning,pass,0,20661,0.0,"expected float, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,tenure_months,warning,pass,0,20661,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,loans,schema_dtype,emi_amount,warning,pass,0,20661,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,autopay_enabled,warning,pass,0,20661,0.0,expected boolean,,0.0
+raw,loans,schema_dtype,loan_sequence_number,warning,pass,0,20661,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,loans,schema_dtype,is_repeat_loan,warning,pass,0,20661,0.0,expected boolean,,0.0
+raw,loans,schema_dtype,maturity_date,warning,pass,0,20661,0.0,expected date; unparseable values counted,,0.0
+raw,loans,schema_dtype,current_dpd,warning,pass,0,20661,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,loans,schema_dtype,max_dpd,warning,pass,0,20661,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,loans,schema_dtype,outstanding_principal,warning,pass,0,20661,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,loans,schema_dtype,closed_date,warning,pass,0,20661,0.0,expected date; unparseable values counted,,0.0
+raw,loans,not_null,loan_id,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,application_id,warning,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,customer_id,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,product_id,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,disbursed_ts,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,principal_amount,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,processing_fee,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,net_disbursed_amount,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,interest_rate_apr,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,tenure_months,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,emi_amount,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,risk_band,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,autopay_enabled,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,loan_sequence_number,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,is_repeat_loan,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,maturity_date,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,loan_status,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,current_dpd,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,max_dpd,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,not_null,outstanding_principal,critical,pass,0,20661,0.0,nulls in a non-nullable column,,0.0
+raw,loans,primary_key_unique,loan_id,critical,pass,0,20661,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,loans,unique_together,application_id,critical,pass,0,20661,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,loans,accepted_values,risk_band,critical,pass,0,20661,0.0,values outside the allowed set,,0.0
+raw,loans,accepted_values,loan_status,critical,pass,0,20661,0.0,values outside the allowed set,,0.0
+raw,loans,accepted_values,closure_type,critical,pass,0,20661,0.0,values outside the allowed set,,0.0
+raw,loans,range,principal_amount,critical,pass,0,20661,0.0,"outside [100, 1000000]",,0.0
+raw,loans,range,processing_fee,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,range,net_disbursed_amount,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,range,interest_rate_apr,critical,fail,21,20661,0.0,"outside [5, 60]","2750.0, 2725.0, 2625.0, 2600.0, 1725.0",0.001016
+raw,loans,range,tenure_months,critical,pass,0,20661,0.0,"outside [1, 60]",,0.0
+raw,loans,range,emi_amount,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,range,loan_sequence_number,critical,pass,0,20661,0.0,"outside [1, inf]",,0.0
+raw,loans,range,current_dpd,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,range,max_dpd,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,range,outstanding_principal,critical,pass,0,20661,0.0,"outside [0, inf]",,0.0
+raw,loans,pattern,loan_id,critical,pass,0,20661,0.0,does not match ^LN\d{7}$,,0.0
+raw,loans,future_date,disbursed_ts,critical,pass,0,20661,0.0,later than the extract date 2026-06-30,,0.0
+raw,loans,foreign_key,application_id,critical,fail,6,20661,0.0,orphans: no matching applications.application_id,"APP9273214, APP9579997, APP9031679, APP9900175, APP9712678",0.00029
+raw,loans,foreign_key,customer_id,critical,pass,0,20661,0.0,orphans: no matching customers.customer_id,,0.0
+raw,loans,foreign_key,product_id,critical,pass,0,20661,0.0,orphans: no matching products.product_id,,0.0
+raw,loans,cross_field:net_equals_principal_minus_fee,"principal_amount,processing_fee,net_disbursed_amount",critical,pass,0,20661,0.0,abs(net_disbursed_amount - (principal_amount - processing_fee)) < 1,,0.0
+raw,loans,cross_field:current_le_max_dpd,"current_dpd,max_dpd",critical,pass,0,20661,0.0,current_dpd <= max_dpd,,0.0
+raw,loans,cross_field:outstanding_le_principal,"principal_amount,outstanding_principal",critical,pass,0,20661,0.0,outstanding_principal <= principal_amount + 1,,0.0
+raw,loans,freshness,disbursed_ts,critical,pass,0,1,0.0,latest disbursed_ts = 2026-06-30 23:54:07 (0 days before extract date; tolerance 2),,0.0
+raw,loans,row_count_min,*,critical,pass,0,1,0.0,20661 rows (minimum 1),,0.0
+raw,loans,row_count_change,*,warning,pass,0,1,0.0,20661 rows vs 20661 in the previous run (+0.0%),,0.0
+raw,repayments,schema_missing_columns,*,critical,pass,0,15,0.0,Columns required by the contract but absent: none,,0.0
+raw,repayments,schema_unexpected_columns,*,warning,pass,0,15,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,repayments,schema_dtype,installment_number,warning,pass,0,125584,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,repayments,schema_dtype,due_date,warning,pass,0,125584,0.0,expected date; unparseable values counted,,0.0
+raw,repayments,schema_dtype,principal_due,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,interest_due,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,total_due,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,amount_paid,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,principal_paid,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,interest_paid,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,schema_dtype,paid_date,warning,pass,0,125584,0.0,expected date; unparseable values counted,,0.0
+raw,repayments,schema_dtype,days_past_due,warning,pass,0,125584,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,repayments,schema_dtype,late_fee,warning,pass,0,125584,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,repayments,not_null,repayment_id,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,loan_id,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,customer_id,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,installment_number,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,due_date,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,principal_due,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,interest_due,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,total_due,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,amount_paid,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,principal_paid,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,interest_paid,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,payment_status,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,days_past_due,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,not_null,late_fee,critical,pass,0,125584,0.0,nulls in a non-nullable column,,0.0
+raw,repayments,primary_key_unique,repayment_id,critical,pass,0,125584,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,repayments,unique_together,loan_id+installment_number,critical,pass,0,125584,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,repayments,accepted_values,payment_status,critical,pass,0,125584,0.0,values outside the allowed set,,0.0
+raw,repayments,range,installment_number,critical,pass,0,125584,0.0,"outside [1, 60]",,0.0
+raw,repayments,range,principal_due,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,interest_due,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,total_due,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,amount_paid,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,principal_paid,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,interest_paid,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,days_past_due,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,range,late_fee,critical,pass,0,125584,0.0,"outside [0, inf]",,0.0
+raw,repayments,pattern,repayment_id,critical,pass,0,125584,0.0,does not match ^RP\d{8}$,,0.0
+raw,repayments,future_date,paid_date,critical,fail,10,125584,0.0,later than the extract date 2026-06-30,"2027-02-13, 2026-09-04, 2027-02-23, 2026-10-26, 2027-03-13",8e-05
+raw,repayments,foreign_key,loan_id,critical,pass,0,125584,0.0,orphans: no matching loans.loan_id,,0.0
+raw,repayments,foreign_key,customer_id,critical,pass,0,125584,0.0,orphans: no matching customers.customer_id,,0.0
+raw,repayments,outlier_robust_z,amount_paid,warning,fail,4,125584,0.0,robust z > 5 on log scale (median 5816),"1816416.0, 605088.0, 678708.0, 2388837.0",3.2e-05
+raw,repayments,cross_field:paid_le_due,"total_due,amount_paid",critical,fail,8,125584,0.0,amount_paid <= total_due * 1.01,"RP00035854, RP00067630, RP00069967, RP00074384, RP00078242",6.4e-05
+raw,repayments,cross_field:components_sum,"principal_due,interest_due,total_due",critical,pass,0,125584,0.0,abs(total_due - principal_due - interest_due) < 0.05,,0.0
+raw,repayments,row_count_min,*,critical,pass,0,1,0.0,125584 rows (minimum 1),,0.0
+raw,repayments,row_count_change,*,warning,pass,0,1,0.0,125584 rows vs 125584 in the previous run (+0.0%),,0.0
+raw,transactions,schema_missing_columns,*,critical,pass,0,10,0.0,Columns required by the contract but absent: none,,0.0
+raw,transactions,schema_unexpected_columns,*,warning,pass,0,10,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,transactions,schema_dtype,txn_ts,warning,pass,0,131285,0.0,expected timestamp; unparseable values counted,,0.0
+raw,transactions,schema_dtype,amount,warning,pass,0,131285,0.0,"expected money, received pandas dtype 'float64'",,0.0
+raw,transactions,not_null,transaction_id,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,customer_id,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,txn_ts,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,txn_type,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,amount,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,payment_method,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,not_null,txn_status,critical,pass,0,131285,0.0,nulls in a non-nullable column,,0.0
+raw,transactions,primary_key_unique,transaction_id,critical,fail,262,131285,0.0,duplicate keys (of which 262 are exact duplicate rows),"TX000030303, TX000014352, TX000118296, TX000075524, TX000075775",0.001996
+raw,transactions,accepted_values,txn_type,critical,pass,0,131285,0.0,values outside the allowed set,,0.0
+raw,transactions,accepted_values,payment_method,critical,pass,0,131285,0.0,values outside the allowed set,,0.0
+raw,transactions,accepted_values,txn_status,critical,pass,0,131285,0.0,values outside the allowed set,,0.0
+raw,transactions,accepted_values,failure_reason,critical,pass,0,131285,0.0,values outside the allowed set,,0.0
+raw,transactions,range,amount,critical,fail,26,131285,0.0,"outside [0, inf]","-18751.14, -6894.92, -11514.59, -51940.0, -16301.31",0.000198
+raw,transactions,pattern,transaction_id,critical,pass,0,131285,0.0,does not match ^TX\d{9}$,,0.0
+raw,transactions,future_date,txn_ts,critical,pass,0,131285,0.0,later than the extract date 2026-06-30,,0.0
+raw,transactions,foreign_key,customer_id,critical,pass,0,131285,0.0,orphans: no matching customers.customer_id,,0.0
+raw,transactions,foreign_key,loan_id,critical,fail,26,131285,0.0,orphans: no matching loans.loan_id,"LN9658988, LN9908748, LN9243206, LN9852949, LN9014757",0.000198
+raw,transactions,foreign_key,repayment_id,critical,pass,0,131285,0.0,orphans: no matching repayments.repayment_id,,0.0
+raw,transactions,outlier_robust_z,amount,warning,pass,0,131285,0.0,robust z > 5 on log scale (median 5100),,0.0
+raw,transactions,conditional:failed_has_reason,failure_reason,warning,pass,0,131285,0.0,when txn_status == 'failed' then failure_reason is required,,0.0
+raw,transactions,freshness,txn_ts,critical,pass,0,1,0.0,latest txn_ts = 2026-06-30 23:54:17 (0 days before extract date; tolerance 2),,0.0
+raw,transactions,row_count_min,*,critical,pass,0,1,0.0,131285 rows (minimum 1),,0.0
+raw,transactions,row_count_change,*,warning,pass,0,1,0.0,131285 rows vs 131285 in the previous run (+0.0%),,0.0
+raw,product_events,schema_missing_columns,*,critical,pass,0,8,0.0,Columns required by the contract but absent: none,,0.0
+raw,product_events,schema_unexpected_columns,*,warning,pass,0,8,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,product_events,schema_dtype,event_ts,warning,pass,0,832231,0.0,expected timestamp; unparseable values counted,,0.0
+raw,product_events,not_null,event_id,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,not_null,user_id,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,not_null,event_name,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,not_null,event_ts,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,not_null,platform,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,not_null,properties,critical,pass,0,832231,0.0,nulls in a non-nullable column,,0.0
+raw,product_events,primary_key_unique,event_id,critical,fail,3315,832231,0.0,duplicate keys (of which 3315 are exact duplicate rows),"EV000000198, EV000000211, EV000000437, EV000001073, EV000002130",0.003983
+raw,product_events,accepted_values,event_name,critical,pass,0,832231,0.0,values outside the allowed set,,0.0
+raw,product_events,accepted_values,platform,critical,fail,3238,832231,0.0,values outside the allowed set,"Android, iOS",0.003891
+raw,product_events,future_date,event_ts,critical,fail,31,832231,0.0,later than the extract date 2026-06-30,"2026-07-09 17:35:40, 2026-07-14 01:25:30, 2026-08-13 01:13:59, 2026-09-27 10:13:51, 2026-09-29 14:21:06",3.7e-05
+raw,product_events,foreign_key,user_id,critical,fail,248,832231,0.0,orphans: no matching customers.customer_id,"TEST-QA-016, TEST-QA-004, TEST-QA-010, TEST-QA-008, TEST-QA-008",0.000298
+raw,product_events,freshness,event_ts,critical,pass,0,1,0.0,latest event_ts = 2027-08-01 12:47:25 (-397 days before extract date; tolerance 2),,0.0
+raw,product_events,row_count_min,*,critical,pass,0,1,0.0,832231 rows (minimum 1),,0.0
+raw,product_events,row_count_change,*,warning,pass,0,1,0.0,832231 rows vs 832231 in the previous run (+0.0%),,0.0
+raw,support_tickets,schema_missing_columns,*,critical,pass,0,11,0.0,Columns required by the contract but absent: none,,0.0
+raw,support_tickets,schema_unexpected_columns,*,warning,fail,1,12,0.0,Columns delivered but not in the contract (additive schema change): ['agent_id'],agent_id,0.083333
+raw,support_tickets,schema_dtype,created_ts,warning,pass,0,6446,0.0,expected timestamp; unparseable values counted,,0.0
+raw,support_tickets,schema_dtype,first_response_minutes,warning,pass,0,6446,0.0,"expected float, received pandas dtype 'float64'",,0.0
+raw,support_tickets,schema_dtype,resolved_ts,warning,pass,0,6446,0.0,expected timestamp; unparseable values counted,,0.0
+raw,support_tickets,schema_dtype,csat_score,critical,fail,3769,6446,0.0,"expected float, received pandas dtype 'object' (type drift: numeric column arrived as text)",N/A,0.584704
+raw,support_tickets,not_null,ticket_id,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,customer_id,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,created_ts,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,channel,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,category,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,priority,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,first_response_minutes,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,not_null,ticket_status,critical,pass,0,6446,0.0,nulls in a non-nullable column,,0.0
+raw,support_tickets,primary_key_unique,ticket_id,critical,pass,0,6446,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,support_tickets,accepted_values,channel,critical,pass,0,6446,0.0,values outside the allowed set,,0.0
+raw,support_tickets,accepted_values,category,critical,pass,0,6446,0.0,values outside the allowed set,,0.0
+raw,support_tickets,accepted_values,priority,critical,pass,0,6446,0.0,values outside the allowed set,,0.0
+raw,support_tickets,accepted_values,ticket_status,critical,pass,0,6446,0.0,values outside the allowed set,,0.0
+raw,support_tickets,range,first_response_minutes,critical,pass,0,6446,0.0,"outside [0, inf]",,0.0
+raw,support_tickets,range,csat_score,critical,pass,0,6446,0.0,"outside [1, 5]",,0.0
+raw,support_tickets,pattern,ticket_id,critical,pass,0,6446,0.0,does not match ^TK\d{6}$,,0.0
+raw,support_tickets,date_order,created_ts<=resolved_ts,critical,fail,6,6446,0.0,resolved_ts earlier than created_ts,"TK001548, TK002370, TK003893, TK003947, TK004003",0.000931
+raw,support_tickets,future_date,created_ts,critical,pass,0,6446,0.0,later than the extract date 2026-06-30,,0.0
+raw,support_tickets,future_date,resolved_ts,critical,pass,0,6446,0.0,later than the extract date 2026-06-30,,0.0
+raw,support_tickets,foreign_key,customer_id,critical,pass,0,6446,0.0,orphans: no matching customers.customer_id,,0.0
+raw,support_tickets,foreign_key,loan_id,critical,pass,0,6446,0.0,orphans: no matching loans.loan_id,,0.0
+raw,support_tickets,outlier_robust_z,first_response_minutes,warning,fail,30,6446,0.0,robust z > 5 on log scale (median 5),"1242.6, 1422.8, 2293.8, 1580.9, 2636.6",0.004654
+raw,support_tickets,freshness,created_ts,critical,pass,0,1,0.0,latest created_ts = 2026-06-30 23:47:42 (0 days before extract date; tolerance 2),,0.0
+raw,support_tickets,row_count_min,*,critical,pass,0,1,0.0,6446 rows (minimum 1),,0.0
+raw,support_tickets,row_count_change,*,warning,pass,0,1,0.0,6446 rows vs 6446 in the previous run (+0.0%),,0.0
+raw,experiments,schema_missing_columns,*,critical,pass,0,13,0.0,Columns required by the contract but absent: none,,0.0
+raw,experiments,schema_unexpected_columns,*,warning,pass,0,13,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,experiments,schema_dtype,allocation_pct,warning,pass,0,3,0.0,"expected integer, received pandas dtype 'int64'",,0.0
+raw,experiments,schema_dtype,start_date,warning,pass,0,3,0.0,expected date; unparseable values counted,,0.0
+raw,experiments,schema_dtype,end_date,warning,pass,0,3,0.0,expected date; unparseable values counted,,0.0
+raw,experiments,not_null,experiment_id,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,experiment_name,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,feature_area,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,hypothesis,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,unit,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,allocation_pct,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,start_date,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,end_date,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,primary_metric,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,status,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,not_null,owner_team,critical,pass,0,3,0.0,nulls in a non-nullable column,,0.0
+raw,experiments,primary_key_unique,experiment_id,critical,pass,0,3,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,experiments,accepted_values,unit,critical,pass,0,3,0.0,values outside the allowed set,,0.0
+raw,experiments,range,allocation_pct,critical,pass,0,3,0.0,"outside [1, 99]",,0.0
+raw,experiments,pattern,experiment_id,critical,pass,0,3,0.0,does not match ^EXP-,,0.0
+raw,experiments,date_order,start_date<=end_date,critical,pass,0,3,0.0,end_date earlier than start_date,,0.0
+raw,experiments,row_count_min,*,critical,pass,0,1,0.0,3 rows (minimum 1),,0.0
+raw,experiments,row_count_change,*,warning,pass,0,1,0.0,3 rows vs 3 in the previous run (+0.0%),,0.0
+raw,experiment_assignments,schema_missing_columns,*,critical,pass,0,6,0.0,Columns required by the contract but absent: none,,0.0
+raw,experiment_assignments,schema_unexpected_columns,*,warning,pass,0,6,0.0,Columns delivered but not in the contract (additive schema change): none,,0.0
+raw,experiment_assignments,schema_dtype,assigned_ts,warning,pass,0,7308,0.0,expected timestamp; unparseable values counted,,0.0
+raw,experiment_assignments,not_null,assignment_id,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,not_null,experiment_id,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,not_null,customer_id,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,not_null,variant,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,not_null,assigned_ts,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,not_null,platform,critical,pass,0,7308,0.0,nulls in a non-nullable column,,0.0
+raw,experiment_assignments,primary_key_unique,assignment_id,critical,pass,0,7308,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,experiment_assignments,unique_together,experiment_id+customer_id,critical,pass,0,7308,0.0,duplicate keys (of which 0 are exact duplicate rows),,0.0
+raw,experiment_assignments,accepted_values,variant,critical,pass,0,7308,0.0,values outside the allowed set,,0.0
+raw,experiment_assignments,accepted_values,platform,critical,pass,0,7308,0.0,values outside the allowed set,,0.0
+raw,experiment_assignments,pattern,assignment_id,critical,pass,0,7308,0.0,does not match ^AS\d{7}$,,0.0
+raw,experiment_assignments,future_date,assigned_ts,critical,pass,0,7308,0.0,later than the extract date 2026-06-30,,0.0
+raw,experiment_assignments,foreign_key,experiment_id,critical,pass,0,7308,0.0,orphans: no matching experiments.experiment_id,,0.0
+raw,experiment_assignments,foreign_key,customer_id,critical,pass,0,7308,0.0,orphans: no matching customers.customer_id,,0.0
+raw,experiment_assignments,row_count_min,*,critical,pass,0,1,0.0,7308 rows (minimum 1),,0.0
+raw,experiment_assignments,row_count_change,*,warning,pass,0,1,0.0,7308 rows vs 7308 in the previous run (+0.0%),,0.0
+raw,transactions,reconciliation:ledger_vs_repayments,amount,critical,fail,196,20677,0.005,"loans whose successful EMI ledger total differs from repayments.amount_paid by > INR 1 (total gap INR 8,225,522)","LN0000087, LN0000190, LN0000238, LN0000330, LN0000488",0.009479
+raw,transactions,reconciliation:disbursement_vs_loans,amount,critical,pass,46,20661,0.005,loans whose disbursement ledger entry does not match net_disbursed_amount,"LN0000021, LN0000166, LN0000180, LN0000213, LN0000628",0.002226
+raw,loans,reconciliation:loans_vs_applications,application_id,warning,pass,12,20661,0.001,"6 disbursed applications without a loan, 6 loans pointing at unknown applications, 0 loans with no application link","APP9031679, APP9182151, APP9273214, APP9579997, APP9712678",0.000581
+raw,product_events,reconciliation:kyc_events_vs_backend,event_name,warning,fail,18,730,0.0,"days where tracked kyc_completed events < 90% of backend KYC completions (instrumentation gap, not a business change)","2025-05-13 (34%), 2025-05-12 (37%), 2025-05-15 (39%), 2025-05-14 (42%), 2025-05-25 (60%)",0.024658
+raw,customers,reconciliation:channel_vs_campaign,acquisition_channel,warning,fail,490,81525,0.0,"acquisition_channel label contradicts the campaign tag (paid channel without campaign, or campaign of another channel)","C000256, C000321, C000330, C000336, C000522",0.00601
+raw,products,schema_drift_vs_previous_run,*,warning,pass,0,13,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,marketing_campaigns,schema_drift_vs_previous_run,*,warning,pass,0,11,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,customers,schema_drift_vs_previous_run,*,warning,pass,0,17,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,applications,schema_drift_vs_previous_run,*,warning,pass,0,17,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,loans,schema_drift_vs_previous_run,*,warning,pass,0,22,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,repayments,schema_drift_vs_previous_run,*,warning,pass,0,15,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,transactions,schema_drift_vs_previous_run,*,warning,pass,0,10,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,product_events,schema_drift_vs_previous_run,*,warning,pass,0,8,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,support_tickets,schema_drift_vs_previous_run,*,warning,pass,0,12,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,experiments,schema_drift_vs_previous_run,*,warning,pass,0,13,0.0,added=[] removed=[] dtype_changed=[],,0.0
+raw,experiment_assignments,schema_drift_vs_previous_run,*,warning,pass,0,6,0.0,added=[] removed=[] dtype_changed=[],,0.0

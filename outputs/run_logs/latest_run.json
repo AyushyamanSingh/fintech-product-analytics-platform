@@ -1,0 +1,25 @@
+{
+  "run_id": "20261003_232031",
+  "started_at": "2026-10-03T23:20:31",
+  "settings": {
+    "base_dir": "D:\\Data Analyst Projects\\fintech-product-analytics-platform",
+    "n_customers": 80000,
+    "seed": 42,
+    "window": [
+      "2024-07-01",
+      "2026-06-30"
+    ]
+  },
+  "steps": [
+    {
+      "step": "dashboard",
+      "status": "success",
+      "seconds": 0.19,
+      "info": {
+        "path": "D:\\Data Analyst Projects\\fintech-product-analytics-platform\\dashboard\\index.html"
+      }
+    }
+  ],
+  "finished_at": "2026-10-03T23:20:31",
+  "status": "success"
+}

@@ -1,0 +1,8 @@
+platform,app_version,backend_kyc_completions,tracked_kyc_completions,tracked_pct
+android,5.2.0,326,171.0,52.5
+android,5.1.0,383,310.0,80.9
+android,5.2.1,909,748.0,82.3
+ios,5.2.1,222,222.0,100.0
+web,web,112,112.0,100.0
+ios,5.1.0,96,96.0,100.0
+ios,5.2.0,62,62.0,100.0

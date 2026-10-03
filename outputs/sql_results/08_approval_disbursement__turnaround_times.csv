@@ -1,0 +1,8 @@
+product_id,decided_applications,median_minutes_to_decision,p90_hours_to_decision,median_hours_approval_to_cash
+P01,10106,2.6,0.1,2.1
+P02,10393,2.6,0.1,2.2
+P03,7136,2.6,0.1,2.1
+P04,3940,2.6,0.1,2.2
+P05,2251,1335.7,70.3,8.7
+P06,2376,1323.9,67.5,67.3
+P07,1997,2.6,0.1,2.2

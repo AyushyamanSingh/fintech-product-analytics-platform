@@ -1,0 +1,28 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# generated data (reproducible: python pipeline.py --generate); data/sample/ is committed
+data/raw/
+data/staging/
+data/processed/
+data/quarantine/
+data/warehouse/
+powerbi/data/*.csv
+*.duckdb
+*.duckdb.wal
+
+# large / noisy outputs (the rest of outputs/ is committed as sample output)
+outputs/segments/customer_segments.csv
+outputs/run_logs/*.log
+outputs/run_logs/run_*.json
+outputs/data_quality/schema_fingerprint_*.json
+
+# local
+MY_PROJECT_GUIDE.md
+.env
+*.pbix.bak
+.DS_Store

@@ -1,0 +1,66 @@
+# Weekly analytics run + CI.  SYNTHETIC DATA.
+# - On every push / PR touching code: run the test-suite (unit + small end-to-end pipeline).
+# - Every Monday 07:00 IST (01:30 UTC) or on demand: regenerate sources, run the full pipeline,
+#   publish the executive summary, DQ report, KPI snapshot and charts as build artifacts.
+# The AI summary uses Claude when the ANTHROPIC_API_KEY secret is set, otherwise the deterministic
+# summariser - the run never fails just because the LLM is unavailable.
+name: weekly-analytics-pipeline
+
+on:
+  schedule:
+    - cron: "30 1 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["**.py", "sql/**", "data_quality/**", "requirements*.txt", ".github/workflows/**"]
+  pull_request:
+
+concurrency:
+  group: pipeline-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q --maxfail=5
+
+  pipeline:
+    needs: test
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run pipeline (extract -> validate -> transform -> KPIs -> AI summary)
+        run: python pipeline.py --generate
+      - name: Publish run summary
+        if: always()
+        run: |
+          echo "## Executive summary" >> "$GITHUB_STEP_SUMMARY"
+          cat outputs/ai/executive_summary.md >> "$GITHUB_STEP_SUMMARY" || true
+          echo "## Data quality" >> "$GITHUB_STEP_SUMMARY"
+          cat outputs/data_quality/data_quality_summary.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: analytics-run-${{ github.run_number }}
+          path: |
+            outputs/
+            docs/images/
+            !outputs/segments/customer_segments.csv
+          retention-days: 30

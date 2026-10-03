@@ -1,0 +1,265 @@
+{
+  "mode": "deterministic",
+  "note": null,
+  "meta": null,
+  "summary": {
+    "headline": {
+      "text": "Jun 2026: Gross revenue ₹59.30 L (+1.6% vs prior month); Loans disbursed 1,293 (-2.1% vs prior month); Collection efficiency remains below target at 93.9%.",
+      "fact_ids": [
+        "F13",
+        "F07",
+        "F20"
+      ]
+    },
+    "highlights": [
+      {
+        "text": "Week of 22 Jun: Loans disbursed 317 (+7.1% week on week); Disbursed amount ₹1.41 Cr (+4.7% week on week); EMI collections ₹1.38 Cr (+16.6% week on week); Payment failure rate 11.2% (+0.8 pp week on week).",
+        "fact_ids": [
+          "F33",
+          "F34",
+          "F35",
+          "F36"
+        ]
+      },
+      {
+        "text": "Disbursed amount ₹5.86 Cr (+1.3% vs prior month); Net revenue ₹33.96 L (-17.2% vs prior month).",
+        "fact_ids": [
+          "F08",
+          "F15"
+        ]
+      },
+      {
+        "text": "KYC completion (7-day) 62.3% (-0.9 pp vs prior month); Approval rate 62.2% (-2.4 pp vs prior month).",
+        "fact_ids": [
+          "F02",
+          "F05"
+        ]
+      },
+      {
+        "text": "PAR30 3.6% (-0.2 pp vs prior month); NPA (90+ DPD) 2.0% (-0.5 pp vs prior month).",
+        "fact_ids": [
+          "F17",
+          "F18"
+        ]
+      },
+      {
+        "text": "Monthly active users 14,918 (+1.4% vs prior month); Repeat-loan share 34.9% (-3.7 pp vs prior month).",
+        "fact_ids": [
+          "F22",
+          "F11"
+        ]
+      },
+      {
+        "text": "Onboarding redesign experiment: 7-day KYC completion 61.78% treatment vs 58.51% control, difference +3.26 pp (95% CI +0.54 to +5.99 pp), relative uplift +5.6%, p-value 0.0191; P(treatment better) 99.0%.",
+        "fact_ids": [
+          "F50"
+        ]
+      }
+    ],
+    "kpi_movements": [
+      {
+        "text": "Approval rate: 62.2% (-2.4 pp vs prior month) - down.",
+        "fact_ids": [
+          "F05"
+        ]
+      },
+      {
+        "text": "Repeat-loan share: 34.9% (-3.7 pp vs prior month) - worsened.",
+        "fact_ids": [
+          "F11"
+        ]
+      },
+      {
+        "text": "Credit losses (write-offs): ₹25.34 L (+46.1% vs prior month) - worsened.",
+        "fact_ids": [
+          "F14"
+        ]
+      },
+      {
+        "text": "Net revenue: ₹33.96 L (-17.2% vs prior month) - worsened.",
+        "fact_ids": [
+          "F15"
+        ]
+      },
+      {
+        "text": "Support tickets: 361 (+7.8% vs prior month) - worsened.",
+        "fact_ids": [
+          "F23"
+        ]
+      },
+      {
+        "text": "Tickets per 1k MAU: 24.20 (+6.2% vs prior month) - worsened.",
+        "fact_ids": [
+          "F24"
+        ]
+      },
+      {
+        "text": "Marketing spend: ₹11.62 L (+7.4% vs prior month) - up.",
+        "fact_ids": [
+          "F26"
+        ]
+      }
+    ],
+    "anomalies": [
+      {
+        "text": "No anomaly episodes in the last 8 weeks; the monitor remains active.",
+        "fact_ids": [
+          "F41"
+        ]
+      },
+      {
+        "text": "Past incident for context: EMI payment failure rate spiked to 47.1% on 15 Aug 2025 (expected 8.9%, robust z 15.6); main driver: failure reason (excess failed debits) = gateway_timeout (96% of the deviation). Window 2025-08-14 to 2025-08-15, 2 day(s) flagged, severity high (no known business event - investigate).",
+        "fact_ids": [
+          "F46"
+        ]
+      },
+      {
+        "text": "Past incident for context: Signups spiked to 222 on 15 Sep 2025 (expected 113, robust z 6.8); main driver: acquisition channel = affiliate (87% of the deviation). Window 2025-09-08 to 2025-09-21, 14 day(s) flagged, severity high (no known business event - investigate).",
+        "fact_ids": [
+          "F47"
+        ]
+      },
+      {
+        "text": "Past incident for context: Daily active users spiked to 920 on 16 Sep 2025 (expected 692, robust z 5.8); main driver: platform = android (94% of the deviation). Window 2025-09-13 to 2025-09-20, 6 day(s) flagged, severity high (no known business event - investigate).",
+        "fact_ids": [
+          "F48"
+        ]
+      }
+    ],
+    "experiments": [
+      {
+        "text": "EXP-ONB-2026-01 guardrails: approval rate +3.13 pp (pass), FPD30 -1.48 pp (pass), KYC support tickets +0.16 pp (inconclusive). Decision: SHIP with post-launch monitoring of kyc_support_ticket_rate.",
+        "fact_ids": [
+          "F52"
+        ]
+      },
+      {
+        "text": "EXP-RPY-2025-11 (Autopay nudge at disbursal): autopay 64.28% treatment vs 46.62% control, difference +17.65 pp (95% CI +12.76 to +22.54 pp), p-value 0.0000. Decision: SHIP.",
+        "fact_ids": [
+          "F54"
+        ]
+      },
+      {
+        "text": "EXP-PRC-2025-06 (Upfront fee transparency on the offer screen): accepted 90.98% treatment vs 88.78% control, difference +2.20 pp (95% CI -1.93 to +6.32 pp), p-value 0.2974. Decision: INCONCLUSIVE - underpowered: needed 1,530 users per arm for a 3.0 pp MDE, had 410.",
+        "fact_ids": [
+          "F55"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "text": "Collection efficiency is off target: 93.9% (>= 95.0% -> off track).",
+        "fact_ids": [
+          "F20"
+        ]
+      },
+      {
+        "text": "Payment failure rate is off target: 10.3% (<= 8.0% -> off track).",
+        "fact_ids": [
+          "F21"
+        ]
+      },
+      {
+        "text": "CSAT is off target: 3.46 (>= 4.00 -> off track).",
+        "fact_ids": [
+          "F25"
+        ]
+      },
+      {
+        "text": "Festive-season credit dilution: First-loan FPD30 for loans disbursed in the Oct-Nov 2025 festive season vs Jun-Sep 2025: affiliate 4.49% vs 1.71%, paid social 5.42% vs 3.67%, partnerships 2.40% vs 3.25%.",
+        "fact_ids": [
+          "F59"
+        ]
+      },
+      {
+        "text": "Acquisition fraud exposure: Campaign CMP-202509-AFFNB (Affiliate Network B, Sep 2025): spend ₹5.56 L, 1,258 signups, 4 funded customers, cost per funded customer ₹1.39 L; flagged 'inefficient_spend'.",
+        "fact_ids": [
+          "F61"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "text": "Add pre-due-date reminders (three days and one day before the EMI date) and same-day retries for failed auto-debits.",
+        "owner": "Collections & Repayments",
+        "fact_ids": [
+          "F20"
+        ]
+      },
+      {
+        "text": "Make autopay mandate set-up the default step at disbursal and schedule debit retries around salary-credit dates; autopay borrowers repay on time more often.",
+        "owner": "Collections & Repayments",
+        "fact_ids": [
+          "F21",
+          "F60"
+        ]
+      },
+      {
+        "text": "Attack the top ticket drivers (KYC issues, payment failures) with in-app self-serve fixes and a first-response SLA; CSAT is below target.",
+        "owner": "Customer Support",
+        "fact_ids": [
+          "F25"
+        ]
+      },
+      {
+        "text": "Shift paid budget from affiliate and paid social towards referral and employer partnerships, which return the most value per rupee of acquisition cost.",
+        "owner": "Marketing",
+        "fact_ids": [
+          "F28",
+          "F58"
+        ]
+      },
+      {
+        "text": "Add device and velocity rules for affiliate traffic and pay affiliates on funded, performing loans instead of signups.",
+        "owner": "Risk & Marketing",
+        "fact_ids": [
+          "F61"
+        ]
+      }
+    ],
+    "data_caveats": [
+      {
+        "text": "Data quality: DQ score 92.0 on the raw extract and 99.1 on the curated layer; critical failures 22 -> 0; 9 warnings remain (documented open issues); 27 of 27 planted defect types detected.",
+        "fact_ids": [
+          "F64"
+        ]
+      },
+      {
+        "text": "Open data-quality issue (warning): marketing_campaigns.budget_inr,spend_inr cross_field:spend_within_budget - 1 rows (spend_inr <= 1.5 * budget_inr).",
+        "fact_ids": [
+          "F65"
+        ]
+      },
+      {
+        "text": "Open data-quality issue (warning): customers.city not_null - 974 rows (nulls in a non-nullable column).",
+        "fact_ids": [
+          "F66"
+        ]
+      },
+      {
+        "text": "Open data-quality issue (warning): customers.age not_null - 65 rows (nulls in a non-nullable column).",
+        "fact_ids": [
+          "F67"
+        ]
+      },
+      {
+        "text": "Cohort-based KPIs report with a lag: Activation rate (first loan in 30 days) refers to May 2026, First-payment default (FPD30) refers to Apr 2026.",
+        "fact_ids": [
+          "F03",
+          "F19"
+        ]
+      },
+      {
+        "text": "All figures are synthetic and generated for demonstration.",
+        "fact_ids": []
+      }
+    ]
+  },
+  "validation": {
+    "grounded": true,
+    "items_checked": 37,
+    "numbers_checked": 116,
+    "problems": [],
+    "removed_items": []
+  }
+}

@@ -1,0 +1,12 @@
+table,source_file,bytes,md5,rows,columns,extracted_at
+products,products.csv,887,69815af2336fad4da146d26583d42bd3,7,13,2026-10-03T03:10:20
+marketing_campaigns,marketing_campaigns.csv,16287,7565307c2755a6a2ad5733c7300e98f3,122,11,2026-10-03T03:10:20
+customers,customers.csv,13105295,097b2c7682febe4bc8049f64eb387125,81525,17,2026-10-03T03:10:20
+applications,applications.csv,6980244,86617ae528e15e547d51715a6e5b9ba4,46988,17,2026-10-03T03:10:20
+loans,loans.csv,3046351,bcedd4926e6fe084ef59bea6873dc674,20661,22,2026-10-03T03:10:20
+repayments,repayments.csv,13793252,ad0ee392ef7fe236b3e8010758e26339,125584,15,2026-10-03T03:10:20
+transactions,transactions.csv,13344580,06fd07610a2d7b5242028220b85fc3f7,131285,10,2026-10-03T03:10:21
+product_events,product_events.csv.gz,14167275,6f15b62fd17f3fd7620bfb38ab5b1c9b,832231,8,2026-10-03T03:10:23
+support_tickets,support_tickets.csv,716793,7867ee14311229ef3d79d9a22140584b,6446,12,2026-10-03T03:10:23
+experiments,experiments.csv,1292,ac8a2ef7da828e02ba26cdc075f406c9,3,13,2026-10-03T03:10:23
+experiment_assignments,experiment_assignments.csv,519970,e9ecd2f16c3f5d5a30887e75867966b1,7308,6,2026-10-03T03:10:23

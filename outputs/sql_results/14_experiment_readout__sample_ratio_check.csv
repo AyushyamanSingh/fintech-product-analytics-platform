@@ -1,0 +1,4 @@
+experiment_id,control_n,treatment_n,chi_square_stat
+EXP-ONB-2026-01,2543.0,2407.0,3.737
+EXP-PRC-2025-06,410.0,410.0,0.0
+EXP-RPY-2025-11,785.0,753.0,0.666

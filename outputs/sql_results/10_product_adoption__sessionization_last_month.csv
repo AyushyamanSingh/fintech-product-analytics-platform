@@ -1,0 +1,4 @@
+platform,derived_sessions,sdk_sessions,events_per_session,median_session_minutes
+android,26679,28594,1.23,0.0
+ios,6561,7084,1.24,0.0
+web,1953,2067,1.19,0.0

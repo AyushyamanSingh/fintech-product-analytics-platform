@@ -1,0 +1,158 @@
+{
+  "raw": {
+    "checks_run": 400,
+    "checks_passed": 367,
+    "critical_failures": 22,
+    "warnings": 11,
+    "dq_score": 92.0,
+    "failed_rows_total": 16198,
+    "by_table": [
+      {
+        "table": "applications",
+        "checks": 44,
+        "failed": 3,
+        "critical_failed": 3
+      },
+      {
+        "table": "customers",
+        "checks": 45,
+        "failed": 10,
+        "critical_failed": 4
+      },
+      {
+        "table": "experiment_assignments",
+        "checks": 20,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "experiments",
+        "checks": 24,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "loans",
+        "checks": 65,
+        "failed": 2,
+        "critical_failed": 2
+      },
+      {
+        "table": "marketing_campaigns",
+        "checks": 33,
+        "failed": 2,
+        "critical_failed": 1
+      },
+      {
+        "table": "product_events",
+        "checks": 19,
+        "failed": 5,
+        "critical_failed": 4
+      },
+      {
+        "table": "products",
+        "checks": 39,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "repayments",
+        "checks": 49,
+        "failed": 3,
+        "critical_failed": 2
+      },
+      {
+        "table": "support_tickets",
+        "checks": 32,
+        "failed": 4,
+        "critical_failed": 2
+      },
+      {
+        "table": "transactions",
+        "checks": 30,
+        "failed": 4,
+        "critical_failed": 4
+      }
+    ]
+  },
+  "clean": {
+    "checks_run": 404,
+    "checks_passed": 395,
+    "critical_failures": 0,
+    "warnings": 9,
+    "dq_score": 99.1,
+    "failed_rows_total": 2758,
+    "by_table": [
+      {
+        "table": "applications",
+        "checks": 44,
+        "failed": 1,
+        "critical_failed": 0
+      },
+      {
+        "table": "customers",
+        "checks": 47,
+        "failed": 4,
+        "critical_failed": 0
+      },
+      {
+        "table": "experiment_assignments",
+        "checks": 20,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "experiments",
+        "checks": 24,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "loans",
+        "checks": 65,
+        "failed": 1,
+        "critical_failed": 0
+      },
+      {
+        "table": "marketing_campaigns",
+        "checks": 33,
+        "failed": 1,
+        "critical_failed": 0
+      },
+      {
+        "table": "product_events",
+        "checks": 21,
+        "failed": 1,
+        "critical_failed": 0
+      },
+      {
+        "table": "products",
+        "checks": 39,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "repayments",
+        "checks": 49,
+        "failed": 0,
+        "critical_failed": 0
+      },
+      {
+        "table": "support_tickets",
+        "checks": 32,
+        "failed": 1,
+        "critical_failed": 0
+      },
+      {
+        "table": "transactions",
+        "checks": 30,
+        "failed": 0,
+        "critical_failed": 0
+      }
+    ]
+  },
+  "recall": {
+    "detected": 27,
+    "total": 27
+  }
+}

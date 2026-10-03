@@ -1,0 +1,13 @@
+driver,value,loans,repeat_90d_pct
+acquisition_channel,partnerships,3261,61.79
+acquisition_channel,referral,1617,53.06
+acquisition_channel,paid_search,2176,47.24
+acquisition_channel,organic,2041,46.84
+acquisition_channel,affiliate,560,45.36
+acquisition_channel,paid_social,930,38.71
+all_instalments_on_time,true,7792,53.47
+all_instalments_on_time,false,2793,46.72
+autopay_enabled,true,5381,56.36
+autopay_enabled,false,5204,46.85
+closure_type,repaid,10146,52.19
+closure_type,foreclosure,439,40.09

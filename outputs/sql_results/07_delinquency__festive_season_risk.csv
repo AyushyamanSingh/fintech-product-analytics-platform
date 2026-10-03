@@ -1,0 +1,13 @@
+period,acquisition_channel,loans,fpd30_pct,ever_30dpd_pct
+baseline_jun_sep_2025,affiliate,117,1.71,7.69
+festive_oct_nov_2025,affiliate,89,4.49,13.48
+baseline_jun_sep_2025,organic,503,1.79,6.76
+festive_oct_nov_2025,organic,350,3.14,8.0
+baseline_jun_sep_2025,paid_search,525,2.29,6.86
+festive_oct_nov_2025,paid_search,313,2.88,8.31
+baseline_jun_sep_2025,paid_social,218,3.67,7.8
+festive_oct_nov_2025,paid_social,203,5.42,14.29
+baseline_jun_sep_2025,partnerships,431,3.25,5.57
+festive_oct_nov_2025,partnerships,292,2.4,3.77
+baseline_jun_sep_2025,referral,440,2.05,4.32
+festive_oct_nov_2025,referral,262,3.05,8.4

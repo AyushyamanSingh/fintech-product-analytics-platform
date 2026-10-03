@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--FRAGMENT-START-->
+<title>Vittora Credit Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky brand bar + tab strip over a 12-column panel grid (max 1240px); each page = heading, stat tiles, then panels. */
+:root {
+  --page: #f6f6f2;
+  --surface: #fdfdfb;
+  --surface-2: #f0efe9;
+  --ink: #121315;
+  --ink-2: #4c4e52;
+  --muted: #84858a;
+  --grid: #e5e4dd;
+  --line: #d9d8d0;
+  --accent: #2a78d6;
+  --accent-ink: #1d5fb0;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+  --s5: #e87ba4; --s6: #008300; --s7: #4a3aa7; --s8: #e34948;
+  --de: #c9c8c2;
+  --good: #0ca30c; --warn: #fab219; --crit: #d03b3b;
+  --good-ink: #0a6e0a; --warn-ink: #8a5a00; --crit-ink: #b42525;
+  --sev1: #f3c590; --sev2: #ec8b4c; --sev3: #d4552b; --sev4: #9e3417;
+  --seq0: #e6effb; --seq1: #cde2fb; --seq2: #9ec5f4; --seq3: #6da7ec;
+  --seq4: #3987e5; --seq5: #2a78d6; --seq6: #1c5cab; --seq7: #104281;
+  --seq-ink-lo: #121315; --seq-ink-hi: #ffffff;
+  --band: rgba(42, 120, 214, 0.08);
+  --tip-shadow: 0 8px 28px rgba(18, 19, 21, 0.14);
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #0e0e0d; --surface: #181817; --surface-2: #20201e; --ink: #f3f3ef; --ink-2: #c6c5bb;
+    --muted: #8e8d86; --grid: #2a2a28; --line: #35352f; --accent: #3987e5; --accent-ink: #86b6ef;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2c962c; --s7: #9085e9; --s8: #e66767;
+    --de: #4b4b47; --good-ink: #3fc43f; --warn-ink: #fab219; --crit-ink: #f08a8a;
+    --sev1: #6b4520; --sev2: #a75a2b; --sev3: #dd6d3c; --sev4: #f39a6c;
+    --seq0: #172231; --seq1: #1a2c45; --seq2: #1e3a5f; --seq3: #234c7e; --seq4: #2a63a6; --seq5: #3987e5; --seq6: #6da7ec; --seq7: #a9cbf5;
+    --seq-ink-lo: #e9eef6; --seq-ink-hi: #0b0d10; --band: rgba(57, 135, 229, 0.15); --tip-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0e0e0d; --surface: #181817; --surface-2: #20201e; --ink: #f3f3ef; --ink-2: #c6c5bb;
+  --muted: #8e8d86; --grid: #2a2a28; --line: #35352f; --accent: #3987e5; --accent-ink: #86b6ef;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #2c962c; --s7: #9085e9; --s8: #e66767;
+  --de: #4b4b47; --good-ink: #3fc43f; --warn-ink: #fab219; --crit-ink: #f08a8a;
+  --sev1: #6b4520; --sev2: #a75a2b; --sev3: #dd6d3c; --sev4: #f39a6c;
+  --seq0: #172231; --seq1: #1a2c45; --seq2: #1e3a5f; --seq3: #234c7e; --seq4: #2a63a6; --seq5: #3987e5; --seq6: #6da7ec; --seq7: #a9cbf5;
+  --seq-ink-lo: #e9eef6; --seq-ink-hi: #0b0d10; --band: rgba(57, 135, 229, 0.15); --tip-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.5 var(--font-ui); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 3vw, 28px); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--page); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding-block: 12px 4px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.brand svg { flex: none; }
+.brand-name { font: 700 19px/1.1 var(--font-display); letter-spacing: -0.01em; }
+.brand-sub { color: var(--ink-2); font-size: 12.5px; }
+.meta { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.badge { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.badge b { color: var(--ink); font-weight: 600; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; margin-bottom: -1px; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { appearance: none; border: 0; background: none; font: 500 13.5px var(--font-ui); color: var(--ink-2); padding: 9px 12px 10px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+button:focus-visible, .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.btn-ghost { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); font: 500 12px var(--font-ui); border-radius: 6px; padding: 3px 9px; cursor: pointer; white-space: nowrap; }
+.btn-ghost:hover, .btn-ghost[aria-pressed="true"] { color: var(--ink); border-color: var(--muted); }
+main { padding-block: 22px 36px; }
+.page-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 16px; }
+.page-head h1 { font: 700 27px/1.15 var(--font-display); margin: 0; letter-spacing: -0.015em; text-wrap: balance; }
+.page-head p { margin: 0; color: var(--ink-2); max-width: 72ch; text-wrap: pretty; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 10px; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.tile .k { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .v { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+.tile .d { font-size: 12px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; min-height: 20px; margin-bottom: 4px; }
+.tile .spark { height: 34px; margin-top: auto; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.span-12 { grid-column: span 12; } .span-8 { grid-column: span 8; } .span-7 { grid-column: span 7; }
+.span-6 { grid-column: span 6; } .span-5 { grid-column: span 5; } .span-4 { grid-column: span 4; }
+@media (max-width: 980px) { .span-8, .span-7, .span-6, .span-5, .span-4 { grid-column: span 12; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 14px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.panel-h { display: flex; align-items: flex-start; gap: 12px; }
+.panel-h > div:first-child { min-width: 0; }
+.panel-h h2 { font: 600 15px/1.3 var(--font-ui); margin: 0; }
+.panel-h p { margin: 2px 0 0; color: var(--ink-2); font-size: 12.5px; }
+/* Panels in a row share one height; the body flexes so charts (and stretchable tables) fill it. */
+.panel-b { flex: 1 1 auto; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.panel-b[hidden] { display: none; }
+.panel-b > p { margin: 0; }
+.panel-b > .push { margin-top: auto; }
+.fill-col { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }
+.stack { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.stack > .panel:last-child { flex: 1 1 auto; }
+.tools { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.chart { width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.chart.fill { flex: 1 1 auto; position: relative; }
+.chart.fill > svg { position: absolute; left: 0; top: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; }
+.legend i.line { height: 2px; width: 14px; border-radius: 1px; }
+svg text { font-family: var(--font-ui); }
+svg text.ax { fill: var(--muted); font-size: 11px; }
+svg text.lbl { fill: var(--ink-2); font-size: 12px; }
+svg text.val { fill: var(--ink); font-size: 12px; font-weight: 600; }
+svg text.sub { fill: var(--muted); font-size: 11px; }
+svg .gl { stroke: var(--grid); stroke-width: 1; }
+svg .base { stroke: var(--muted); stroke-width: 1; }
+svg .ln { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+svg .hair { stroke: var(--muted); stroke-width: 1; }
+svg .hit { fill: transparent; cursor: crosshair; }
+svg .rowhit { fill: transparent; cursor: default; }
+svg .rowhit:hover { fill: var(--band); }
+svg .band { fill: var(--band); }
+svg .mark-line { stroke: var(--muted); stroke-width: 1; }
+svg .ring { stroke: var(--surface); stroke-width: 2; }
+.tip { position: fixed; z-index: 50; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; box-shadow: var(--tip-shadow); font-size: 12px; min-width: 150px; max-width: 300px; }
+.tip .t { color: var(--ink-2); margin-bottom: 4px; font-size: 11.5px; }
+.tip .r { display: flex; align-items: center; gap: 8px; line-height: 1.65; }
+.tip .r b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.tip .r span { color: var(--ink-2); }
+.tip .r i { width: 12px; height: 2px; border-radius: 1px; display: inline-block; flex: none; }
+.tbl-wrap { overflow-x: auto; min-width: 0; }
+.tbl-wrap.fill { flex: 1 1 auto; display: flex; flex-direction: column; }
+.tbl-wrap.fill > table { flex: 1 1 auto; }
+/* long tables scroll inside a fixed box that still grows with its row */
+.tbl-wrap.scroll { flex: 1 1 auto; height: 360px; overflow: auto; }
+table.t td.brk { overflow-wrap: break-word; }
+.tbl-wrap.scroll thead th { position: sticky; top: 0; z-index: 1; background: var(--surface); box-shadow: inset 0 -1px 0 var(--line); }
+table.t.wrap-head th { white-space: normal; vertical-align: bottom; }
+table.t { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.t th { text-align: left; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--line); padding: 6px 8px; white-space: nowrap; font-size: 12px; }
+table.t td { padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+table.t .n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.t tr:last-child td { border-bottom: 0; }
+.chip { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 1px 8px; font-size: 11.5px; font-weight: 500; white-space: nowrap; background: color-mix(in srgb, var(--muted) 15%, transparent); color: var(--ink-2); }
+.chip.good { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--good-ink); }
+.chip.warn { background: color-mix(in srgb, var(--warn) 22%, transparent); color: var(--warn-ink); }
+.chip.crit { background: color-mix(in srgb, var(--crit) 14%, transparent); color: var(--crit-ink); }
+.chip.accent { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-ink); }
+.delta { font-weight: 500; }
+.delta.good { color: var(--good-ink); } .delta.crit { color: var(--crit-ink); } .delta.neutral { color: var(--ink-2); }
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; margin-bottom: 16px; }
+@media (max-width: 860px) { .hero { grid-template-columns: minmax(0, 1fr); } }
+.hero-fig { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.hero-fig .k { color: var(--ink-2); font-size: 13px; }
+.hero-fig .big { font-size: clamp(40px, 6vw, 56px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.05; }
+.hero-fig .strip { margin-top: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 12px; border-top: 1px solid var(--grid); }
+.hero-fig .strip .k { font-size: 12px; }
+.hero-fig .strip .v { font-size: 17px; font-weight: 600; line-height: 1.3; }
+.summary { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.summary .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.summary .k { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+.summary blockquote { margin: 0; font-size: 15.5px; line-height: 1.45; font-weight: 500; text-wrap: pretty; }
+.summary ul { margin: 0; padding-left: 18px; color: var(--ink-2); display: flex; flex-direction: column; gap: 4px; }
+.cite { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-left: 4px; }
+.list { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.list li { display: flex; gap: 10px; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--grid); padding-bottom: 7px; min-width: 0; }
+.list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.list .lt { min-width: 0; }
+.list .rt { display: flex; gap: 6px; align-items: baseline; flex: none; font-variant-numeric: tabular-nums; }
+.list small { display: block; color: var(--ink-2); font-size: 12px; }
+.seg { display: flex; gap: 4px; flex-wrap: wrap; }
+.seg button { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); font: 500 12px var(--font-ui); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.heat { border-collapse: separate; border-spacing: 2px; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.heat th { color: var(--muted); font-weight: 500; padding: 2px 6px; text-align: right; white-space: nowrap; }
+.heat thead th { text-align: center; }
+.heat td { text-align: center; padding: 5px 4px; border-radius: 3px; min-width: 36px; }
+.heat td.m0 { background: var(--surface-2); color: var(--muted); }
+.scale { display: flex; align-items: center; gap: 3px; font-size: 11.5px; color: var(--muted); }
+.scale i { width: 16px; height: 10px; border-radius: 2px; display: inline-block; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 13px; margin: 0; }
+.kv dt { color: var(--ink-2); }
+.kv dd { margin: 0; font-weight: 500; font-variant-numeric: tabular-nums; }
+.note { font-size: 12px; color: var(--ink-2); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 16px; }
+.stats .k { font-size: 12px; color: var(--ink-2); }
+.stats .v { font-size: 20px; font-weight: 600; line-height: 1.25; }
+.stats.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.foot { color: var(--muted); font-size: 12px; padding-block: 10px 28px; border-top: 1px solid var(--line); }
+@media (prefers-reduced-motion: no-preference) {
+  .tile, .panel, .hero-fig, .summary { animation: rise 0.3s ease both; }
+  @keyframes rise { from { transform: translateY(4px); } to { transform: none; } }
+}
+</style>
+<!--HEAD-END-->
+</head>
+<body>
+<!--BODY-START-->
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" style="fill: var(--accent)"></rect><path d="M7.5 8.5 L14 20 L20.5 8.5" style="fill: none; stroke: var(--surface); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round"></path></svg>
+        <div>
+          <div class="brand-name">Vittora Credit</div>
+          <div class="brand-sub">Product analytics &amp; decision intelligence</div>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="badge" id="asof"></span>
+        <span class="badge">Synthetic data</span>
+        <button class="btn-ghost" id="theme" type="button" aria-label="Switch colour theme">Theme: auto</button>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Dashboard pages" id="tabs"></nav>
+  </div>
+</header>
+<main class="wrap" id="page"></main>
+<footer class="wrap foot" id="foot"></footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script id="dash-data" type="application/json">/*__DASHBOARD_DATA__*/null</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("dash-data").textContent);
+  var NS = "http://www.w3.org/2000/svg";
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var K = {}; D.kpis.forEach(function (k) { K[k.id] = k; });
+  var M = D.monthly;
+  var observers = [];
+
+  // ------------------------------------------------------------------ formatting
+  function ym(s) { var p = String(s).slice(0, 7).split("-"); return MON[+p[1] - 1] + " " + p[0]; }
+  function ymShort(s) { var p = String(s).slice(0, 7).split("-"); return MON[+p[1] - 1] + " " + p[0].slice(2); }
+  function dmy(s) { var p = String(s).slice(0, 10).split("-"); return +p[2] + " " + MON[+p[1] - 1] + " " + p[0]; }
+  function dm(s) { var p = String(s).slice(0, 10).split("-"); return +p[2] + " " + MON[+p[1] - 1]; }
+  function isNum(v) { return v !== null && v !== undefined && !isNaN(v); }
+  function int(v) { return isNum(v) ? Math.round(v).toLocaleString("en-IN") : "n/a"; }
+  function pctR(v, d) { return isNum(v) ? (v * 100).toFixed(d == null ? 1 : d) + "%" : "n/a"; }
+  function pct(v, d) { return isNum(v) ? (+v).toFixed(d == null ? 1 : d) + "%" : "n/a"; }
+  function signed(v, d, unit) { if (!isNum(v)) return "n/a"; return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d) + (unit || ""); }
+  function inr(v) {
+    if (!isNum(v)) return "n/a";
+    var a = Math.abs(v), s = v < 0 ? "−" : "";
+    if (a >= 1e7) return s + "₹" + (a / 1e7).toFixed(2) + " Cr";
+    if (a >= 1e5) return s + "₹" + (a / 1e5).toFixed(2) + " L";
+    return s + "₹" + Math.round(a).toLocaleString("en-IN");
+  }
+  function inrAxis(v) {
+    var a = Math.abs(v), s = v < 0 ? "−" : "";
+    if (a >= 1e7) return s + "₹" + +(a / 1e7).toFixed(1) + "Cr";
+    if (a >= 1e5) return s + "₹" + +(a / 1e5).toFixed(1) + "L";
+    if (a >= 1e3) return s + "₹" + +(a / 1e3).toFixed(0) + "k";
+    return s + "₹" + Math.round(a);
+  }
+  function fmtK(k, v) {
+    if (k.unit === "pct") return pctR(v);
+    if (k.unit === "inr") return inr(v);
+    if (k.unit === "count") return int(v);
+    return isNum(v) ? (+v).toFixed(2) : "n/a";
+  }
+  function pretty(s) {
+    var map = { emi_calculator: "EMI calculator", new_to_credit: "New to credit", has_bureau_score: "Has bureau score", tier_1: "Tier 1", tier_2: "Tier 2", tier_3: "Tier 3", ios: "iOS", web: "Web", android: "Android" };
+    if (map[s]) return map[s];
+    s = String(s).replace(/_/g, " ");
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  function productName(id) { var p = D.products.filter(function (x) { return x.product_id === id; })[0]; return p ? p.product_name : id; }
+
+  // ------------------------------------------------------------------ DOM helpers
+  function h(tag, attrs) {
+    var e = document.createElement(tag), kids = Array.prototype.slice.call(arguments, 2);
+    if (attrs) Object.keys(attrs).forEach(function (k) {
+      var v = attrs[k];
+      if (v === null || v === undefined || v === false) return;
+      if (k === "class") e.className = v;
+      else if (k === "text") e.textContent = v;
+      else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v === true ? "" : v);
+    });
+    (function add(list) {
+      list.forEach(function (c) {
+        if (c === null || c === undefined || c === false) return;
+        if (Array.isArray(c)) add(c); else e.append(c.nodeType ? c : document.createTextNode(String(c)));
+      });
+    })(kids);
+    return e;
+  }
+  function s(tag, attrs, parent) {
+    var e = document.createElementNS(NS, tag);
+    Object.keys(attrs || {}).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function stext(parent, x, y, str, cls, anchor) {
+    var t = s("text", { x: x, y: y, "class": cls || "ax", "text-anchor": anchor || "start" }, parent);
+    t.textContent = str;
+    return t;
+  }
+  function clip(str, maxChars) { str = String(str); return str.length > maxChars ? str.slice(0, Math.max(1, maxChars - 1)) + "…" : str; }
+  function chip(text, tone) { return h("span", { "class": "chip " + (tone || ""), text: text }); }
+  function tone(assessment) { return assessment === "improved" ? "good" : assessment === "worsened" ? "crit" : "neutral"; }
+  function legend(items) {
+    return h("div", { "class": "legend" }, items.map(function (it) {
+      return h("span", null, h("i", { "class": it.kind === "line" ? "line" : "", style: "background:" + it.color }), it.label);
+    }));
+  }
+
+  // ------------------------------------------------------------------ tooltip
+  var tip = document.getElementById("tip");
+  function showTip(evt, title, rows) {
+    tip.replaceChildren();
+    if (title) tip.append(h("div", { "class": "t", text: title }));
+    rows.forEach(function (r) {
+      tip.append(h("div", { "class": "r" }, r.color ? h("i", { style: "background:" + r.color }) : null, h("b", { text: r.value }), h("span", { text: r.label })));
+    });
+    tip.hidden = false;
+    var w = tip.offsetWidth, hh = tip.offsetHeight, x = evt.clientX + 14, y = evt.clientY + 14;
+    if (x + w > window.innerWidth - 8) x = evt.clientX - w - 14;
+    if (y + hh > window.innerHeight - 8) y = evt.clientY - hh - 14;
+    tip.style.left = Math.max(8, x) + "px";
+    tip.style.top = Math.max(8, y) + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+
+  // ------------------------------------------------------------------ chart plumbing
+  // fillMin: the host grows to the height its panel gets from the grid row (never below fillMin px) and the
+  // SVG is absolutely positioned inside it, so a chart can fill its panel without feeding back into the row height.
+  function mount(host, draw, fillMin) {
+    var lastW = -1, lastH = -1;
+    if (fillMin) { host.classList.add("fill"); host.style.minHeight = Math.ceil(fillMin) + "px"; }
+    function run() {
+      var w = Math.floor(host.clientWidth), hh = fillMin ? Math.floor(host.clientHeight) : 0;
+      if (w < 20 || (w === lastW && hh === lastH)) return;
+      lastW = w; lastH = hh;
+      hideTip(); // a redraw removes the hovered marks, so their tooltip must go too
+      host.replaceChildren();
+      draw(host, w, hh);
+    }
+    setTimeout(run, 0); // first draw once the host is in the document; the observer handles resizes
+    if ("ResizeObserver" in window) {
+      var ro = new ResizeObserver(function () { clearTimeout(host._t); host._t = setTimeout(run, 60); });
+      ro.observe(host);
+      observers.push(ro);
+    }
+  }
+  function fillChart(parent, minH, draw) { mount(chartHost(parent), draw, minH); }
+  function linePanel(parent, minH, o) { fillChart(parent, minH, function (el, w, hh) { o.height = hh; lineChart(el, w, o); }); }
+  function columnPanel(parent, minH, o) { fillChart(parent, minH, function (el, w, hh) { o.height = hh; columnChart(el, w, o); }); }
+  function barBaseRowH(o) { return o.rowH || (o.stack100 || o.stacked || o.series.length === 1 ? 30 : 38); }
+  function barPanel(parent, o) {
+    fillChart(parent, o.rows.length * barBaseRowH(o) + 4 + (o.stack100 ? 8 : 24), function (el, w, hh) { o.fillH = hh; barChart(el, w, o); });
+  }
+  function forestPanel(parent, rows, o) {
+    o = o || {};
+    fillChart(parent, rows.length * (o.rowH || 38) + 32, function (el, w, hh) { o.fillH = hh; forest(el, w, rows, o); });
+  }
+  function nice(min, max, n) {
+    if (min === max) { max = min + 1; }
+    var step0 = (max - min) / (n || 4), mag = Math.pow(10, Math.floor(Math.log10(step0))), r = step0 / mag;
+    var step = (r <= 1 ? 1 : r <= 2 ? 2 : r <= 5 ? 5 : 10) * mag;
+    var lo = Math.floor(min / step) * step, hi = Math.ceil(max / step) * step, ticks = [];
+    for (var v = lo; v <= hi + step / 2; v += step) ticks.push(+v.toFixed(10));
+    return { lo: lo, hi: hi, ticks: ticks };
+  }
+  function svgRoot(host, w, hgt, aria) {
+    return s("svg", { width: w, height: hgt, viewBox: "0 0 " + w + " " + hgt, role: "img", "aria-label": aria || "" }, host);
+  }
+  function colPath(x, y0, y1, w, r) { // vertical bar, rounded at the data end (y1)
+    var top = Math.min(y0, y1), bot = Math.max(y0, y1), hh = bot - top;
+    r = Math.min(r, hh, w / 2);
+    if (y1 <= y0) return "M" + x + "," + bot + "V" + (top + r) + "Q" + x + "," + top + " " + (x + r) + "," + top + "H" + (x + w - r) + "Q" + (x + w) + "," + top + " " + (x + w) + "," + (top + r) + "V" + bot + "Z";
+    return "M" + x + "," + top + "V" + (bot - r) + "Q" + x + "," + bot + " " + (x + r) + "," + bot + "H" + (x + w - r) + "Q" + (x + w) + "," + bot + " " + (x + w) + "," + (bot - r) + "V" + top + "Z";
+  }
+  function rowPath(y, x0, x1, hh, r) { // horizontal bar, rounded at the data end (x1)
+    var l = Math.min(x0, x1), rr = Math.max(x0, x1), ww = rr - l;
+    r = Math.min(r, ww, hh / 2);
+    if (x1 >= x0) return "M" + l + "," + y + "H" + (rr - r) + "Q" + rr + "," + y + " " + rr + "," + (y + r) + "V" + (y + hh - r) + "Q" + rr + "," + (y + hh) + " " + (rr - r) + "," + (y + hh) + "H" + l + "Z";
+    return "M" + rr + "," + y + "H" + (l + r) + "Q" + l + "," + y + " " + l + "," + (y + r) + "V" + (y + hh - r) + "Q" + l + "," + (y + hh) + " " + (l + r) + "," + (y + hh) + "H" + rr + "Z";
+  }
+
+  // Line chart with crosshair tooltip. o: labels, series[{name, values, color, width}], yFmt, tipFmt, xFmt, tipTitle, height, bands, markers, endLabels
+  function lineChart(host, w, o) {
+    var hgt = o.height || 250, n = o.labels.length;
+    var vals = [];
+    o.series.forEach(function (sr) { sr.values.forEach(function (v) { if (isNum(v)) vals.push(v); }); });
+    var min = o.yMin !== undefined ? o.yMin : Math.min(0, Math.min.apply(null, vals));
+    var max = o.yMax !== undefined ? o.yMax : Math.max.apply(null, vals);
+    var sc = nice(min, max, 4), fmt = o.yFmt || String, tfmt = o.tipFmt || fmt;
+    var left = 12 + Math.max.apply(null, sc.ticks.map(function (t) { return fmt(t).length; })) * 6.4;
+    var right = o.endLabels ? 74 : 14, top = 14, bottom = 26;
+    var iw = w - left - right, ih = hgt - top - bottom;
+    function X(i) { return left + (n === 1 ? iw / 2 : i * iw / (n - 1)); }
+    function Y(v) { return top + ih - (v - sc.lo) / (sc.hi - sc.lo) * ih; }
+    var svg = svgRoot(host, w, hgt, o.aria);
+    (o.bands || []).forEach(function (b) {
+      if (b.from < 0) return;
+      var x0 = X(b.from), x1 = X(Math.min(b.to, n - 1));
+      s("rect", { x: x0, y: top, width: Math.max(2, x1 - x0), height: ih, "class": "band" }, svg);
+      if (b.label) stext(svg, x0 + 4, top + 12, b.label, "sub");
+    });
+    sc.ticks.forEach(function (t) {
+      var y = Y(t);
+      s("line", { x1: left, x2: left + iw, y1: y, y2: y, "class": t === 0 ? "base" : "gl" }, svg);
+      stext(svg, left - 8, y + 4, fmt(t), "ax", "end");
+    });
+    var every = o.xEvery || Math.max(1, Math.ceil(n / Math.max(2, Math.floor(iw / 62))));
+    o.labels.forEach(function (l, i) {
+      if (i % every === 0) stext(svg, X(i), hgt - 8, o.xFmt ? o.xFmt(l) : l, "ax", "middle");
+    });
+    (o.markers || []).forEach(function (m) {
+      if (m.at < 0) return;
+      var x = X(m.at);
+      s("line", { x1: x, x2: x, y1: top, y2: top + ih, "class": "mark-line" }, svg);
+      stext(svg, x + 5, top + ih - 8, m.label, "sub");
+    });
+    o.series.forEach(function (sr) {
+      var d = "", pen = false;
+      sr.values.forEach(function (v, i) {
+        if (!isNum(v)) { pen = false; return; }
+        d += (pen ? "L" : "M") + X(i).toFixed(1) + "," + Y(v).toFixed(1);
+        pen = true;
+      });
+      if (sr.area) {
+        var idx = sr.values.map(function (v, i) { return isNum(v) ? i : -1; }).filter(function (i) { return i >= 0; });
+        if (idx.length) s("path", { d: d + "L" + X(idx[idx.length - 1]) + "," + Y(Math.max(sc.lo, 0)) + "L" + X(idx[0]) + "," + Y(Math.max(sc.lo, 0)) + "Z", style: "fill:" + sr.color + ";opacity:.1" }, svg);
+      }
+      s("path", { d: d, "class": "ln", style: "stroke:" + sr.color + ";stroke-width:" + (sr.width || 2) }, svg);
+    });
+    o.series.forEach(function (sr) {
+      if (sr.noEnd) return;
+      var i = sr.values.length - 1;
+      while (i >= 0 && !isNum(sr.values[i])) i--;
+      if (i < 0) return;
+      s("circle", { cx: X(i), cy: Y(sr.values[i]), r: 4, "class": "ring", style: "fill:" + sr.color }, svg);
+      if (o.endLabels) stext(svg, X(i) + 8, Y(sr.values[i]) + 4, sr.endLabel || sr.name, sr.strong ? "val" : "sub");
+    });
+    var hair = s("line", { "class": "hair", y1: top, y2: top + ih, x1: -99, x2: -99 }, svg);
+    var dots = o.series.map(function (sr) { return s("circle", { r: 4, "class": "ring", cx: -99, cy: -99, style: "fill:" + sr.color }, svg); });
+    var hit = s("rect", { x: left, y: top, width: Math.max(1, iw), height: ih, "class": "hit" }, svg);
+    hit.addEventListener("pointermove", function (e) {
+      var rect = svg.getBoundingClientRect();
+      var i = Math.round((e.clientX - rect.left - left) / (iw / Math.max(1, n - 1)));
+      i = Math.max(0, Math.min(n - 1, i));
+      var x = X(i);
+      hair.setAttribute("x1", x); hair.setAttribute("x2", x);
+      var rows = [];
+      o.series.forEach(function (sr, k) {
+        var v = sr.values[i];
+        if (!isNum(v)) { dots[k].setAttribute("cx", -99); return; }
+        dots[k].setAttribute("cx", x); dots[k].setAttribute("cy", Y(v));
+        if (!sr.noTip) rows.push({ color: sr.color, label: sr.name, value: tfmt(v) });
+      });
+      showTip(e, o.tipTitle ? o.tipTitle(o.labels[i]) : o.xFmt ? o.xFmt(o.labels[i]) : o.labels[i], rows.concat(o.extraTip ? o.extraTip(i) : []));
+    });
+    hit.addEventListener("pointerleave", function () {
+      hideTip(); hair.setAttribute("x1", -99); hair.setAttribute("x2", -99);
+      dots.forEach(function (d) { d.setAttribute("cx", -99); });
+    });
+  }
+
+  // Column chart (grouped or stacked; negative values stack downward). o: labels, series, stacked, yFmt, tipFmt, xFmt, height, extraTip
+  function columnChart(host, w, o) {
+    var hgt = o.height || 250, n = o.labels.length, k = o.series.length;
+    var hiV = 0, loV = 0;
+    for (var i = 0; i < n; i++) {
+      if (o.stacked) {
+        var pos = 0, neg = 0;
+        o.series.forEach(function (sr) { var v = sr.values[i] || 0; if (v >= 0) pos += v; else neg += v; });
+        hiV = Math.max(hiV, pos); loV = Math.min(loV, neg);
+      } else o.series.forEach(function (sr) { var v = sr.values[i] || 0; hiV = Math.max(hiV, v); loV = Math.min(loV, v); });
+    }
+    var sc = nice(loV, hiV, 4), fmt = o.yFmt || String, tfmt = o.tipFmt || fmt;
+    var left = 12 + Math.max.apply(null, sc.ticks.map(function (t) { return fmt(t).length; })) * 6.4;
+    var top = 12, bottom = 26, right = 8, iw = w - left - right, ih = hgt - top - bottom, band = iw / n;
+    function Y(v) { return top + ih - (v - sc.lo) / (sc.hi - sc.lo) * ih; }
+    var svg = svgRoot(host, w, hgt, o.aria);
+    sc.ticks.forEach(function (t) {
+      var y = Y(t);
+      s("line", { x1: left, x2: left + iw, y1: y, y2: y, "class": t === 0 ? "base" : "gl" }, svg);
+      stext(svg, left - 8, y + 4, fmt(t), "ax", "end");
+    });
+    var every = o.xEvery || Math.max(1, Math.ceil(n / Math.max(2, Math.floor(iw / 56))));
+    var bw = o.stacked ? Math.min(24, band * 0.72) : Math.min(24, (band * 0.8 - (k - 1) * 2) / k);
+    for (var j = 0; j < n; j++) {
+      var cx = left + band * j + band / 2;
+      if (j % every === 0) stext(svg, cx, hgt - 8, o.xFmt ? o.xFmt(o.labels[j]) : o.labels[j], "ax", "middle");
+      if (o.stacked) {
+        var up = 0, down = 0, lastPos = -1, lastNeg = -1;
+        o.series.forEach(function (sr, q) { var v = sr.values[j] || 0; if (v > 0) lastPos = q; if (v < 0) lastNeg = q; });
+        o.series.forEach(function (sr, q) {
+          var v = sr.values[j] || 0;
+          if (!v) return;
+          var a = v > 0 ? up : down, b = a + v;
+          var y0 = Y(a), y1 = Y(b);
+          var gap = (v > 0 ? (a > 0 ? 2 : 0) : (a < 0 ? 2 : 0));
+          if (v > 0) { y0 -= gap; up = b; } else { y0 += gap; down = b; }
+          if (Math.abs(y1 - y0) < 0.5) return;
+          var roundEnd = (v > 0 && q === lastPos) || (v < 0 && q === lastNeg);
+          s("path", { d: colPath(cx - bw / 2, y0, y1, bw, roundEnd ? 3 : 0), style: "fill:" + sr.color }, svg);
+        });
+      } else {
+        o.series.forEach(function (sr, q) {
+          var v = sr.values[j];
+          if (!isNum(v)) return;
+          var x = cx - (k * bw + (k - 1) * 2) / 2 + q * (bw + 2);
+          s("path", { d: colPath(x, Y(0), Y(v), bw, 3), style: "fill:" + sr.color }, svg);
+        });
+      }
+      (function (jj) {
+        var hit = s("rect", { x: left + band * jj, y: top, width: band, height: ih, "class": "rowhit" }, svg);
+        hit.addEventListener("pointermove", function (e) {
+          var rows = o.series.map(function (sr) { return { color: sr.color, label: sr.name, value: isNum(sr.values[jj]) ? tfmt(sr.values[jj]) : "n/a" }; });
+          showTip(e, o.tipTitle ? o.tipTitle(o.labels[jj]) : o.xFmt ? o.xFmt(o.labels[jj]) : o.labels[jj], rows.concat(o.extraTip ? o.extraTip(jj) : []));
+        });
+        hit.addEventListener("pointerleave", hideTip);
+      })(j);
+    }
+  }
+
+  // Vertical gridlines for a horizontal value axis; labels thinned (keeping zero) so they never collide.
+  function xTicks(svg, ticks, X, fmt, y0, y1, ly) {
+    var px = ticks.length > 1 ? Math.abs(X(ticks[1]) - X(ticks[0])) : 1e9;
+    var need = Math.max.apply(null, ticks.map(function (t) { return fmt(t).length; })) * 6.6 + 10;
+    var every = Math.max(1, Math.ceil(need / px)), zi = Math.max(0, ticks.indexOf(0));
+    ticks.forEach(function (t, i) {
+      s("line", { x1: X(t), x2: X(t), y1: y0, y2: y1, "class": t === 0 ? "base" : "gl" }, svg);
+      if ((i - zi) % every === 0) stext(svg, X(t), ly, fmt(t), "ax", "middle");
+    });
+  }
+
+  // Horizontal bars: one or more series per row, stacked (o.stacked, values add up) or 100% stacked (o.stack100).
+  // o: rows[{label, values[], tip?}], series[{name,color}], fmt, valueText(row)
+  function barChart(host, w, o) {
+    var k = o.series.length, full = !!o.stack100, stack = full || !!o.stacked, gapB = 3, n = o.rows.length;
+    var top = 4, bottom = full ? 8 : 24, base = barBaseRowH(o);
+    // in a taller panel rows spread out (up to 2.4x) and bars thicken (single bars <= 24px, grouped <= 16px each)
+    var rowH = o.fillH ? Math.max(base, Math.min(base * 2.4, (o.fillH - top - bottom) / n)) : base;
+    var barH = stack || k === 1 ? Math.round(Math.min(24, Math.max(14, rowH * 0.46))) : Math.round(Math.min(16, Math.max(10, (rowH * 0.6 - gapB * (k - 1)) / k)));
+    var labelW = Math.min(o.labelW || 160, Math.max(90, w * 0.34)), valueW = o.valueW || (full ? 8 : 70);
+    var hgt = n * rowH + top + bottom;
+    var vals = [0];
+    o.rows.forEach(function (r) {
+      if (stack) vals.push(r.values.reduce(function (a, v) { return a + (isNum(v) && v > 0 ? v : 0); }, 0));
+      else r.values.forEach(function (v) { if (isNum(v)) vals.push(v); });
+    });
+    var minV = Math.min.apply(null, vals), maxV = Math.max.apply(null, vals);
+    var x0 = labelW + 8 + (minV < 0 ? 46 : 0), x1 = w - valueW;
+    var sc = full ? { lo: 0, hi: 100, ticks: [] } : nice(minV, maxV, Math.max(2, Math.min(5, Math.floor((x1 - x0) / 64))));
+    function X(v) { return x0 + (v - sc.lo) / (sc.hi - sc.lo) * (x1 - x0); }
+    var svg = svgRoot(host, w, hgt, o.aria), maxChars = Math.floor(labelW / 6.6), afmt = o.axisFmt || o.fmt || String;
+    if (o.fillH > hgt) svg.style.top = Math.floor((o.fillH - hgt) / 2) + "px";
+    if (!full) xTicks(svg, sc.ticks, X, afmt, top, hgt - bottom, hgt - 8);
+    o.rows.forEach(function (r, i) {
+      var y = top + i * rowH, cy = y + rowH / 2;
+      stext(svg, 0, cy + 4, clip(r.label, maxChars), "lbl");
+      if (stack) {
+        var acc = 0, lastQ = -1;
+        r.values.forEach(function (v, q) { if (isNum(v) && v > 0) lastQ = q; });
+        r.values.forEach(function (v, q) {
+          if (!isNum(v) || v <= 0) return;
+          var a = X(acc) + (acc > 0 ? 2 : 0), b = X(acc + v);
+          acc += v;
+          if (b - a < 0.5) return;
+          s("path", { d: rowPath(cy - barH / 2, a, b, barH, !full && q === lastQ ? 3 : 0), style: "fill:" + o.series[q].color }, svg);
+        });
+        if (!full && o.valueText) stext(svg, X(acc) + 6, cy + 4, o.valueText(r), "val", "start");
+      } else {
+        var block = k * barH + (k - 1) * gapB, by = cy - block / 2;
+        r.values.forEach(function (v, q) {
+          if (!isNum(v)) return;
+          var yy = by + q * (barH + gapB);
+          s("path", { d: rowPath(yy, X(0), X(v), barH, 3), style: "fill:" + (r.colors ? r.colors[q] : o.series[q].color) }, svg);
+          if (o.labelEach !== false && k > 1) stext(svg, v >= 0 ? X(v) + 5 : X(v) - 5, yy + barH / 2 + 4, o.fmt(v), "sub", v >= 0 ? "start" : "end");
+        });
+        if (k === 1 && isNum(r.values[0])) {
+          var v0 = r.values[0];
+          stext(svg, v0 >= 0 ? X(v0) + 6 : X(v0) - 6, cy + 4, o.valueText ? o.valueText(r) : o.fmt(v0), "val", v0 >= 0 ? "start" : "end");
+        } else if (o.valueText) stext(svg, w, cy + 4, o.valueText(r), "val", "end");
+      }
+      var hit = s("rect", { x: 0, y: y, width: w, height: rowH, "class": "rowhit" }, svg);
+      hit.addEventListener("pointermove", function (e) {
+        var rows = r.tip || o.series.map(function (sr, q) { return { color: sr.color, label: sr.name, value: isNum(r.values[q]) ? (o.tipFmt || o.fmt)(r.values[q]) : "n/a" }; });
+        showTip(e, r.label, rows);
+      });
+      hit.addEventListener("pointerleave", hideTip);
+    });
+  }
+
+  // Forest plot: difference with 95% CI per row (percentage points)
+  function forest(host, w, rows, o) {
+    o = o || {};
+    var base = o.rowH || 38, top = 6, bottom = 26;
+    var rowH = o.fillH ? Math.max(base, Math.min(base * 2.4, (o.fillH - top - bottom) / rows.length)) : base;
+    var labelW = Math.min(210, Math.max(110, w * 0.34)), rightW = Math.min(170, Math.max(96, w * 0.26));
+    var hgt = rows.length * rowH + top + bottom;
+    var lo = Math.min(0, Math.min.apply(null, rows.map(function (r) { return r.lo; })));
+    var hi = Math.max(0, Math.max.apply(null, rows.map(function (r) { return r.hi; })));
+    var x0 = labelW + 8, x1 = w - rightW, sc = nice(lo, hi, Math.max(2, Math.min(5, Math.floor((x1 - x0) / 56))));
+    function X(v) { return x0 + (v - sc.lo) / (sc.hi - sc.lo) * (x1 - x0); }
+    var svg = svgRoot(host, w, hgt, o.aria), maxChars = Math.floor(labelW / 6.6);
+    if (o.fillH > hgt) svg.style.top = Math.floor((o.fillH - hgt) / 2) + "px";
+    xTicks(svg, sc.ticks, X, function (t) { return signed(t, 0, " pp"); }, top, hgt - bottom, hgt - 8);
+    rows.forEach(function (r, i) {
+      var cy = top + i * rowH + rowH / 2, col = r.sig ? "var(--s1)" : "var(--muted)";
+      stext(svg, 0, r.sub ? cy - 1 : cy + 4, clip(r.label, maxChars), "lbl");
+      if (r.sub) stext(svg, 0, cy + 12, r.sub, "sub");
+      s("line", { x1: X(r.lo), x2: X(r.hi), y1: cy, y2: cy, style: "stroke:" + col + ";stroke-width:2.4;stroke-linecap:round" }, svg);
+      s("circle", { cx: X(r.d), cy: cy, r: 5, "class": "ring", style: "fill:" + col }, svg);
+      stext(svg, w, cy + 4, r.right || signed(r.d, 2, " pp"), "val", "end");
+      var hit = s("rect", { x: 0, y: cy - rowH / 2, width: w, height: rowH, "class": "rowhit" }, svg);
+      hit.addEventListener("pointermove", function (e) {
+        showTip(e, r.label, [{ label: "difference", value: signed(r.d, 2, " pp") }, { label: "95% CI", value: signed(r.lo, 2) + " to " + signed(r.hi, 2) + " pp" }].concat(r.tip || []));
+      });
+      hit.addEventListener("pointerleave", hideTip);
+    });
+  }
+
+  function sparkline(host, w, values) {
+    var v = values.filter(isNum).slice(-12);
+    if (v.length < 2) return;
+    var hgt = 34, min = Math.min.apply(null, v), max = Math.max.apply(null, v), pad = 5;
+    function X(i) { return pad + i * (w - 2 * pad) / (v.length - 1); }
+    function Y(x) { return max === min ? hgt / 2 : pad + (hgt - 2 * pad) * (1 - (x - min) / (max - min)); }
+    var svg = svgRoot(host, w, hgt, "12-month trend");
+    s("path", { d: v.map(function (x, i) { return (i ? "L" : "M") + X(i).toFixed(1) + "," + Y(x).toFixed(1); }).join(""), "class": "ln", style: "stroke:var(--de);stroke-width:1.6" }, svg);
+    s("circle", { cx: X(v.length - 1), cy: Y(v[v.length - 1]), r: 3.5, "class": "ring", style: "fill:var(--accent)" }, svg);
+  }
+
+  // ------------------------------------------------------------------ layout pieces
+  function pageHead(title, sub) { return h("div", { "class": "page-head" }, h("h1", { text: title }), h("p", { text: sub })); }
+  function makeTable(spec) {
+    return h("table", { "class": "t" + (spec.wrapHead ? " wrap-head" : "") },
+      h("thead", null, h("tr", null, spec.cols.map(function (c) { return h("th", { "class": c.num ? "n" : null, text: c.label }); }))),
+      h("tbody", null, spec.rows.map(function (r) {
+        return h("tr", null, spec.cols.map(function (c) {
+          var v = c.get(r);
+          var str = String(v === null || v === undefined ? "" : v);
+          if (c.brk) str = str.replace(/([._,:])/g, "$1​"); // let long identifiers wrap at their separators
+          return h("td", { "class": c.num ? "n" : c.brk ? "brk" : null }, v && v.nodeType ? v : str);
+        }));
+      })));
+  }
+  function panel(span, title, sub, opts) {
+    opts = opts || {};
+    var tools = h("div", { "class": "tools" }), body = h("div", { "class": "panel-b" });
+    var el = h("section", { "class": "panel" + (span ? " span-" + span : "") }, h("div", { "class": "panel-h" }, h("div", null, h("h2", { text: title }), sub ? h("p", { text: sub }) : null), tools), body);
+    if (opts.table) {
+      var tbl = h("div", { "class": "tbl-wrap", hidden: true }), showing = false;
+      var btn = h("button", { "class": "btn-ghost", type: "button", "aria-pressed": "false", text: "Table" });
+      btn.addEventListener("click", function () {
+        showing = !showing;
+        btn.setAttribute("aria-pressed", String(showing));
+        btn.textContent = showing ? "Chart" : "Table";
+        if (showing && !tbl.firstChild) tbl.append(makeTable(opts.table()));
+        tbl.hidden = !showing; body.hidden = showing;
+      });
+      tools.append(btn);
+      el.append(tbl);
+    }
+    return { el: el, body: body, tools: tools };
+  }
+  function chartHost(parent) { var c = h("div", { "class": "chart" }); parent.append(c); return c; }
+  function deltaEl(k, suffix) {
+    if (!k || !k.delta_fmt || k.delta_fmt === "n/a") return null;
+    var arrow = k.delta_abs > 0 ? "▲ " : k.delta_abs < 0 ? "▼ " : "";
+    return h("span", { "class": "delta " + tone(k.assessment), text: arrow + k.delta_fmt + (suffix || "") });
+  }
+  function targetChip(k) {
+    if (!k || !k.target_status) return null;
+    var op = k.target_op === ">=" ? "≥" : "≤";
+    return k.target_status === "on_track" ? chip("✓ Target " + op + " " + k.target_fmt, "good") : chip("✕ Target " + op + " " + k.target_fmt, "crit");
+  }
+  var SHORT = { outstanding_principal: "Loan book (AUM)", signup_to_disbursal_30d: "Activation (30-day)", kyc_completion_rate_7d: "KYC completion (7-day)", fpd30_rate: "FPD30 rate" };
+  function kpiTile(id, opts) {
+    var k = K[id];
+    if (!k) return null;
+    opts = opts || {};
+    var prev = k.previous_value !== null && k.period ? " vs " + MON[(+k.period.slice(5, 7) + 10) % 12] : "";
+    var t = h("div", { "class": "tile" },
+      h("div", { "class": "k", title: k.name + ", " + ym(k.period + "-01"), text: (opts.label || SHORT[id] || k.name) + (k.is_reporting_month ? "" : " · " + ym(k.period + "-01")) }),
+      h("div", { "class": "v", text: fmtK(k, k.value) }),
+      h("div", { "class": "d" }, deltaEl(k, prev), targetChip(k)));
+    if (M[id]) { var sp = h("div", { "class": "spark" }); t.append(sp); mount(sp, function (el, w) { sparkline(el, w, M[id]); }); }
+    return t;
+  }
+  function stat(k, v, sub) { return h("div", null, h("div", { "class": "k", text: k }), h("div", { "class": "v", text: v }), h("div", { "class": "note" }, sub)); }
+  function customTile(label, value, sub) { return h("div", { "class": "tile" }, h("div", { "class": "k", text: label }), h("div", { "class": "v", text: value }), h("div", { "class": "d" }, sub)); }
+  function tiles(list) { return h("div", { "class": "tiles" }, list.filter(Boolean)); }
+  function indexOf(labels, pred) { for (var i = 0; i < labels.length; i++) if (pred(labels[i])) return i; return -1; }
+
+  // ------------------------------------------------------------------ pages
+  function pageOverview(main) {
+    var mon = ym(D.meta.reporting_month + "-01"), g = K.gross_revenue, last = D.revenue[D.revenue.length - 1] || {};
+    main.append(pageHead("Executive overview", mon + " reporting month · week of " + dmy(D.meta.reporting_week.start) + " · all figures synthetic"));
+    var sm = (D.ai && D.ai.summary) || {}, val = (D.ai && D.ai.validation) || {};
+    main.append(h("div", { "class": "hero" },
+      h("div", { "class": "hero-fig" },
+        h("div", { "class": "k", text: "Gross revenue, " + mon }),
+        h("div", { "class": "big", text: inr(g.value) }),
+        h("div", { "class": "d" }, deltaEl(g, " vs " + MON[(+g.period.slice(5, 7) + 10) % 12]), h("span", { "class": "note", text: " · year on year " + g.yoy_delta_fmt })),
+        h("div", { "class": "strip" },
+          stat("Net revenue", inr(K.net_revenue.value), deltaEl(K.net_revenue)),
+          stat("Write-offs", inr(K.credit_losses.value), deltaEl(K.credit_losses)),
+          stat((last.fiscal_year || "FY") + " to date", inr(last.gross_revenue_fytd), "gross revenue"))),
+      h("div", { "class": "summary" },
+        h("div", { "class": "row" }, h("span", { "class": "k", text: "Weekly summary" }), val.grounded ? chip("✓ " + val.numbers_checked + " numbers verified against source facts", "good") : null),
+        h("blockquote", { text: sm.headline ? sm.headline.text : "" }),
+        h("ul", null, (sm.highlights || []).slice(1, 4).map(function (x) {
+          return h("li", null, x.text, h("span", { "class": "cite", text: (x.fact_ids || []).map(function (f) { return "[" + f + "]"; }).join("") }));
+        })))));
+    main.append(tiles(["loans_disbursed", "disbursed_amount", "net_revenue", "outstanding_principal", "par30_rate", "mau"].map(function (id) { return kpiTile(id); })));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var rev = panel(8, "Revenue and write-offs", "Monthly gross revenue against net revenue after credit losses", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return ym(r.month_start); } }, { label: "Gross revenue", num: true, get: function (r) { return inr(r.gross_revenue); } }, { label: "Credit losses", num: true, get: function (r) { return inr(r.credit_losses); } }, { label: "Net revenue", num: true, get: function (r) { return inr(r.net_revenue); } }, { label: "MoM", num: true, get: function (r) { return pct(r.gross_revenue_mom_pct); } }], rows: D.revenue.slice().reverse() }; } });
+    rev.body.append(legend([{ label: "Gross revenue", color: "var(--s1)", kind: "line" }, { label: "Net revenue", color: "var(--s2)", kind: "line" }]));
+    linePanel(rev.body, 250, { labels: D.revenue.map(function (r) { return r.month_start; }), xFmt: ymShort, tipTitle: ym, yFmt: inrAxis, tipFmt: inr,
+        series: [{ name: "Gross revenue", values: D.revenue.map(function (r) { return r.gross_revenue; }), color: "var(--s1)", area: true },
+                 { name: "Net revenue", values: D.revenue.map(function (r) { return r.net_revenue; }), color: "var(--s2)" }],
+        extraTip: function (i) { return [{ label: "credit losses", value: inr(D.revenue[i].credit_losses) }]; } });
+    grid.append(rev.el);
+
+    var att = panel(4, "Needs attention", mon + ": KPIs off target or materially worse");
+    var ul = h("ul", { "class": "list" });
+    D.kpis.filter(function (k) { return k.target_status === "off_track"; }).forEach(function (k) {
+      ul.append(h("li", null, h("span", { "class": "lt" }, k.name, h("small", { text: "Target " + (k.target_op === ">=" ? "≥ " : "≤ ") + k.target_fmt })), h("span", { "class": "rt" }, h("b", { text: fmtK(k, k.value) }), chip("Off target", "crit"))));
+    });
+    D.kpis.filter(function (k) { return k.assessment === "worsened" && k.notable && k.target_status !== "off_track"; }).forEach(function (k) {
+      ul.append(h("li", null, h("span", { "class": "lt" }, k.name, h("small", { text: "vs prior month" })), h("span", { "class": "rt" }, h("b", { text: fmtK(k, k.value) }), h("span", { "class": "delta crit", text: k.delta_fmt }))));
+    });
+    var cut = new Date(D.meta.as_of); cut.setDate(cut.getDate() - 56);
+    var recent = D.anomalies.filter(function (e) { return new Date(e.end) >= cut; });
+    ul.append(h("li", null, h("span", { "class": "lt" }, "Anomaly monitor", h("small", { text: recent.length ? recent.length + " episode(s) in the last 8 weeks" : "No episodes in the last 8 weeks" })), h("span", { "class": "rt" }, recent.length ? chip("Investigate", "warn") : chip("✓ Clear", "good"))));
+    att.body.append(ul);
+    grid.append(att.el);
+
+    var wk = panel(7, "Weekly pulse", "Week of " + dmy(D.meta.reporting_week.start) + " vs the prior week and the 4-week average");
+    wk.body.append(h("div", { "class": "tbl-wrap fill" }, makeTable({ cols: [
+      { label: "KPI", get: function (r) { return r.name; } },
+      { label: "This week", num: true, get: function (r) { return r.value_fmt; } },
+      { label: "Week on week", num: true, get: function (r) { return h("span", { "class": "delta " + tone(r.assessment), text: r.wow_delta_fmt }); } },
+      { label: "vs 4-week avg", num: true, get: function (r) { return r.vs_4w_delta_fmt; } }], rows: D.weekly })));
+
+    var dec = panel(null, "Experiment decisions", "Readouts from the experimentation platform");
+    var dl = h("ul", { "class": "list" });
+    expOrder().forEach(function (id) {
+      var r = D.experiments[id], meta = expMeta(id);
+      if (!r) return;
+      dl.append(h("li", null, h("span", { "class": "lt" }, meta.experiment_name || r.name, h("small", { text: id + " · primary " + signed(100 * r.primary.diff_abs, 2, " pp") + ", p " + (r.primary.p_value < 0.001 ? "< 0.001" : "= " + r.primary.p_value.toFixed(3)) })), h("span", { "class": "rt" }, decisionChip(r.decision))));
+    });
+    dec.body.append(dl);
+
+    var q = D.dq, dsum = q.summary || {}, raw = dsum.raw || {}, cln = dsum.clean || {}, rcl = dsum.recall || {};
+    var trust = panel(null, "Data trust", "Quality gate on the curated data behind every number here");
+    trust.body.append(h("div", { "class": "stats two" },
+      stat("DQ score", (cln.dq_score || 0).toFixed(1), "raw extract " + (raw.dq_score || 0).toFixed(1)),
+      stat("Critical failures", String(cln.critical_failures || 0), cln.critical_failures ? chip("Publishing blocked", "crit") : chip("✓ Publishing allowed", "good")),
+      stat("Planted defects caught", (rcl.detected || 0) + " / " + (rcl.total || 0), "framework recall"),
+      stat("Rows quarantined", int(q.quarantined), "kept with a reason")),
+      h("div", { "class": "push" }, h("button", { "class": "btn-ghost", type: "button", text: "Open the data quality page →", onclick: function () { show("quality", true); window.scrollTo(0, 0); } })));
+    grid.append(wk.el, h("div", { "class": "stack span-5" }, dec.el, trust.el));
+  }
+
+  function pageFunnel(main) {
+    main.append(pageHead("Acquisition funnel", "From signup to first loan: where customers drop out, which segments leak, and what each channel costs"));
+    main.append(tiles([kpiTile("new_customers"), kpiTile("kyc_completion_rate_7d"), kpiTile("signup_to_disbursal_30d"), kpiTile("cost_per_new_borrower")]));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var f = D.funnel, worst = f.slice(1).reduce(function (a, b) { return (b.lost_vs_previous_stage || 0) > (a.lost_vs_previous_stage || 0) ? b : a; }, f[1] || {});
+    var fp = panel(7, "Onboarding funnel", "Share of signups reaching each stage (cohorts at least 30 days old)", {
+      table: function () { return { cols: [{ label: "Stage", get: function (r) { return r.stage; } }, { label: "Customers", num: true, get: function (r) { return int(r.customers); } }, { label: "% of signups", num: true, get: function (r) { return pct(r.pct_of_signups); } }, { label: "Step conversion", num: true, get: function (r) { return pct(r.step_conversion_pct); } }, { label: "Lost", num: true, get: function (r) { return int(r.lost_vs_previous_stage); } }], rows: f }; } });
+    barPanel(fp.body, { series: [{ name: "% of signups", color: "var(--s1)" }], fmt: function (v) { return pct(v, 0); }, valueW: 118,
+        rows: f.map(function (r) { return { label: r.stage, values: [r.pct_of_signups], cust: r.customers,
+          tip: [{ label: "of signups", value: pct(r.pct_of_signups) }, { label: "customers", value: int(r.customers) }, { label: "step conversion", value: pct(r.step_conversion_pct) }] }; }),
+        valueText: function (r) { return pct(r.values[0]) + " · " + int(r.cust); } });
+    fp.body.append(h("p", { "class": "note", text: "Largest loss: " + int(worst.lost_vs_previous_stage) + " customers between “" + (f[f.indexOf(worst) - 1] || {}).stage + "” and “" + worst.stage + "” (" + pct(worst.step_conversion_pct, 0) + " step conversion)." }));
+    grid.append(fp.el);
+
+    var dims = [["signup_platform", "Platform", "platform"], ["city_tier", "City tier", "city_tier"], ["employment_type", "Employment", "employment_type"], ["acquisition_channel", "Channel", "acquisition_channel"], ["is_ntc", "Credit file", "is_ntc"]];
+    var sp = panel(5, "KYC completion by segment", "7-day KYC completion; tooltip shows customers recoverable at best-segment rate");
+    var holder = h("div", { "class": "fill-col" });
+    var seg = h("div", { "class": "seg", role: "group", "aria-label": "Segment dimension" });
+    function drawSeg(dim) {
+      holder.replaceChildren();
+      var rows = D.kyc_segments.filter(function (r) { return r.dimension === dim; }).sort(function (a, b) { return b.kyc_7d_pct - a.kyc_7d_pct; });
+      barPanel(holder, { series: [{ name: "KYC in 7 days", color: "var(--s1)" }], fmt: function (v) { return pct(v, 0); },
+          rows: rows.map(function (r) { return { label: pretty(r.segment), values: [r.kyc_7d_pct],
+            tip: [{ label: "KYC in 7 days", value: pct(r.kyc_7d_pct) }, { label: "signups", value: int(r.signups) }, { label: "gap to best", value: (+r.gap_to_best_pp).toFixed(1) + " pp" }, { label: "recoverable customers", value: int(r.recoverable_customers) }] }; }),
+          valueText: function (r) { return pct(r.values[0]); } });
+    }
+    dims.forEach(function (d, i) {
+      var b = h("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", text: d[1] });
+      b.addEventListener("click", function () { seg.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); drawSeg(d[2]); });
+      seg.append(b);
+    });
+    sp.body.append(seg, holder);
+    drawSeg("platform");
+    grid.append(sp.el);
+
+    var byCh = {}; D.ltv.forEach(function (r) { byCh[r.acquisition_channel] = r; });
+    var cac = {}; D.cac.forEach(function (r) { cac[r.channel] = r; });
+    var ch = panel(12, "Channel scorecard", "Conversion and unit economics by acquisition channel (cost and LTV on mature cohorts)");
+    ch.body.append(h("div", { "class": "tbl-wrap" }, makeTable({ cols: [
+      { label: "Channel", get: function (r) { return pretty(r.acquisition_channel); } },
+      { label: "Signups", num: true, get: function (r) { return int(r.signups); } },
+      { label: "KYC in 7 days", num: true, get: function (r) { return pct(r.kyc_7d_pct); } },
+      { label: "Signup → loan (30d)", num: true, get: function (r) { return pct(r.signup_to_disbursal_30d_pct); } },
+      { label: "Cost per funded customer", num: true, get: function (r) { var c = cac[r.acquisition_channel]; return c ? inr(c.cost_per_funded) : "—"; } },
+      { label: "Net value per borrower", num: true, get: function (r) { var l = byCh[r.acquisition_channel]; return l ? inr(l.net_value_per_borrower) : "—"; } },
+      { label: "LTV : CAC", num: true, get: function (r) { var l = byCh[r.acquisition_channel]; if (!l || !isNum(l.ltv_to_cac)) return chip("organic", ""); var x = l.ltv_to_cac; return chip(x.toFixed(1) + "×", x >= 3 ? "good" : x >= 1.5 ? "warn" : "crit"); } }],
+      rows: D.funnel_channel })));
+    grid.append(ch.el);
+
+    var kw = D.kyc_weekly, labels = kw.map(function (r) { return r.signup_week; });
+    var kp = panel(12, "7-day KYC completion, app signups", "Weekly signup cohorts; the onboarding redesign was A/B tested in Jan–Feb 2026 and shipped on 2 Mar 2026", {
+      table: function () { return { cols: [{ label: "Week of", get: function (r) { return dmy(r.signup_week); } }, { label: "App signups", num: true, get: function (r) { return int(r.app_signups); } }, { label: "KYC in 7 days", num: true, get: function (r) { return pct(r.kyc_7d_pct); } }, { label: "4-week average", num: true, get: function (r) { return pct(r.kyc_7d_pct_4wk_avg); } }], rows: kw.slice().reverse() }; } });
+    kp.body.append(legend([{ label: "Weekly", color: "var(--de)", kind: "line" }, { label: "4-week average", color: "var(--s1)", kind: "line" }]));
+    var periods = kw.map(function (r) { return r.period; });
+    var a = periods.indexOf("experiment"), b = periods.lastIndexOf("experiment");
+    linePanel(kp.body, 250, { labels: labels, xFmt: ymShort, tipTitle: function (d) { return "Week of " + dmy(d); }, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v); },
+        yMin: Math.floor(Math.min.apply(null, kw.map(function (r) { return r.kyc_7d_pct; })) - 1),
+        bands: [{ from: a, to: b, label: "A/B test" }], markers: [{ at: periods.indexOf("post_redesign"), label: "Shipped" }],
+        extraTip: function (i) { return [{ label: "app signups", value: int(kw[i].app_signups) }]; },
+        series: [{ name: "Weekly", values: kw.map(function (r) { return r.kyc_7d_pct; }), color: "var(--de)", width: 1.5, noEnd: true },
+                 { name: "4-week average", values: kw.map(function (r) { return r.kyc_7d_pct_4wk_avg; }), color: "var(--s1)" }] });
+    grid.append(kp.el);
+  }
+
+  function pageProduct(main) {
+    main.append(pageHead("Product analytics", "Who is active, which products and features they use, and how underwriting decisions move"));
+    var st = D.stickiness[D.stickiness.length - 1] || {};
+    main.append(tiles([kpiTile("mau"), customTile("DAU / MAU, " + ym(st.month_start || D.meta.reporting_month + "-01"), pct(st.dau_mau_pct), h("span", { "class": "note", text: int(st.avg_dau) + " average daily users" })), kpiTile("repeat_loan_share"), kpiTile("autopay_adoption_rate"), kpiTile("approval_rate")]));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var mau = D.mau;
+    var mp = panel(7, "Monthly active users: growth accounting", "Active = at least one app/web event; quick ratio = (new + resurrected) / churned", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return ym(r.activity_month); } }, { label: "MAU", num: true, get: function (r) { return int(r.mau); } }, { label: "New", num: true, get: function (r) { return int(r.new_users); } }, { label: "Retained", num: true, get: function (r) { return int(r.retained_users); } }, { label: "Resurrected", num: true, get: function (r) { return int(r.resurrected_users); } }, { label: "Churned", num: true, get: function (r) { return int(r.churned_users); } }, { label: "Quick ratio", num: true, get: function (r) { return isNum(r.quick_ratio) ? (+r.quick_ratio).toFixed(2) : "—"; } }], rows: mau.slice().reverse() }; } });
+    mp.body.append(legend([{ label: "Retained", color: "var(--s1)" }, { label: "New", color: "var(--s3)" }, { label: "Resurrected", color: "var(--s4)" }]));
+    columnPanel(mp.body, 250, { labels: mau.map(function (r) { return r.activity_month; }), xFmt: ymShort, tipTitle: ym, stacked: true, yFmt: int,
+        series: [{ name: "Retained", values: mau.map(function (r) { return r.retained_users; }), color: "var(--s1)" },
+                 { name: "New", values: mau.map(function (r) { return r.new_users; }), color: "var(--s3)" },
+                 { name: "Resurrected", values: mau.map(function (r) { return r.resurrected_users; }), color: "var(--s4)" }],
+        extraTip: function (i) { var r = mau[i]; return [{ label: "MAU", value: int(r.mau) }, { label: "churned", value: int(r.churned_users) }, { label: "quick ratio", value: isNum(r.quick_ratio) ? (+r.quick_ratio).toFixed(2) : "—" }]; } });
+    grid.append(mp.el);
+
+    var ev = panel(5, "Event volume, last 90 days", "Mixpanel-style tracking plan: 16 events (docs/event_taxonomy.md)", {
+      table: function () { return { cols: [{ label: "Event", get: function (r) { return r.event_name; } }, { label: "Events", num: true, get: function (r) { return int(r.events); } }, { label: "Users", num: true, get: function (r) { return int(r.users); } }], rows: D.events_90d }; } });
+    barPanel(ev.body, { series: [{ name: "events", color: "var(--s1)" }], fmt: function (v) { return int(v); }, axisFmt: function (v) { return v >= 1000 ? +(v / 1000).toFixed(0) + "k" : String(v); }, rowH: 24, labelW: 190,
+        rows: D.events_90d.map(function (r) { return { label: r.event_name, values: [r.events], tip: [{ label: "events", value: int(r.events) }, { label: "users", value: int(r.users) }] }; }) });
+    grid.append(ev.el);
+
+    var months = [], byKey = {};
+    D.product_mix.forEach(function (r) { if (months.indexOf(r.disbursal_month) < 0) months.push(r.disbursal_month); byKey[r.disbursal_month + "|" + r.product_id] = r.loans; });
+    months.sort();
+    var colors = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)", "var(--s7)"];
+    var series = D.products.map(function (p, i) { return { name: p.product_name, color: colors[i % colors.length], values: months.map(function (m) { return byKey[m + "|" + p.product_id] || 0; }) }; });
+    var pm = panel(7, "Loans disbursed by product", "Flexi Credit Line (P07) launched in April 2025");
+    pm.body.append(legend(series.map(function (sr) { return { label: sr.name, color: sr.color }; })));
+    columnPanel(pm.body, 250, { labels: months, xFmt: ymShort, tipTitle: ym, stacked: true, yFmt: int, series: series,
+        extraTip: function (i) { var t = 0; series.forEach(function (sr) { t += sr.values[i]; }); return [{ label: "total loans", value: int(t) }]; } });
+    grid.append(pm.el);
+
+    var fe = panel(5, "Feature adoption and repayment", "Share of borrowers using each feature; users vs non-users below (correlation, not causation)");
+    barPanel(fe.body, { series: [{ name: "Adoption", color: "var(--s1)" }], fmt: function (v) { return pct(v, 0); },
+      rows: D.features.map(function (r) { return { label: pretty(r.feature), values: [r.adoption_pct], tip: [{ label: "of borrowers use it", value: pct(r.adoption_pct) }] }; }),
+      valueText: function (r) { return pct(r.values[0]); } });
+    fe.body.append(h("div", { "class": "tbl-wrap" }, makeTable({ wrapHead: true, cols: [
+      { label: "Feature", get: function (r) { return pretty(r.feature); } },
+      { label: "On-time EMIs, users", num: true, get: function (r) { return pct(r.on_time_pct_adopters); } },
+      { label: "non-users", num: true, get: function (r) { return pct(r.on_time_pct_non_adopters); } },
+      { label: "Loans per user", num: true, get: function (r) { return (+r.loans_per_adopter).toFixed(2); } },
+      { label: "per non-user", num: true, get: function (r) { return (+r.loans_per_non_adopter).toFixed(2); } }], rows: D.features })));
+    grid.append(fe.el);
+
+    var ap = D.approval;
+    var app = panel(12, "Underwriting decisions", "Approval rate (approved / decided) and offer acceptance (disbursed / approved) by month", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return ym(r.month_start); } }, { label: "Decisions", num: true, get: function (r) { return int(r.decisions); } }, { label: "Approval rate", num: true, get: function (r) { return pct(r.approval_rate_pct); } }, { label: "Offer acceptance", num: true, get: function (r) { return pct(r.disbursal_rate_pct); } }], rows: ap.slice().reverse() }; } });
+    app.body.append(legend([{ label: "Approval rate", color: "var(--s1)", kind: "line" }, { label: "Offer acceptance", color: "var(--s3)", kind: "line" }]));
+    var lab = ap.map(function (r) { return r.month_start; });
+    linePanel(app.body, 240, { labels: lab, xFmt: ymShort, tipTitle: ym, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v); }, yMin: 40, yMax: 100,
+        markers: [{ at: indexOf(lab, function (d) { return d.slice(0, 7) === "2025-09"; }), label: "Fraud ring" }],
+        series: [{ name: "Approval rate", values: ap.map(function (r) { return r.approval_rate_pct; }), color: "var(--s1)" },
+                 { name: "Offer acceptance", values: ap.map(function (r) { return r.disbursal_rate_pct; }), color: "var(--s3)" }] });
+    grid.append(app.el);
+  }
+
+  function pageCohorts(main) {
+    main.append(pageHead("Customer cohorts", "Do customers come back after signup, and is the quality of each monthly cohort holding up?"));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+    var cohorts = [], cell = {}, sizes = {}, maxV = 0;
+    D.retention.forEach(function (r) {
+      if (cohorts.indexOf(r.cohort_month) < 0) cohorts.push(r.cohort_month);
+      cell[r.cohort_month + "|" + r.month_number] = r.retention_pct; sizes[r.cohort_month] = r.cohort_size;
+      if (r.month_number > 0 && r.month_number <= 12) maxV = Math.max(maxV, r.retention_pct);
+    });
+    cohorts.sort();
+    var hp = panel(12, "Monthly active retention by signup cohort", "% of each cohort with at least one app/web event in month N after signup");
+    var scale = h("div", { "class": "scale" }, "0%", [0, 1, 2, 3, 4, 5, 6, 7].map(function (q) { return h("i", { style: "background:var(--seq" + q + ")" }); }), Math.round(maxV) + "%");
+    hp.tools.append(scale);
+    var thead = h("tr", null, h("th", { text: "Cohort" }), h("th", { text: "Size" }), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (m) { return h("th", { text: "M" + m }); }));
+    var tbody = h("tbody", null, cohorts.map(function (c) {
+      return h("tr", null, h("th", { text: ym(c) }), h("th", { text: int(sizes[c]) }), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (m) {
+        var v = cell[c + "|" + m];
+        if (!isNum(v)) return h("td", null, "");
+        if (m === 0) return h("td", { "class": "m0", text: Math.round(v) });
+        var t = Math.max(0, Math.min(1, v / maxV)); // continuous ramp: near-equal values get near-equal colours
+        return h("td", { style: "background:color-mix(in oklab, var(--seq7) " + (100 * t).toFixed(0) + "%, var(--seq0));color:" + (t >= 0.62 ? "var(--seq-ink-hi)" : "var(--seq-ink-lo)"), title: ym(c) + ", month " + m + ": " + pct(v), text: Math.round(v) });
+      }));
+    }));
+    hp.body.append(h("div", { "class": "tbl-wrap" }, h("table", { "class": "heat" }, h("thead", null, thead), tbody)));
+    grid.append(hp.el);
+
+    var rc = D.retention_curve, b = rc.filter(function (r) { return r.borrower_status === "borrower"; }), nb = rc.filter(function (r) { return r.borrower_status === "non_borrower"; });
+    var cp = panel(6, "Borrowing drives retention", "Share still active N months after signup", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return "M" + r.month_number; } }, { label: "Borrowers", num: true, get: function (r) { return pct(r.retention_pct); } }, { label: "Non-borrowers", num: true, get: function (r) { var x = nb.filter(function (y) { return y.month_number === r.month_number; })[0]; return x ? pct(x.retention_pct) : "—"; } }], rows: b }; } });
+    cp.body.append(legend([{ label: "Borrowers", color: "var(--s1)", kind: "line" }, { label: "Never borrowed", color: "var(--s2)", kind: "line" }]));
+    linePanel(cp.body, 240, { labels: b.map(function (r) { return r.month_number; }), xFmt: function (m) { return "M" + m; }, tipTitle: function (m) { return "Month " + m + " after signup"; }, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v); }, yMax: 100,
+        series: [{ name: "Borrowers", values: b.map(function (r) { return r.retention_pct; }), color: "var(--s1)" },
+                 { name: "Never borrowed", values: nb.map(function (r) { return r.retention_pct; }), color: "var(--s2)" }] });
+    grid.append(cp.el);
+
+    var cq = D.cohort_quality, lab = cq.map(function (r) { return r.cohort_month; });
+    var qp = panel(6, "First-loan FPD30 by signup cohort", "First instalment 30+ days past due; festive-season cohorts shaded", {
+      table: function () { return { cols: [{ label: "Cohort", get: function (r) { return ym(r.cohort_month); } }, { label: "KYC in 7 days", num: true, get: function (r) { return pct(r.kyc_7d_pct); } }, { label: "Loan in 30 days", num: true, get: function (r) { return pct(r.disbursed_30d_pct); } }, { label: "First-loan FPD30", num: true, get: function (r) { return pct(r.first_loan_fpd30_pct, 2); } }, { label: "Paid social + affiliate", num: true, get: function (r) { return pct(r.paid_social_affiliate_share_pct); } }], rows: cq.slice().reverse() }; } });
+    linePanel(qp.body, 240, { labels: lab, xFmt: ymShort, tipTitle: ym, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v, 2); },
+        bands: [{ from: indexOf(lab, function (d) { return d >= "2024-10-01"; }), to: indexOf(lab, function (d) { return d >= "2024-11-01"; }), label: "Festive" }, { from: indexOf(lab, function (d) { return d >= "2025-10-01"; }), to: indexOf(lab, function (d) { return d >= "2025-11-01"; }), label: "Festive" }],
+        series: [{ name: "First-loan FPD30", values: cq.map(function (r) { return r.first_loan_fpd30_pct; }), color: "var(--s2)" }],
+        extraTip: function (i) { return [{ label: "paid social + affiliate share", value: pct(cq[i].paid_social_affiliate_share_pct) }]; } });
+    grid.append(qp.el);
+
+    var sg = D.segments;
+    var sp = panel(12, "CRM segments", "Rule-based segments for every customer: who they are worth and what to do next", {
+      table: function () { return { cols: [{ label: "Segment", get: function (r) { return r.business_segment; } }, { label: "Rule", get: function (r) { return r.rule; } }, { label: "Customers", num: true, get: function (r) { return int(r.customers); } }, { label: "Recommended action", get: function (r) { return r.recommended_action; } }], rows: sg }; } });
+    sp.body.append(legend([{ label: "Share of customers", color: "var(--s2)" }, { label: "Share of net revenue", color: "var(--s1)" }]));
+    barPanel(sp.body, { series: [{ name: "Share of customers", color: "var(--s2)" }, { name: "Share of net revenue", color: "var(--s1)" }], fmt: function (v) { return pct(v, 1); }, axisFmt: function (v) { return pct(v, 0); }, labelW: 170,
+        rows: sg.map(function (r) { return { label: r.business_segment, values: [r.share_of_customers_pct, r.share_of_net_revenue_pct] }; }) });
+    grid.append(sp.el);
+  }
+
+  function pagePortfolio(main) {
+    main.append(pageHead("Loan portfolio", "Size and health of the book: point-in-time delinquency, vintages and the segments behind losses. NPA = 90+ DPD (RBI)."));
+    main.append(tiles(["outstanding_principal", "par30_rate", "npa_rate", "fpd30_rate", "collection_efficiency", "credit_losses"].map(function (id) { return kpiTile(id); })));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var pq = D.portfolio;
+    var pp = panel(7, "PAR30 and NPA at month end", "Outstanding principal 30+ / 90+ days past due, rebuilt point-in-time from instalments", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return ym(r.month_start); } }, { label: "Outstanding", num: true, get: function (r) { return inr(r.outstanding_principal); } }, { label: "PAR30", num: true, get: function (r) { return pct(r.par30_pct, 2); } }, { label: "NPA", num: true, get: function (r) { return pct(r.npa_pct, 2); } }, { label: "Written off", num: true, get: function (r) { return inr(r.written_off_principal); } }], rows: pq.slice().reverse() }; } });
+    pp.body.append(legend([{ label: "PAR30", color: "var(--s1)", kind: "line" }, { label: "NPA (90+ DPD)", color: "var(--s2)", kind: "line" }]));
+    linePanel(pp.body, 250, { labels: pq.map(function (r) { return r.month_start; }), xFmt: ymShort, tipTitle: ym, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v, 2); },
+        series: [{ name: "PAR30", values: pq.map(function (r) { return r.par30_pct; }), color: "var(--s1)" }, { name: "NPA (90+ DPD)", values: pq.map(function (r) { return r.npa_pct; }), color: "var(--s2)" }],
+        extraTip: function (i) { return [{ label: "outstanding", value: inr(pq[i].outstanding_principal) }]; } });
+    grid.append(pp.el);
+
+    var buckets = ["1-29", "30-59", "60-89", "90-179"], bcol = ["var(--sev1)", "var(--sev2)", "var(--sev3)", "var(--sev4)"];
+    var share = {}, prods = [];
+    D.dpd.forEach(function (r) { share[r.product_id + "|" + r.dpd_bucket] = r.share_of_product_book_pct; if (prods.indexOf(r.product_id) < 0) prods.push(r.product_id); });
+    prods.sort();
+    var dpRows = prods.map(function (p) {
+      var vals = buckets.map(function (b) { return share[p + "|" + b] || 0; }), due = vals.reduce(function (a, v) { return a + v; }, 0);
+      return { label: productName(p), values: vals, due: due,
+        tip: [{ label: "current", value: pct(share[p + "|0 current"] || 0) }].concat(buckets.map(function (b, i) { return { color: bcol[i], label: b + " DPD", value: pct(vals[i]) }; })) };
+    }).sort(function (a, b) { return b.due - a.due; });
+    var dp = panel(5, "Past-due share of the open book", "% of each product's outstanding principal by days past due, today", {
+      table: function () { return { cols: [{ label: "Product", get: function (r) { return r.label; } }].concat(buckets.map(function (b, i) { return { label: b + " DPD", num: true, get: function (r) { return pct(r.values[i]); } }; })).concat([{ label: "Past due", num: true, get: function (r) { return pct(r.due); } }]), rows: dpRows }; } });
+    dp.body.append(legend(buckets.map(function (b, i) { return { label: b + " DPD", color: bcol[i] }; })));
+    barPanel(dp.body, { stacked: true, series: buckets.map(function (b, i) { return { name: b, color: bcol[i] }; }), fmt: function (v) { return pct(v); }, axisFmt: function (v) { return pct(v, 0); }, labelW: 150, valueW: 48,
+        rows: dpRows, valueText: function (r) { return pct(r.due); } });
+    grid.append(dp.el);
+
+    var vq = {}, vlist = [];
+    D.vintage.forEach(function (r) { if (!vq[r.vintage_quarter]) { vq[r.vintage_quarter] = []; vlist.push(r.vintage_quarter); } vq[r.vintage_quarter][r.mob - 1] = r.cum_30dpd_pct; });
+    vlist.sort();
+    var hl = vlist.indexOf("2025-10-01") >= 0 ? "2025-10-01" : vlist[vlist.length - 1];
+    function qname(d) { var y = d.slice(2, 4), m = +d.slice(5, 7); return "Q" + (Math.floor((m - 1) / 3) + 1) + " " + y; }
+    var vp = panel(7, "Vintage curves", "Cumulative % of each disbursal quarter that reached 30+ DPD, by months on book");
+    vp.body.append(legend([{ label: qname(hl) + " (festive season)", color: "var(--s2)", kind: "line" }, { label: "Other quarters", color: "var(--de)", kind: "line" }]));
+    var mobs = []; for (var i = 1; i <= 12; i++) mobs.push(i);
+    var vseries = vlist.filter(function (v) { return v !== hl; }).map(function (v) {
+      return { name: qname(v), values: mobs.map(function (m) { return isNum(vq[v][m - 1]) ? vq[v][m - 1] : null; }), color: "var(--de)", width: 1.5, endLabel: qname(v) };
+    });
+    vseries.push({ name: qname(hl), values: mobs.map(function (m) { return isNum(vq[hl][m - 1]) ? vq[hl][m - 1] : null; }), color: "var(--s2)", width: 2.6, endLabel: qname(hl), strong: true });
+    linePanel(vp.body, 250, { labels: mobs, xFmt: function (m) { return "M" + m; }, tipTitle: function (m) { return m + " months on book"; }, yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v, 2); }, endLabels: true, series: vseries });
+    grid.append(vp.el);
+
+    var rs = D.risk_segments.filter(function (r) { return r.dimension === "acquisition_channel" || r.dimension === "risk_band"; });
+    var rp = panel(5, "Early default by segment", "FPD30 on matured loans; index vs the dimension average");
+    rp.body.append(h("div", { "class": "tbl-wrap fill" }, makeTable({ cols: [
+      { label: "Segment", get: function (r) { return (r.dimension === "risk_band" ? "Risk band " : "") + pretty(r.segment); } },
+      { label: "Loans", num: true, get: function (r) { return int(r.matured_loans); } },
+      { label: "FPD30", num: true, get: function (r) { return pct(r.fpd30_pct, 2); } },
+      { label: "Index", num: true, get: function (r) { var x = r.fpd30_index_vs_dimension_avg; return isNum(x) ? chip(x.toFixed(2) + "×", x >= 1.3 ? "crit" : x <= 0.8 ? "good" : "") : "—"; } }], rows: rs })));
+    grid.append(rp.el);
+
+    var rep = D.repeat;
+    var rpp = panel(12, "Repeat borrowing by product", "Loans closed in good standing whose borrower took another loan within 90 days");
+    barPanel(rpp.body, { series: [{ name: "Repeat within 90 days", color: "var(--s3)" }], fmt: function (v) { return pct(v, 0); },
+        rows: rep.map(function (r) { return { label: r.product_name, values: [r.repeat_90d_pct], tip: [{ label: "repeat within 90 days", value: pct(r.repeat_90d_pct) }, { label: "closed good loans", value: int(r.closed_good_loans) }] }; }),
+        valueText: function (r) { return pct(r.values[0]); } });
+    grid.append(rpp.el);
+  }
+
+  function pageRevenue(main) {
+    main.append(pageHead("Revenue & customer value", "What revenue is made of, which channels pay back, and how concentrated customer value is"));
+    var last = D.revenue[D.revenue.length - 1] || {}, yl = D.yield[D.yield.length - 1] || {};
+    main.append(tiles([kpiTile("gross_revenue"), kpiTile("net_revenue"), kpiTile("credit_losses"),
+      customTile((last.fiscal_year || "FY") + " revenue to date", inr(last.gross_revenue_fytd), h("span", { "class": "note", text: "Indian fiscal year, April to March" })),
+      customTile("Interest yield (annualised)", pct(yl.annualised_yield_pct), h("span", { "class": "note", text: ym(yl.month_start || D.meta.reporting_month + "-01") + ", on the average company-funded book" })),
+      kpiTile("cost_per_new_borrower")]));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var rv = D.revenue;
+    var cp = panel(8, "Revenue components and credit losses", "Cash-basis interest and fees by month, write-offs below zero (P2P loans earn a platform fee only)", {
+      table: function () { return { cols: [{ label: "Month", get: function (r) { return ym(r.month_start); } }, { label: "Interest", num: true, get: function (r) { return inr(r.interest_income); } }, { label: "Processing fees", num: true, get: function (r) { return inr(r.processing_fees); } }, { label: "Other fees", num: true, get: function (r) { return inr(r.other_fees); } }, { label: "Credit losses", num: true, get: function (r) { return inr(-r.credit_losses); } }, { label: "Net revenue", num: true, get: function (r) { return inr(r.net_revenue); } }], rows: rv.slice().reverse() }; } });
+    cp.body.append(legend([{ label: "Interest", color: "var(--s1)" }, { label: "Processing fees", color: "var(--s3)" }, { label: "Late & foreclosure fees", color: "var(--s4)" }, { label: "Credit losses", color: "var(--s8)" }]));
+    columnPanel(cp.body, 240, { labels: rv.map(function (r) { return r.month_start; }), xFmt: ymShort, tipTitle: ym, stacked: true, yFmt: inrAxis, tipFmt: inr,
+        series: [{ name: "Interest", values: rv.map(function (r) { return r.interest_income; }), color: "var(--s1)" },
+                 { name: "Processing fees", values: rv.map(function (r) { return r.processing_fees; }), color: "var(--s3)" },
+                 { name: "Late & foreclosure fees", values: rv.map(function (r) { return r.other_fees; }), color: "var(--s4)" },
+                 { name: "Credit losses", values: rv.map(function (r) { return -r.credit_losses; }), color: "var(--s8)" }],
+        extraTip: function (i) { return [{ label: "net revenue", value: inr(rv[i].net_revenue) }]; } });
+    grid.append(cp.el);
+
+    var pe = panel(4, "Product economics", "Lifetime revenue share and risk-adjusted margin on principal disbursed");
+    pe.body.append(h("div", { "class": "tbl-wrap fill" }, makeTable({ cols: [
+      { label: "Product", get: function (r) { return r.product_name; } },
+      { label: "Revenue share", num: true, get: function (r) { return pct(r.revenue_share_pct); } },
+      { label: "Net margin", num: true, get: function (r) { return pct(r.net_margin_on_disbursed_pct, 1); } }], rows: D.product_econ })));
+    grid.append(pe.el);
+
+    var lt = D.ltv.slice().sort(function (a, b) { return (isNum(b.ltv_to_cac) ? b.ltv_to_cac : -1) - (isNum(a.ltv_to_cac) ? a.ltv_to_cac : -1); });
+    var lp = panel(6, "Unit economics by channel", "Net value per borrower vs acquisition cost per borrower (cohorts with 12+ months of history)");
+    lp.body.append(legend([{ label: "Net value per borrower", color: "var(--s1)" }, { label: "Acquisition cost per borrower", color: "var(--s2)" }]));
+    barPanel(lp.body, { series: [{ name: "Net value per borrower", color: "var(--s1)" }, { name: "Acquisition cost per borrower", color: "var(--s2)" }], fmt: inr, axisFmt: inrAxis, labelEach: false, valueW: 64,
+        rows: lt.map(function (r) { return { label: pretty(r.acquisition_channel), values: [r.net_value_per_borrower, r.cac_per_borrower], ratio: r.ltv_to_cac,
+          tip: [{ color: "var(--s1)", label: "net value per borrower", value: inr(r.net_value_per_borrower) }, { color: "var(--s2)", label: "CAC per borrower", value: inr(r.cac_per_borrower) }, { label: "LTV : CAC", value: isNum(r.ltv_to_cac) ? r.ltv_to_cac.toFixed(1) + "×" : "no paid spend" }] }; }),
+        valueText: function (r) { return isNum(r.ratio) ? r.ratio.toFixed(1) + "×" : "—"; } });
+    lp.body.append(h("p", { "class": "note", text: "Right-hand figure = LTV : CAC. Organic has no paid acquisition cost." }));
+    grid.append(lp.el);
+
+    var dc = D.deciles;
+    var dp = panel(6, "Value concentration", "Share of net revenue by borrower decile (D1 = most valuable 10%)", {
+      table: function () { return { cols: [{ label: "Decile", get: function (r) { return "D" + r.decile; } }, { label: "Borrowers", num: true, get: function (r) { return int(r.borrowers); } }, { label: "Share", num: true, get: function (r) { return pct(r.share_of_net_revenue_pct); } }, { label: "Cumulative", num: true, get: function (r) { return pct(r.cumulative_share_pct); } }], rows: dc }; } });
+    columnPanel(dp.body, 240, { labels: dc.map(function (r) { return "D" + r.decile; }), yFmt: function (v) { return v + "%"; }, tipFmt: function (v) { return pct(v); },
+        series: [{ name: "Share of net revenue", values: dc.map(function (r) { return r.share_of_net_revenue_pct; }), color: "var(--s1)" }],
+        extraTip: function (i) { return [{ label: "cumulative share", value: pct(dc[i].cumulative_share_pct) }]; } });
+    grid.append(dp.el);
+
+    var cl = D.clusters.slice().sort(function (a, b) { return b.share_of_net_revenue_pct - a.share_of_net_revenue_pct; }), km = D.kmeans || {};
+    var kp = panel(12, "Borrower segments (K-Means)", "k = " + km.k + " on 11 behaviour and value features · silhouette " + km.silhouette + " · seed stability (ARI) " + km.stability_ari_mean);
+    kp.body.append(legend([{ label: "Share of borrowers", color: "var(--s2)" }, { label: "Share of net revenue", color: "var(--s1)" }]));
+    barPanel(kp.body, { series: [{ name: "Share of borrowers", color: "var(--s2)" }, { name: "Share of net revenue", color: "var(--s1)" }], fmt: function (v) { return pct(v, 1); }, axisFmt: function (v) { return pct(v, 0); }, labelW: 190,
+        rows: cl.map(function (r) { return { label: r.cluster_name, values: [r.share_of_borrowers_pct, r.share_of_net_revenue_pct] }; }) });
+    kp.body.append(h("div", { "class": "tbl-wrap" }, makeTable({ cols: [
+      { label: "Segment", get: function (r) { return r.cluster_name; } },
+      { label: "Borrowers", num: true, get: function (r) { return int(r.borrowers); } },
+      { label: "Avg loans", num: true, get: function (r) { return (+r.n_loans).toFixed(2); } },
+      { label: "On-time", num: true, get: function (r) { return pctR(r.on_time_rate, 0); } },
+      { label: "Recommended action", get: function (r) { return r.recommended_action; } }], rows: cl })));
+    grid.append(kp.el);
+  }
+
+  function expOrder() { return ["EXP-ONB-2026-01", "EXP-RPY-2025-11", "EXP-PRC-2025-06"].filter(function (id) { return D.experiments[id]; }); }
+  function expMeta(id) { return D.experiments_meta.filter(function (m) { return m.experiment_id === id; })[0] || {}; }
+  function decisionChip(d) {
+    var t = String(d || "");
+    if (t.indexOf("SHIP") === 0) return chip("✓ " + (t.indexOf("monitor") > 0 ? "Ship + monitor" : "Ship"), "good");
+    if (t.indexOf("DO NOT") === 0) return chip("✕ Do not ship", "crit");
+    if (t.indexOf("INCONCLUSIVE") === 0) return chip("● Inconclusive", "warn");
+    return chip(t.split(" ")[0] || "n/a", "");
+  }
+  var metricLabels = { kyc_completion_7d: "KYC completed in 7 days", application_submitted_14d: "Application in 14 days", loan_disbursed_30d: "First loan in 30 days", approval_rate: "Approval rate", fpd30_rate: "FPD30 rate", kyc_support_ticket_rate: "KYC support tickets", autopay: "Autopay enabled", first_emi_on_time: "First EMI on time", accepted: "Offer accepted" };
+
+  function pageExperiments(main) {
+    main.append(pageHead("Experiment analysis", "Pre-registered A/B tests: validity checks, effect sizes with confidence intervals, guardrails and the decision"));
+    var pills = h("div", { "class": "seg", role: "group", "aria-label": "Experiment" }), holder = h("div");
+    main.append(h("div", { style: "margin-bottom:14px" }, pills), holder);
+    function draw(id) {
+      holder.replaceChildren();
+      var r = D.experiments[id], meta = expMeta(id), p = r.primary, grid = h("div", { "class": "grid" });
+      holder.append(grid);
+      var primaryName = metricLabels[r.primary_metric || "kyc_completion_7d"] || r.primary_metric;
+      var hd = panel(12, meta.experiment_name || r.name, meta.hypothesis || "");
+      hd.tools.append(decisionChip(r.decision));
+      hd.body.append(h("p", { "class": "note", text: "Primary metric: " + primaryName }), h("div", { "class": "stats" },
+        stat("Control", pctR(p.control_rate, 2), int(p.control_n) + " users"),
+        stat("Treatment", pctR(p.treatment_rate, 2), int(p.treatment_n) + " users"),
+        stat("Difference (95% CI)", signed(100 * p.diff_abs, 2, " pp"), signed(100 * p.ci_low, 2) + " to " + signed(100 * p.ci_high, 2) + " pp"),
+        stat("p-value", p.p_value < 0.0001 ? "< 0.0001" : p.p_value.toFixed(4), p.significant ? "significant at 5%" : "not significant"),
+        stat("P(treatment better)", pctR(r.bayesian.prob_treatment_better, 1), "Beta-Binomial posterior"),
+        stat("Sample ratio check", "p = " + r.srm.p_value.toFixed(3), r.srm.srm_detected ? "mismatch detected" : "no mismatch (alarm < 0.001)")));
+      hd.body.append(h("p", { "class": "note", text: id + " · " + dmy(meta.start_date) + " to " + dmy(meta.end_date) + " · owner: " + (meta.owner_team || "") + " · decision: " + r.decision }));
+      grid.append(hd.el);
+
+      var rows = [{ label: primaryName, sub: "primary", m: p }];
+      Object.keys(r.secondary || {}).forEach(function (k) { rows.push({ label: metricLabels[k] || pretty(k), sub: "secondary", m: r.secondary[k] }); });
+      Object.keys(r.guardrails || {}).forEach(function (k) { rows.push({ label: metricLabels[k] || pretty(k), sub: "guardrail, " + (r.guardrails[k].higher_is_worse ? "lower" : "higher") + " is better", m: r.guardrails[k], status: r.guardrails[k].status }); });
+      var fp = panel(7, "Effect sizes", "Treatment − control in percentage points, 95% CI; blue = significant at 5%");
+      forestPanel(fp.body, rows.map(function (x) {
+          return { label: x.label, sub: x.sub, d: 100 * x.m.diff_abs, lo: 100 * x.m.ci_low, hi: 100 * x.m.ci_high, sig: x.m.significant,
+            right: signed(100 * x.m.diff_abs, 2, " pp") + (x.status ? " · " + x.status : " · p " + (x.m.p_value < 0.001 ? "<0.001" : x.m.p_value.toFixed(3))),
+            tip: [{ label: "control", value: pctR(x.m.control_rate, 2) }, { label: "treatment", value: pctR(x.m.treatment_rate, 2) }, { label: "p-value", value: x.m.p_value.toFixed(4) }].concat(x.status ? [{ label: "guardrail", value: x.status + " (margin " + (100 * x.m.margin).toFixed(1) + " pp)" }] : []) };
+        }));
+      grid.append(fp.el);
+
+      var dz = panel(5, "Design and power", "Sized before launch; checked after");
+      var d = r.design || {}, kv = h("dl", { "class": "kv" });
+      function add(k, v) { kv.append(h("dt", { text: k }), h("dd", { text: v })); }
+      if (d.pre_period_baseline) add("Baseline (pre-period)", pctR(d.pre_period_baseline, 1));
+      add("Minimum detectable effect", (100 * (d.planned_mde_abs || r.planned_mde_abs)).toFixed(1) + " pp");
+      add("Required users per arm", int(d.required_n_per_arm || r.required_n_per_arm));
+      if (d.weeks_needed) add("Weeks needed", d.weeks_needed + " at " + int(d.pre_period_weekly_app_signups) + " app signups/week");
+      add("Realised users per arm", int(Math.min(p.control_n, p.treatment_n)));
+      if (r.achieved_power_at_observed_effect) add("Power at observed effect", pctR(r.achieved_power_at_observed_effect, 0));
+      add("MDE at realised sample", (100 * r.mde_at_realised_n).toFixed(2) + " pp");
+      dz.body.append(kv);
+      if (r.impact) dz.body.append(h("p", { "class": "note push", text: "Estimated impact at the post-launch run rate: ~" + int(r.impact.incremental_kyc_per_year) + " more verified customers and ~" + int(r.impact.incremental_first_loans_per_year) + " more first loans a year, about " + inr(r.impact.incremental_net_revenue_per_year) + " net revenue from first loans alone." }));
+      grid.append(dz.el);
+
+      if (r.weekly_effect && r.weekly_effect.length) {
+        var wp = panel(6, "Effect by week of assignment", "Novelty check: does the lift fade after the first weeks?");
+        forestPanel(wp.body, r.weekly_effect.map(function (x) { return { label: "Week of " + dm(x.assignment_week), d: 100 * x.diff_abs, lo: 100 * x.ci_low, hi: 100 * x.ci_high, sig: x.ci_low > 0 || x.ci_high < 0, tip: [{ label: "users", value: int(x.users) }] }; }), { rowH: 30 });
+        grid.append(wp.el);
+      }
+      if (r.segments && r.segments.length) {
+        var sp = panel(6, "Heterogeneity (exploratory)", "Holm-adjusted for multiple comparisons; not for targeting without a follow-up test");
+        sp.body.append(h("div", { "class": "tbl-wrap fill" }, makeTable({ cols: [
+          { label: "Segment", get: function (x) { return pretty(x.dimension) + ": " + pretty(x.segment); } },
+          { label: "Users", num: true, get: function (x) { return int(x.users); } },
+          { label: "Difference", num: true, get: function (x) { return signed(100 * x.diff_abs, 2, " pp"); } },
+          { label: "Holm p", num: true, get: function (x) { return x.p_value_holm.toFixed(3); } }], rows: r.segments })));
+        grid.append(sp.el);
+      }
+    }
+    expOrder().forEach(function (id, i) {
+      var b = h("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", text: (expMeta(id).experiment_name || id) });
+      b.addEventListener("click", function () { pills.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); draw(id); });
+      pills.append(b);
+    });
+    if (expOrder().length) draw(expOrder()[0]);
+  }
+
+  function pageQuality(main) {
+    var q = D.dq, sm = q.summary || {}, raw = sm.raw || {}, cl = sm.clean || {}, rc = sm.recall || {};
+    main.append(pageHead("Data quality", "Contract-driven checks on the raw extract and the curated layer; critical failures block publishing"));
+    main.append(tiles([
+      customTile("DQ score", (raw.dq_score || 0).toFixed(1) + " → " + (cl.dq_score || 0).toFixed(1), h("span", { "class": "note", text: "raw → curated, weighted pass rate" })),
+      customTile("Critical failures", (raw.critical_failures || 0) + " → " + (cl.critical_failures || 0), cl.critical_failures ? chip("Publishing blocked", "crit") : chip("✓ Certified", "good")),
+      customTile("Warnings", (raw.warnings || 0) + " → " + (cl.warnings || 0), h("span", { "class": "note", text: "documented open issues" })),
+      customTile("Planted defects caught", (rc.detected || 0) + " / " + (rc.total || 0), h("span", { "class": "note", text: "framework recall" })),
+      customTile("Rows quarantined", int(q.quarantined), h("span", { "class": "note", text: "kept with a reason, not deleted" })),
+      customTile("Checks per run", int(cl.checks_run), h("span", { "class": "note", text: "schema to reconciliation" }))]));
+    var grid = h("div", { "class": "grid" });
+    main.append(grid);
+
+    var tables = Object.keys(Object.assign({}, q.failed_raw, q.failed_clean)).sort(function (a, b) { return ((q.failed_raw[b] || 0) + (q.failed_clean[b] || 0)) - ((q.failed_raw[a] || 0) + (q.failed_clean[a] || 0)); });
+    var fp = panel(6, "Failed checks by table", "Critical and warning failures before and after ETL");
+    fp.body.append(legend([{ label: "Raw extract", color: "var(--de)" }, { label: "Curated layer", color: "var(--s1)" }]));
+    barPanel(fp.body, { series: [{ name: "Raw extract", color: "var(--de)" }, { name: "Curated layer", color: "var(--s1)" }], fmt: int, labelW: 170, rowH: 34,
+        rows: tables.map(function (t) { return { label: t, values: [q.failed_raw[t] || 0, q.failed_clean[t] || 0] }; }) });
+    grid.append(fp.el);
+
+    var op = panel(6, "Open issues on the curated layer", "Published with a caveat; none are critical");
+    op.body.append(h("div", { "class": "tbl-wrap fill" }, makeTable({ cols: [
+      { label: "Severity", get: function (r) { return chip(r.severity, r.severity === "critical" ? "crit" : "warn"); } },
+      { label: "Where", brk: true, get: function (r) { return r.table + "." + r.column; } },
+      { label: "Check", brk: true, get: function (r) { return r.check; } },
+      { label: "Rows", num: true, get: function (r) { return int(r.failed_rows); } }], rows: q.open_issues })));
+    grid.append(op.el);
+
+    var an = panel(12, "Anomaly episodes", "Seasonality-aware detector with driver attribution; known business events are labelled, the rest are incidents");
+    var al = h("ul", { "class": "list" });
+    D.anomalies.forEach(function (e) {
+      al.append(h("li", null,
+        h("span", { "class": "lt" }, e.metric_label + ", " + dmy(e.start) + (e.end !== e.start ? " to " + dmy(e.end) : ""), h("small", { text: e.headline })),
+        h("span", { "class": "rt" }, e.known_context ? chip("Known event", "") : chip("Incident", "crit"))));
+    });
+    an.body.append(al);
+    grid.append(an.el);
+
+    var fixes = q.cleaning_log.filter(function (r) { return r.action !== "derive"; });
+    var lg = panel(6, "ETL repair log", fixes.length + " repair rules changed data in this run");
+    lg.body.append(h("div", { "class": "tbl-wrap scroll" }, makeTable({ cols: [
+      { label: "Table", get: function (r) { return r.table; } },
+      { label: "Rule", get: function (r) { return r.rule; } },
+      { label: "Rows", num: true, get: function (r) { return int(r.rows_affected); } }], rows: fixes })));
+    grid.append(lg.el);
+
+    var rp = panel(6, "Planted-defect recall", "All " + q.recall.length + " defects the generator injected, and whether a check caught each one");
+    rp.body.append(h("div", { "class": "tbl-wrap scroll" }, makeTable({ cols: [
+      { label: "Defect", get: function (r) { return r.issue; } },
+      { label: "Where", get: function (r) { return r.table + "." + r.column; } },
+      { label: "Caught", get: function (r) { return r.detected ? chip("✓ yes", "good") : chip("✕ no", "crit"); } }], rows: q.recall })));
+    grid.append(rp.el);
+  }
+
+  // ------------------------------------------------------------------ shell
+  var PAGES = [
+    { id: "overview", label: "Overview", render: pageOverview },
+    { id: "funnel", label: "Funnel", render: pageFunnel },
+    { id: "product", label: "Product", render: pageProduct },
+    { id: "cohorts", label: "Cohorts", render: pageCohorts },
+    { id: "portfolio", label: "Portfolio", render: pagePortfolio },
+    { id: "revenue", label: "Revenue", render: pageRevenue },
+    { id: "experiments", label: "Experiments", render: pageExperiments },
+    { id: "quality", label: "Data quality", render: pageQuality }
+  ];
+  var tabsEl = document.getElementById("tabs"), main = document.getElementById("page");
+  function show(id, push) {
+    var pg = PAGES.filter(function (p) { return p.id === id; })[0] || PAGES[0];
+    observers.forEach(function (o) { o.disconnect(); }); observers = [];
+    hideTip();
+    tabsEl.querySelectorAll(".tab").forEach(function (t) { t.setAttribute("aria-selected", String(t.dataset.id === pg.id)); t.tabIndex = t.dataset.id === pg.id ? 0 : -1; });
+    main.replaceChildren();
+    pg.render(main);
+    try { localStorage.setItem("vittora-tab", pg.id); } catch (e) { /* storage unavailable */ }
+    if (push) { try { history.replaceState(null, "", "#" + pg.id); } catch (e) { /* sandboxed */ } }
+  }
+  PAGES.forEach(function (p) {
+    var b = h("button", { "class": "tab", role: "tab", type: "button", text: p.label, "data-id": p.id });
+    b.addEventListener("click", function () { show(p.id, true); window.scrollTo(0, 0); });
+    tabsEl.append(b);
+  });
+  tabsEl.addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    var ids = PAGES.map(function (p) { return p.id; }), cur = ids.indexOf((tabsEl.querySelector('[aria-selected="true"]') || {}).dataset.id);
+    var nxt = ids[(cur + (e.key === "ArrowRight" ? 1 : ids.length - 1)) % ids.length];
+    show(nxt, true);
+    tabsEl.querySelector('[data-id="' + nxt + '"]').focus();
+  });
+
+  var root = document.documentElement, themeBtn = document.getElementById("theme"), modes = ["auto", "light", "dark"];
+  function applyTheme(m) {
+    if (m === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", m);
+    themeBtn.textContent = "Theme: " + m;
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("vittora-theme"); } catch (e) { saved = null; }
+  if (saved && modes.indexOf(saved) >= 0) applyTheme(saved);
+  themeBtn.addEventListener("click", function () {
+    var cur = root.getAttribute("data-theme") || "auto", next = modes[(modes.indexOf(cur) + 1) % modes.length];
+    applyTheme(next);
+    try { localStorage.setItem("vittora-theme", next); } catch (e) { /* storage unavailable */ }
+  });
+
+  document.getElementById("asof").replaceChildren("Data as of ", h("b", { text: dmy(D.meta.as_of) }));
+  document.getElementById("foot").textContent = "Vittora Credit is fictional and every figure is synthetic (" + int(D.meta.total_rows) + " generated rows, " + dmy(D.meta.start) + " to " + dmy(D.meta.as_of) + "). Built " + D.meta.built + " by the FinTech Product Analytics & Decision Intelligence Platform pipeline.";
+  var start = (location.hash || "").replace("#", "");
+  if (!PAGES.some(function (p) { return p.id === start; })) { try { start = localStorage.getItem("vittora-tab") || "overview"; } catch (e) { start = "overview"; } }
+  show(start, false);
+})();
+</script>
+<!--FRAGMENT-END-->
+</body>
+</html>

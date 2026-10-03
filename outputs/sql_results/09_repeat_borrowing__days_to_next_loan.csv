@@ -1,0 +1,8 @@
+product_id,repeat_events,median_days_closure_to_next,p90_days_closure_to_next
+P01,679,13.0,41.0
+P02,3560,13.0,42.0
+P03,1862,13.0,43.0
+P04,223,13.0,39.6
+P05,28,16.5,38.4
+P06,74,13.5,44.4
+P07,221,17.0,47.0

@@ -1,0 +1,8 @@
+product_id,product_name,product_category,min_amount,max_amount,min_tenure_months,max_tenure_months,base_apr_pct,processing_fee_pct,revenue_model,launch_date,is_secured,is_active
+P01,Instant Personal Loan,personal_loan,10000,200000,3,24,24.0,2.5,interest_and_fees,2021-04-01,False,True
+P02,Salary Advance,salary_advance,5000,50000,1,3,30.0,2.0,interest_and_fees,2021-09-01,False,True
+P03,Pay Later,bnpl,1000,20000,1,6,16.0,1.0,interest_and_fees,2022-06-01,False,True
+P04,Consumer Durable Loan,consumer_durable,15000,150000,6,18,20.0,2.0,interest_and_fees,2022-11-01,False,True
+P05,Business Micro Loan,business_loan,50000,500000,12,36,26.0,3.0,interest_and_fees,2023-03-01,False,True
+P06,P2P Marketplace Loan,p2p_loan,25000,300000,6,24,22.0,3.5,platform_fee,2023-08-01,False,True
+P07,Flexi Credit Line,credit_line,10000,100000,3,12,28.0,1.5,interest_and_fees,2025-04-01,False,True

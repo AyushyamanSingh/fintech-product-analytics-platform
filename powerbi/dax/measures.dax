@@ -1,0 +1,323 @@
+// =====================================================================================
+// Vittora Credit (fictional) - Power BI measure library.  SYNTHETIC DATA.
+// Model: star schema described in powerbi/model/data_model.md (tables from powerbi/data/).
+// Conventions
+//   * One measure per governed KPI; names match python/kpi_definitions.py.
+//   * Rates return 0-1 decimals (format as %); money in INR (format "₹#,0" or the L/Cr helpers below).
+//   * Inactive date relationships are activated with USERELATIONSHIP - never duplicate fact tables.
+//   * Indian fiscal year ends 31 March: year-to-date measures pass "3/31".
+// Copy into Power BI as measures in a dedicated _Measures table; display folder in each header.
+// =====================================================================================
+
+
+// ---------------------------------------------------------------- 01 Acquisition & Funnel
+New Customers =
+COUNTROWS ( fct_funnel )
+
+Mature Signups 7d =
+CALCULATE ( COUNTROWS ( fct_funnel ), fct_funnel[is_mature_7d] = TRUE () )
+
+KYC Completed 7d =
+CALCULATE ( COUNTROWS ( fct_funnel ), fct_funnel[is_mature_7d] = TRUE (), fct_funnel[kyc_completed_7d] = TRUE () )
+
+KYC Completion 7d % =
+DIVIDE ( [KYC Completed 7d], [Mature Signups 7d] )
+
+KYC Completion 7d % Target =
+0.62
+
+KYC Completion 7d % vs Target (pp) =
+( [KYC Completion 7d %] - [KYC Completion 7d % Target] ) * 100
+
+Signup to Loan 30d % =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fct_funnel ), fct_funnel[is_mature_30d] = TRUE (), fct_funnel[disbursed_30d] = TRUE () ),
+    CALCULATE ( COUNTROWS ( fct_funnel ), fct_funnel[is_mature_30d] = TRUE () )
+)
+
+// Funnel visual: a disconnected table 'Funnel Stage' (Stage, Stage Order) drives this SWITCH.
+Funnel Customers =
+VAR _stage = SELECTEDVALUE ( 'Funnel Stage'[Stage Order] )
+VAR _base = CALCULATETABLE ( fct_funnel, fct_funnel[is_mature_30d] = TRUE () )
+RETURN
+    SWITCH (
+        _stage,
+        1, COUNTROWS ( _base ),
+        2, COUNTROWS ( FILTER ( _base, fct_funnel[reached_kyc_started] ) ),
+        3, COUNTROWS ( FILTER ( _base, fct_funnel[reached_kyc_completed] ) ),
+        4, COUNTROWS ( FILTER ( _base, fct_funnel[reached_app_started] ) ),
+        5, COUNTROWS ( FILTER ( _base, fct_funnel[reached_app_submitted] ) ),
+        6, COUNTROWS ( FILTER ( _base, fct_funnel[reached_approved] ) ),
+        7, COUNTROWS ( FILTER ( _base, fct_funnel[reached_disbursed] ) )
+    )
+
+Funnel % of Signups =
+DIVIDE ( [Funnel Customers], CALCULATE ( [Funnel Customers], 'Funnel Stage'[Stage Order] = 1 ) )
+
+Funnel Step Conversion % =
+VAR _stage = SELECTEDVALUE ( 'Funnel Stage'[Stage Order] )
+VAR _prev = CALCULATE ( [Funnel Customers], 'Funnel Stage'[Stage Order] = _stage - 1 )
+RETURN IF ( _stage > 1, DIVIDE ( [Funnel Customers], _prev ) )
+
+Median Minutes to KYC =
+MEDIAN ( fct_funnel[minutes_signup_to_kyc] )
+
+// ---------------------------------------------------------------- 02 Lending
+Applications Started =
+CALCULATE ( COUNTROWS ( fct_applications ), USERELATIONSHIP ( dim_date[date_day], fct_applications[started_date] ) )
+
+Applications Submitted =
+CALCULATE (
+    COUNTROWS ( fct_applications ),
+    USERELATIONSHIP ( dim_date[date_day], fct_applications[submitted_date] ),
+    NOT ISBLANK ( fct_applications[submitted_date] )
+)
+
+Decisions =
+CALCULATE ( COUNTROWS ( fct_applications ), NOT ISBLANK ( fct_applications[decision] ) )   // active rel = decision_date
+
+Approvals =
+CALCULATE ( COUNTROWS ( fct_applications ), fct_applications[decision] = "approved" )
+
+Approval Rate % =
+DIVIDE ( [Approvals], [Decisions] )
+
+Offer Acceptance % =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fct_applications ), fct_applications[decision] = "approved", fct_applications[application_status] = "disbursed" ),
+    [Approvals]
+)
+
+Loans Disbursed =
+COUNTROWS ( fct_loans )
+
+Disbursed Amount =
+SUM ( fct_loans[principal_amount] )
+
+Avg Ticket Size =
+DIVIDE ( [Disbursed Amount], [Loans Disbursed] )
+
+New Borrowers =
+CALCULATE ( [Loans Disbursed], fct_loans[loan_sequence_number] = 1 )
+
+Repeat Loan Share % =
+DIVIDE ( CALCULATE ( [Loans Disbursed], fct_loans[is_repeat_loan] = TRUE () ), [Loans Disbursed] )
+
+Autopay Adoption % =
+DIVIDE ( CALCULATE ( [Loans Disbursed], fct_loans[autopay_enabled] = TRUE () ), [Loans Disbursed] )
+
+Loans Disbursed MoM % =
+VAR _prev = CALCULATE ( [Loans Disbursed], DATEADD ( dim_date[date_day], -1, MONTH ) )
+RETURN DIVIDE ( [Loans Disbursed] - _prev, _prev )
+
+// ---------------------------------------------------------------- 03 Revenue & Value
+Gross Revenue =
+CALCULATE ( SUM ( fct_revenue[amount] ), fct_revenue[component] <> "credit_loss" )
+
+Interest Income =
+CALCULATE ( SUM ( fct_revenue[amount] ), fct_revenue[component] = "interest_income" )
+
+Fee Income =
+CALCULATE ( SUM ( fct_revenue[amount] ), fct_revenue[component] IN { "processing_fee", "late_fee", "foreclosure_fee" } )
+
+Credit Losses =
+- CALCULATE ( SUM ( fct_revenue[amount] ), fct_revenue[component] = "credit_loss" )
+
+Net Revenue =
+[Gross Revenue] - [Credit Losses]
+
+Gross Revenue PM =
+CALCULATE ( [Gross Revenue], DATEADD ( dim_date[date_day], -1, MONTH ) )
+
+Gross Revenue MoM % =
+DIVIDE ( [Gross Revenue] - [Gross Revenue PM], [Gross Revenue PM] )
+
+Gross Revenue PY =
+CALCULATE ( [Gross Revenue], SAMEPERIODLASTYEAR ( dim_date[date_day] ) )
+
+Gross Revenue YoY % =
+DIVIDE ( [Gross Revenue] - [Gross Revenue PY], [Gross Revenue PY] )
+
+Gross Revenue FYTD =
+TOTALYTD ( [Gross Revenue], dim_date[date_day], "3/31" )
+
+Revenue Mix % =
+DIVIDE ( [Gross Revenue], CALCULATE ( [Gross Revenue], REMOVEFILTERS ( dim_product ) ) )
+
+Net Revenue per Borrower =
+DIVIDE ( [Net Revenue], DISTINCTCOUNT ( fct_loans[customer_id] ) )
+
+Acquisition Cost =
+SUM ( dim_customer[acquisition_cost] )
+
+LTV to CAC =
+// realised net value of the customers in context / what it cost to acquire them
+DIVIDE ( SUM ( dim_customer[net_revenue] ), [Acquisition Cost] )
+
+// Display helper: Indian short format, e.g. ₹60.58 L / ₹6.22 Cr
+Format INR Short =
+VAR _v = [Gross Revenue]
+RETURN
+    SWITCH (
+        TRUE (),
+        ABS ( _v ) >= 1E7, FORMAT ( _v / 1E7, "₹#,0.00" ) & " Cr",
+        ABS ( _v ) >= 1E5, FORMAT ( _v / 1E5, "₹#,0.00" ) & " L",
+        FORMAT ( _v, "₹#,0" )
+    )
+
+// ---------------------------------------------------------------- 04 Portfolio & Risk (semi-additive: month-end)
+Outstanding Principal =
+VAR _lastMonth = MAX ( dim_date[month_start] )
+RETURN CALCULATE ( SUM ( fct_portfolio_monthly[outstanding_principal] ), dim_date[month_start] = _lastMonth )
+
+PAR30 Outstanding =
+VAR _lastMonth = MAX ( dim_date[month_start] )
+RETURN CALCULATE ( SUM ( fct_portfolio_monthly[par30_outstanding] ), dim_date[month_start] = _lastMonth )
+
+NPA Outstanding =
+VAR _lastMonth = MAX ( dim_date[month_start] )
+RETURN CALCULATE ( SUM ( fct_portfolio_monthly[npa_outstanding] ), dim_date[month_start] = _lastMonth )
+
+PAR30 % =
+DIVIDE ( [PAR30 Outstanding], [Outstanding Principal] )
+
+NPA % =
+DIVIDE ( [NPA Outstanding], [Outstanding Principal] )
+
+Write-offs =
+SUM ( fct_portfolio_monthly[written_off_principal] )
+
+FPD30 % =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fct_loans ), fct_loans[fpd30_mature] = TRUE (), fct_loans[is_fpd30] = TRUE () ),
+    CALCULATE ( COUNTROWS ( fct_loans ), fct_loans[fpd30_mature] = TRUE () )
+)
+
+Ever 30+ DPD % =
+DIVIDE ( CALCULATE ( COUNTROWS ( fct_loans ), fct_loans[ever_30dpd] = TRUE () ), [Loans Disbursed] )
+
+Collection Efficiency % =
+// collected by the end of the due month / amount falling due (active rel = due_date)
+VAR _due = SUM ( fct_repayments[total_due] )
+VAR _collected =
+    SUMX (
+        FILTER ( fct_repayments, NOT ISBLANK ( fct_repayments[paid_date] )
+                 && fct_repayments[paid_date] <= EOMONTH ( fct_repayments[due_date], 0 ) ),
+        fct_repayments[amount_paid]
+    )
+RETURN DIVIDE ( _collected, _due )
+
+Payment Failure Rate % =
+DIVIDE ( SUM ( fct_daily_metrics[payments_failed] ),
+         SUM ( fct_daily_metrics[payments_failed] ) + SUM ( fct_daily_metrics[payments_success] ) )
+
+// ---------------------------------------------------------------- 05 Engagement & Product
+MAU =
+CALCULATE ( DISTINCTCOUNT ( fct_user_activity_monthly[customer_id] ), fct_user_activity_monthly[client_events] > 0 )
+
+Avg DAU =
+AVERAGE ( fct_daily_metrics[dau] )
+
+Stickiness DAU/MAU % =
+DIVIDE ( [Avg DAU], [MAU] )
+
+Events =
+SUM ( fct_events_daily[events] )
+
+Event Users =
+SUM ( fct_events_daily[users] )   // users per day summed: use only at day grain
+
+Borrowers with Autopay % =
+DIVIDE ( CALCULATE ( DISTINCTCOUNT ( fct_loans[customer_id] ), fct_loans[autopay_enabled] = TRUE () ),
+         DISTINCTCOUNT ( fct_loans[customer_id] ) )
+
+Feature Events per Active User =
+// engagement depth for the feature events (credit score, EMI calculator, autopay, referral)
+DIVIDE (
+    CALCULATE ( [Events], fct_events_daily[event_name] IN { "credit_score_viewed", "emi_calculator_used", "autopay_enabled", "referral_shared" } ),
+    [MAU]
+)
+
+Retention % =
+DIVIDE ( SUM ( fct_cohort_retention[active_customers] ), SUM ( fct_cohort_retention[cohort_size] ) )
+
+// ---------------------------------------------------------------- 06 Support
+Support Tickets =
+COUNTROWS ( fct_support_tickets )
+
+Tickets per 1k MAU =
+DIVIDE ( [Support Tickets] * 1000, [MAU] )
+
+CSAT =
+AVERAGE ( fct_support_tickets[csat_score] )
+
+Median First Response (min) =
+MEDIAN ( fct_support_tickets[first_response_minutes] )
+
+// ---------------------------------------------------------------- 07 Marketing
+Marketing Spend =
+SUM ( fct_cac_monthly[spend] )
+
+Cost per Signup =
+DIVIDE ( [Marketing Spend], SUM ( fct_cac_monthly[signups] ) )
+
+Cost per Funded Customer =
+DIVIDE ( [Marketing Spend], SUM ( fct_cac_monthly[funded_30d] ) )
+
+// ---------------------------------------------------------------- 08 Experiments (one row per experiment x metric)
+Control Rate =
+SELECTEDVALUE ( fct_experiment_results[control_rate] )
+
+Treatment Rate =
+SELECTEDVALUE ( fct_experiment_results[treatment_rate] )
+
+Uplift (pp) =
+SELECTEDVALUE ( fct_experiment_results[diff_abs] ) * 100
+
+CI Low (pp) =
+SELECTEDVALUE ( fct_experiment_results[ci_low] ) * 100
+
+CI High (pp) =
+SELECTEDVALUE ( fct_experiment_results[ci_high] ) * 100
+
+Result Label =
+VAR _sig = SELECTEDVALUE ( fct_experiment_results[significant] )
+VAR _d = [Uplift (pp)]
+RETURN IF ( _sig, IF ( _d > 0, "Significant uplift", "Significant decline" ), "Not significant" )
+
+Experiment Decision =
+SELECTEDVALUE ( fct_experiment_results[decision] )
+
+// ---------------------------------------------------------------- 09 Data Quality
+Checks Run (Curated) =
+COUNTROWS ( fct_dq_results_clean )
+
+Critical Failures (Curated) =
+CALCULATE ( COUNTROWS ( fct_dq_results_clean ), fct_dq_results_clean[status] = "fail", fct_dq_results_clean[severity] = "critical" )
+
+Warnings (Curated) =
+CALCULATE ( COUNTROWS ( fct_dq_results_clean ), fct_dq_results_clean[status] = "fail", fct_dq_results_clean[severity] = "warning" )
+
+DQ Score (Curated) =
+VAR _w = SUMX ( fct_dq_results_clean, IF ( fct_dq_results_clean[severity] = "critical", 3, 1 ) )
+VAR _p = SUMX ( FILTER ( fct_dq_results_clean, fct_dq_results_clean[status] = "pass" ),
+                IF ( fct_dq_results_clean[severity] = "critical", 3, 1 ) )
+RETURN DIVIDE ( _p, _w ) * 100
+
+DQ Score (Raw) =
+VAR _w = SUMX ( fct_dq_results_raw, IF ( fct_dq_results_raw[severity] = "critical", 3, 1 ) )
+VAR _p = SUMX ( FILTER ( fct_dq_results_raw, fct_dq_results_raw[status] = "pass" ),
+                IF ( fct_dq_results_raw[severity] = "critical", 3, 1 ) )
+RETURN DIVIDE ( _p, _w ) * 100
+
+Rows Repaired or Quarantined =
+SUM ( fct_cleaning_log[rows_affected] )
+
+// ---------------------------------------------------------------- 10 Report helpers
+Data As Of =
+"Data as of " & FORMAT ( MAX ( dim_date[date_day] ), "dd mmm yyyy" ) & "  |  synthetic data"
+
+KPI Status Colour =
+// use in conditional formatting (field value): status colours are reserved for status
+VAR _v = [KYC Completion 7d %]
+RETURN IF ( _v >= [KYC Completion 7d % Target], "#0ca30c", "#d03b3b" )

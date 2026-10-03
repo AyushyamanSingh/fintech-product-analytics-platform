@@ -1,0 +1,3 @@
+variant,users,autopay_enabled_pct,first_emi_on_time_pct
+control,785,46.62,86.37
+treatment,753,64.28,86.99

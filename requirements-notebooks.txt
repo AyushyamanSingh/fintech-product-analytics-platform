@@ -1,0 +1,5 @@
+# Optional: only needed to (re)execute the notebooks in notebooks/
+-r requirements.txt
+nbformat>=5.9
+nbclient>=0.8
+ipykernel>=6.25

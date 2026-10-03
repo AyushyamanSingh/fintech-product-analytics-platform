@@ -1,0 +1,1003 @@
+{
+  "as_of_date": "2026-06-30",
+  "synthetic_data": true,
+  "reporting_month": "2026-06",
+  "reporting_week": {
+    "start": "2026-06-22",
+    "end": "2026-06-28"
+  },
+  "facts": [
+    {
+      "id": "F01",
+      "topic": "kpi_monthly",
+      "statement": "New customers (Jun 2026): 4,256; prior month 4,158 (+2.4%); same month last year 3,182 (+33.8%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "new_customers",
+        "period": "2026-06",
+        "value": 4256.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+2.4%",
+        "value_fmt": "4,256",
+        "name": "New customers"
+      }
+    },
+    {
+      "id": "F02",
+      "topic": "kpi_monthly",
+      "statement": "KYC completion (7-day) (Jun 2026): 62.3%; prior month 63.2% (-0.9 pp); same month last year 56.3% (+6.0 pp); target >= 62.0% -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "kyc_completion_rate_7d",
+        "period": "2026-06",
+        "value": 0.6230414746543779,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "up_good",
+        "delta_fmt": "-0.9 pp",
+        "value_fmt": "62.3%",
+        "name": "KYC completion (7-day)"
+      }
+    },
+    {
+      "id": "F03",
+      "topic": "kpi_monthly",
+      "statement": "Activation rate (first loan in 30 days) (May 2026): 17.0%; prior month 18.0% (-1.0 pp); same month last year 15.7% (+1.3 pp); target >= 15.0% -> on track; assessment: stable. (Latest available period: Needs 30 days of observation, so the current month is reported next month..)",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "signup_to_disbursal_30d",
+        "period": "2026-05",
+        "value": 0.1697931697931698,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "up_good",
+        "delta_fmt": "-1.0 pp",
+        "value_fmt": "17.0%",
+        "name": "Activation rate (first loan in 30 days)"
+      }
+    },
+    {
+      "id": "F04",
+      "topic": "kpi_monthly",
+      "statement": "Applications submitted (Jun 2026): 2,271; prior month 2,271 (+0.0%); same month last year 1,475 (+54.0%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "applications_submitted",
+        "period": "2026-06",
+        "value": 2271.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+0.0%",
+        "value_fmt": "2,271",
+        "name": "Applications submitted"
+      }
+    },
+    {
+      "id": "F05",
+      "topic": "kpi_monthly",
+      "statement": "Approval rate (Jun 2026): 62.2%; prior month 64.6% (-2.4 pp); same month last year 60.5% (+1.7 pp); target >= 50.0% -> on track; assessment: down, notable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "approval_rate",
+        "period": "2026-06",
+        "value": 0.6222515391380826,
+        "assessment": "down",
+        "notable": true,
+        "target_status": "on_track",
+        "direction": "neutral",
+        "delta_fmt": "-2.4 pp",
+        "value_fmt": "62.2%",
+        "name": "Approval rate"
+      }
+    },
+    {
+      "id": "F06",
+      "topic": "kpi_monthly",
+      "statement": "Offer acceptance (disbursal rate) (Jun 2026): 90.5%; prior month 90.1% (+0.4 pp); same month last year 89.2% (+1.2 pp); target >= 85.0% -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "offer_acceptance_rate",
+        "period": "2026-06",
+        "value": 0.9045936395759717,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "up_good",
+        "delta_fmt": "+0.4 pp",
+        "value_fmt": "90.5%",
+        "name": "Offer acceptance (disbursal rate)"
+      }
+    },
+    {
+      "id": "F07",
+      "topic": "kpi_monthly",
+      "statement": "Loans disbursed (Jun 2026): 1,293; prior month 1,321 (-2.1%); same month last year 786 (+64.5%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "loans_disbursed",
+        "period": "2026-06",
+        "value": 1293.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "-2.1%",
+        "value_fmt": "1,293",
+        "name": "Loans disbursed"
+      }
+    },
+    {
+      "id": "F08",
+      "topic": "kpi_monthly",
+      "statement": "Disbursed amount (Jun 2026): ₹5.86 Cr; prior month ₹5.78 Cr (+1.3%); same month last year ₹3.28 Cr (+78.6%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "disbursed_amount",
+        "period": "2026-06",
+        "value": 58556800.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+1.3%",
+        "value_fmt": "₹5.86 Cr",
+        "name": "Disbursed amount"
+      }
+    },
+    {
+      "id": "F09",
+      "topic": "kpi_monthly",
+      "statement": "Average ticket size (Jun 2026): ₹45,288; prior month ₹43,764 (+3.5%); same month last year ₹41,702 (+8.6%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "avg_ticket_size",
+        "period": "2026-06",
+        "value": 45287.54833720031,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "neutral",
+        "delta_fmt": "+3.5%",
+        "value_fmt": "₹45,288",
+        "name": "Average ticket size"
+      }
+    },
+    {
+      "id": "F10",
+      "topic": "kpi_monthly",
+      "statement": "New borrowers (Jun 2026): 842; prior month 811 (+3.8%); same month last year 523 (+61.0%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "new_borrowers",
+        "period": "2026-06",
+        "value": 842.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+3.8%",
+        "value_fmt": "842",
+        "name": "New borrowers"
+      }
+    },
+    {
+      "id": "F11",
+      "topic": "kpi_monthly",
+      "statement": "Repeat-loan share (Jun 2026): 34.9%; prior month 38.6% (-3.7 pp); same month last year 33.5% (+1.4 pp); assessment: worsened, notable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "repeat_loan_share",
+        "period": "2026-06",
+        "value": 0.34880123743232794,
+        "assessment": "worsened",
+        "notable": true,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "-3.7 pp",
+        "value_fmt": "34.9%",
+        "name": "Repeat-loan share"
+      }
+    },
+    {
+      "id": "F12",
+      "topic": "kpi_monthly",
+      "statement": "Autopay adoption (Jun 2026): 64.9%; prior month 65.0% (-0.1 pp); same month last year 48.7% (+16.2 pp); target >= 60.0% -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "autopay_adoption_rate",
+        "period": "2026-06",
+        "value": 0.6488785769528229,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "up_good",
+        "delta_fmt": "-0.1 pp",
+        "value_fmt": "64.9%",
+        "name": "Autopay adoption"
+      }
+    },
+    {
+      "id": "F13",
+      "topic": "kpi_monthly",
+      "statement": "Gross revenue (Jun 2026): ₹59.30 L; prior month ₹58.38 L (+1.6%); same month last year ₹31.34 L (+89.2%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "gross_revenue",
+        "period": "2026-06",
+        "value": 5930353.88,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+1.6%",
+        "value_fmt": "₹59.30 L",
+        "name": "Gross revenue"
+      }
+    },
+    {
+      "id": "F14",
+      "topic": "kpi_monthly",
+      "statement": "Credit losses (write-offs) (Jun 2026): ₹25.34 L; prior month ₹17.35 L (+46.1%); same month last year ₹7.41 L (+241.9%); assessment: worsened, notable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "credit_losses",
+        "period": "2026-06",
+        "value": 2534235.84,
+        "assessment": "worsened",
+        "notable": true,
+        "target_status": null,
+        "direction": "down_good",
+        "delta_fmt": "+46.1%",
+        "value_fmt": "₹25.34 L",
+        "name": "Credit losses (write-offs)"
+      }
+    },
+    {
+      "id": "F15",
+      "topic": "kpi_monthly",
+      "statement": "Net revenue (Jun 2026): ₹33.96 L; prior month ₹41.03 L (-17.2%); same month last year ₹23.93 L (+41.9%); assessment: worsened, notable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "net_revenue",
+        "period": "2026-06",
+        "value": 3396118.04,
+        "assessment": "worsened",
+        "notable": true,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "-17.2%",
+        "value_fmt": "₹33.96 L",
+        "name": "Net revenue"
+      }
+    },
+    {
+      "id": "F16",
+      "topic": "kpi_monthly",
+      "statement": "Outstanding principal (AUM) (Jun 2026): ₹29.56 Cr; prior month ₹28.49 Cr (+3.8%); same month last year ₹15.15 Cr (+95.1%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "outstanding_principal",
+        "period": "2026-06",
+        "value": 295594950.99,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+3.8%",
+        "value_fmt": "₹29.56 Cr",
+        "name": "Outstanding principal (AUM)"
+      }
+    },
+    {
+      "id": "F17",
+      "topic": "kpi_monthly",
+      "statement": "PAR30 (Jun 2026): 3.6%; prior month 3.8% (-0.2 pp); same month last year 2.1% (+1.5 pp); target <= 6.0% -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "par30_rate",
+        "period": "2026-06",
+        "value": 0.03572060951865584,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "down_good",
+        "delta_fmt": "-0.2 pp",
+        "value_fmt": "3.6%",
+        "name": "PAR30"
+      }
+    },
+    {
+      "id": "F18",
+      "topic": "kpi_monthly",
+      "statement": "NPA (90+ DPD) (Jun 2026): 2.0%; prior month 2.5% (-0.5 pp); same month last year 1.2% (+0.8 pp); target <= 3.5% -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "npa_rate",
+        "period": "2026-06",
+        "value": 0.020080100827570634,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "down_good",
+        "delta_fmt": "-0.5 pp",
+        "value_fmt": "2.0%",
+        "name": "NPA (90+ DPD)"
+      }
+    },
+    {
+      "id": "F19",
+      "topic": "kpi_monthly",
+      "statement": "First-payment default (FPD30) (Apr 2026): 1.5%; prior month 1.8% (-0.4 pp); same month last year 2.2% (-0.7 pp); target <= 3.0% -> on track; assessment: stable. (Latest available period: Needs first due date + 30 days, so the latest value refers to loans disbursed ~2 months ago..)",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "fpd30_rate",
+        "period": "2026-04",
+        "value": 0.01474010861132661,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "down_good",
+        "delta_fmt": "-0.4 pp",
+        "value_fmt": "1.5%",
+        "name": "First-payment default (FPD30)"
+      }
+    },
+    {
+      "id": "F20",
+      "topic": "kpi_monthly",
+      "statement": "Collection efficiency (Jun 2026): 93.9%; prior month 93.5% (+0.4 pp); same month last year 95.3% (-1.3 pp); target >= 95.0% -> off track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "collection_efficiency",
+        "period": "2026-06",
+        "value": 0.9392033026523645,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "off_track",
+        "direction": "up_good",
+        "delta_fmt": "+0.4 pp",
+        "value_fmt": "93.9%",
+        "name": "Collection efficiency"
+      }
+    },
+    {
+      "id": "F21",
+      "topic": "kpi_monthly",
+      "statement": "Payment failure rate (Jun 2026): 10.3%; prior month 10.0% (+0.3 pp); same month last year 8.0% (+2.3 pp); target <= 8.0% -> off track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "payment_failure_rate",
+        "period": "2026-06",
+        "value": 0.1031948402579871,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "off_track",
+        "direction": "down_good",
+        "delta_fmt": "+0.3 pp",
+        "value_fmt": "10.3%",
+        "name": "Payment failure rate"
+      }
+    },
+    {
+      "id": "F22",
+      "topic": "kpi_monthly",
+      "statement": "Monthly active users (Jun 2026): 14,918; prior month 14,705 (+1.4%); same month last year 9,245 (+61.4%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "mau",
+        "period": "2026-06",
+        "value": 14918.0,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "up_good",
+        "delta_fmt": "+1.4%",
+        "value_fmt": "14,918",
+        "name": "Monthly active users"
+      }
+    },
+    {
+      "id": "F23",
+      "topic": "kpi_monthly",
+      "statement": "Support tickets (Jun 2026): 361; prior month 335 (+7.8%); same month last year 248 (+45.6%); assessment: worsened.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "support_tickets",
+        "period": "2026-06",
+        "value": 361.0,
+        "assessment": "worsened",
+        "notable": false,
+        "target_status": null,
+        "direction": "down_good",
+        "delta_fmt": "+7.8%",
+        "value_fmt": "361",
+        "name": "Support tickets"
+      }
+    },
+    {
+      "id": "F24",
+      "topic": "kpi_monthly",
+      "statement": "Tickets per 1k MAU (Jun 2026): 24.20; prior month 22.78 (+6.2%); same month last year 26.83 (-9.8%); assessment: worsened.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "tickets_per_1k_mau",
+        "period": "2026-06",
+        "value": 24.198954283416008,
+        "assessment": "worsened",
+        "notable": false,
+        "target_status": null,
+        "direction": "down_good",
+        "delta_fmt": "+6.2%",
+        "value_fmt": "24.20",
+        "name": "Tickets per 1k MAU"
+      }
+    },
+    {
+      "id": "F25",
+      "topic": "kpi_monthly",
+      "statement": "CSAT (Jun 2026): 3.46; prior month 3.48 (-0.7%); same month last year 3.58 (-3.5%); target >= 4.00 -> off track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "csat_avg",
+        "period": "2026-06",
+        "value": 3.4586466165413534,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "off_track",
+        "direction": "up_good",
+        "delta_fmt": "-0.7%",
+        "value_fmt": "3.46",
+        "name": "CSAT"
+      }
+    },
+    {
+      "id": "F26",
+      "topic": "kpi_monthly",
+      "statement": "Marketing spend (Jun 2026): ₹11.62 L; prior month ₹10.82 L (+7.4%); same month last year ₹7.93 L (+46.6%); assessment: up, notable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "marketing_spend",
+        "period": "2026-06",
+        "value": 1162023.8699999955,
+        "assessment": "up",
+        "notable": true,
+        "target_status": null,
+        "direction": "neutral",
+        "delta_fmt": "+7.4%",
+        "value_fmt": "₹11.62 L",
+        "name": "Marketing spend"
+      }
+    },
+    {
+      "id": "F27",
+      "topic": "kpi_monthly",
+      "statement": "Blended CAC (Jun 2026): ₹273; prior month ₹260 (+5.0%); same month last year ₹249 (+9.6%); assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "blended_cac",
+        "period": "2026-06",
+        "value": 273.0319243421042,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": null,
+        "direction": "down_good",
+        "delta_fmt": "+5.0%",
+        "value_fmt": "₹273",
+        "name": "Blended CAC"
+      }
+    },
+    {
+      "id": "F28",
+      "topic": "kpi_monthly",
+      "statement": "Cost per new borrower (Jun 2026): ₹1,380; prior month ₹1,334 (+3.5%); same month last year ₹1,516 (-8.9%); target <= ₹2,500 -> on track; assessment: stable.",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "cost_per_new_borrower",
+        "period": "2026-06",
+        "value": 1380.075855106883,
+        "assessment": "stable",
+        "notable": false,
+        "target_status": "on_track",
+        "direction": "down_good",
+        "delta_fmt": "+3.5%",
+        "value_fmt": "₹1,380",
+        "name": "Cost per new borrower"
+      }
+    },
+    {
+      "id": "F29",
+      "topic": "kpi_weekly",
+      "statement": "New customers (week of 22 Jun 2026): 1,034; prior week 1,010 (+2.4%); 4-week average 980 (+5.6%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "new_customers",
+        "assessment": "stable",
+        "notable": false,
+        "name": "New customers",
+        "value_fmt": "1,034",
+        "delta_fmt": "+2.4%"
+      }
+    },
+    {
+      "id": "F30",
+      "topic": "kpi_weekly",
+      "statement": "KYC completions (week of 22 Jun 2026): 657; prior week 626 (+5.0%); 4-week average 630 (+4.2%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "kyc_completions",
+        "assessment": "stable",
+        "notable": false,
+        "name": "KYC completions",
+        "value_fmt": "657",
+        "delta_fmt": "+5.0%"
+      }
+    },
+    {
+      "id": "F31",
+      "topic": "kpi_weekly",
+      "statement": "Applications submitted (week of 22 Jun 2026): 564; prior week 502 (+12.4%); 4-week average 528 (+6.7%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "applications_submitted",
+        "assessment": "improved",
+        "notable": true,
+        "name": "Applications submitted",
+        "value_fmt": "564",
+        "delta_fmt": "+12.4%"
+      }
+    },
+    {
+      "id": "F32",
+      "topic": "kpi_weekly",
+      "statement": "Approval rate (week of 22 Jun 2026): 61.8%; prior week 63.7% (-2.0 pp); 4-week average 62.4% (-0.6 pp).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "approval_rate",
+        "assessment": "down",
+        "notable": false,
+        "name": "Approval rate",
+        "value_fmt": "61.8%",
+        "delta_fmt": "-2.0 pp"
+      }
+    },
+    {
+      "id": "F33",
+      "topic": "kpi_weekly",
+      "statement": "Loans disbursed (week of 22 Jun 2026): 317; prior week 296 (+7.1%); 4-week average 299 (+6.1%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "loans_disbursed",
+        "assessment": "improved",
+        "notable": false,
+        "name": "Loans disbursed",
+        "value_fmt": "317",
+        "delta_fmt": "+7.1%"
+      }
+    },
+    {
+      "id": "F34",
+      "topic": "kpi_weekly",
+      "statement": "Disbursed amount (week of 22 Jun 2026): ₹1.41 Cr; prior week ₹1.34 Cr (+4.7%); 4-week average ₹1.34 Cr (+4.6%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "disbursed_amount",
+        "assessment": "stable",
+        "notable": false,
+        "name": "Disbursed amount",
+        "value_fmt": "₹1.41 Cr",
+        "delta_fmt": "+4.7%"
+      }
+    },
+    {
+      "id": "F35",
+      "topic": "kpi_weekly",
+      "statement": "EMI collections (week of 22 Jun 2026): ₹1.38 Cr; prior week ₹1.18 Cr (+16.6%); 4-week average ₹1.10 Cr (+26.1%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "collections_amount",
+        "assessment": "improved",
+        "notable": true,
+        "name": "EMI collections",
+        "value_fmt": "₹1.38 Cr",
+        "delta_fmt": "+16.6%"
+      }
+    },
+    {
+      "id": "F36",
+      "topic": "kpi_weekly",
+      "statement": "Payment failure rate (week of 22 Jun 2026): 11.2%; prior week 10.4% (+0.8 pp); 4-week average 9.9% (+1.3 pp).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "payment_failure_rate",
+        "assessment": "stable",
+        "notable": false,
+        "name": "Payment failure rate",
+        "value_fmt": "11.2%",
+        "delta_fmt": "+0.8 pp"
+      }
+    },
+    {
+      "id": "F37",
+      "topic": "kpi_weekly",
+      "statement": "Gross revenue (week of 22 Jun 2026): ₹15.92 L; prior week ₹14.76 L (+7.8%); 4-week average ₹13.57 L (+17.3%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "gross_revenue",
+        "assessment": "improved",
+        "notable": false,
+        "name": "Gross revenue",
+        "value_fmt": "₹15.92 L",
+        "delta_fmt": "+7.8%"
+      }
+    },
+    {
+      "id": "F38",
+      "topic": "kpi_weekly",
+      "statement": "Support tickets (week of 22 Jun 2026): 83; prior week 106 (-21.7%); 4-week average 84 (-1.5%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "support_tickets",
+        "assessment": "improved",
+        "notable": true,
+        "name": "Support tickets",
+        "value_fmt": "83",
+        "delta_fmt": "-21.7%"
+      }
+    },
+    {
+      "id": "F39",
+      "topic": "kpi_weekly",
+      "statement": "CSAT (week of 22 Jun 2026): 3.33; prior week 3.51 (-5.1%); 4-week average 3.46 (-3.7%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "csat_avg",
+        "assessment": "worsened",
+        "notable": false,
+        "name": "CSAT",
+        "value_fmt": "3.33",
+        "delta_fmt": "-5.1%"
+      }
+    },
+    {
+      "id": "F40",
+      "topic": "kpi_weekly",
+      "statement": "Average DAU (week of 22 Jun 2026): 1,073; prior week 1,070 (+0.3%); 4-week average 1,055 (+1.7%).",
+      "source": "outputs/kpis/kpi_snapshot.json",
+      "data": {
+        "kpi": "avg_dau",
+        "assessment": "stable",
+        "notable": false,
+        "name": "Average DAU",
+        "value_fmt": "1,073",
+        "delta_fmt": "+0.3%"
+      }
+    },
+    {
+      "id": "F41",
+      "topic": "anomaly_summary",
+      "statement": "Anomaly monitor: 8 episodes flagged across the 24-month history; 0 in the last 8 weeks (since 05 May 2026).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "total": 8,
+        "recent": 0
+      }
+    },
+    {
+      "id": "F42",
+      "topic": "anomaly",
+      "statement": "Daily active users spiked to 427 on 22 Oct 2024 (expected 313, robust z 4.3); main driver: platform = android (80% of the deviation). Window 2024-10-21 to 2024-10-22, 2 day(s) flagged, severity medium (known event: Festive campaign 2024 (Diwali)).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "dau",
+        "start": "2024-10-21",
+        "end": "2024-10-22",
+        "severity": "medium",
+        "classification": "expected (known event)",
+        "recent": false
+      }
+    },
+    {
+      "id": "F43",
+      "topic": "anomaly",
+      "statement": "Daily active users spiked to 483 on 28 Oct 2024 (expected 309, robust z 6.6); main driver: platform = android (81% of the deviation). Window 2024-10-28 to 2024-11-12, 14 day(s) flagged, severity high (known event: Festive campaign 2024 (Diwali)).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "dau",
+        "start": "2024-10-28",
+        "end": "2024-11-12",
+        "severity": "high",
+        "classification": "expected (known event)",
+        "recent": false
+      }
+    },
+    {
+      "id": "F44",
+      "topic": "anomaly",
+      "statement": "Tracked / backend KYC completions dropped to 33.9% on 13 May 2025 (expected 100.0%, robust z -13.2); main driver: platform (untracked completions) = android (100% of the deviation). Window 2025-05-12 to 2025-05-29, 14 day(s) flagged, severity high (known event: App release 5.2.0 (hotfix 5.2.1 on 16 May)).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "kyc_tracking_ratio",
+        "start": "2025-05-12",
+        "end": "2025-05-29",
+        "severity": "high",
+        "classification": "expected (known event)",
+        "recent": false
+      }
+    },
+    {
+      "id": "F45",
+      "topic": "anomaly",
+      "statement": "Support tickets spiked to 32 on 14 Aug 2025 (expected 6, robust z 6.7); main driver: ticket category = payment_failure (82% of the deviation). Window 2025-08-14 to 2025-08-14, 1 day(s) flagged, severity medium (no known business event - investigate).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "support_tickets",
+        "start": "2025-08-14",
+        "end": "2025-08-14",
+        "severity": "medium",
+        "classification": "investigate",
+        "recent": false
+      }
+    },
+    {
+      "id": "F46",
+      "topic": "anomaly",
+      "statement": "EMI payment failure rate spiked to 47.1% on 15 Aug 2025 (expected 8.9%, robust z 15.6); main driver: failure reason (excess failed debits) = gateway_timeout (96% of the deviation). Window 2025-08-14 to 2025-08-15, 2 day(s) flagged, severity high (no known business event - investigate).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "payment_failure_rate",
+        "start": "2025-08-14",
+        "end": "2025-08-15",
+        "severity": "high",
+        "classification": "investigate",
+        "recent": false
+      }
+    },
+    {
+      "id": "F47",
+      "topic": "anomaly",
+      "statement": "Signups spiked to 222 on 15 Sep 2025 (expected 113, robust z 6.8); main driver: acquisition channel = affiliate (87% of the deviation). Window 2025-09-08 to 2025-09-21, 14 day(s) flagged, severity high (no known business event - investigate).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "signups",
+        "start": "2025-09-08",
+        "end": "2025-09-21",
+        "severity": "high",
+        "classification": "investigate",
+        "recent": false
+      }
+    },
+    {
+      "id": "F48",
+      "topic": "anomaly",
+      "statement": "Daily active users spiked to 920 on 16 Sep 2025 (expected 692, robust z 5.8); main driver: platform = android (94% of the deviation). Window 2025-09-13 to 2025-09-20, 6 day(s) flagged, severity high (no known business event - investigate).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "dau",
+        "start": "2025-09-13",
+        "end": "2025-09-20",
+        "severity": "high",
+        "classification": "investigate",
+        "recent": false
+      }
+    },
+    {
+      "id": "F49",
+      "topic": "anomaly",
+      "statement": "Applications submitted spiked to 94 on 18 Sep 2025 (expected 46, robust z 4.7); main driver: acquisition channel = affiliate (69% of the deviation). Window 2025-09-17 to 2025-09-18, 2 day(s) flagged, severity medium (no known business event - investigate).",
+      "source": "outputs/anomalies/anomaly_episodes.json",
+      "data": {
+        "metric": "applications_submitted",
+        "start": "2025-09-17",
+        "end": "2025-09-18",
+        "severity": "medium",
+        "classification": "investigate",
+        "recent": false
+      }
+    },
+    {
+      "id": "F50",
+      "topic": "experiment",
+      "statement": "EXP-ONB-2026-01 (onboarding redesign, 2026-01-12 to 2026-02-22 (6 weeks)): 7-day KYC completion 61.78% treatment vs 58.51% control, difference +3.26 pp (95% CI +0.54 to +5.99 pp), relative uplift +5.6%, p-value 0.0191; P(treatment better) 99.0%.",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-ONB-2026-01"
+      }
+    },
+    {
+      "id": "F51",
+      "topic": "experiment",
+      "statement": "EXP-ONB-2026-01 design: 2,365 users per arm required for a 4.0 pp MDE; realised 2,543 control / 2,407 treatment; sample-ratio check p-value 0.053 (no SRM).",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-ONB-2026-01"
+      }
+    },
+    {
+      "id": "F52",
+      "topic": "experiment",
+      "statement": "EXP-ONB-2026-01 guardrails: approval rate +3.13 pp (pass), FPD30 -1.48 pp (pass), KYC support tickets +0.16 pp (inconclusive). Decision: SHIP with post-launch monitoring of kyc_support_ticket_rate.",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-ONB-2026-01"
+      }
+    },
+    {
+      "id": "F53",
+      "topic": "experiment",
+      "statement": "EXP-ONB-2026-01 estimated impact at the post-launch run rate: about 1,502 additional verified customers and 387 additional first loans per year, worth about ₹16.59 L net revenue from first loans.",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-ONB-2026-01"
+      }
+    },
+    {
+      "id": "F54",
+      "topic": "experiment",
+      "statement": "EXP-RPY-2025-11 (Autopay nudge at disbursal): autopay 64.28% treatment vs 46.62% control, difference +17.65 pp (95% CI +12.76 to +22.54 pp), p-value 0.0000. Decision: SHIP.",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-RPY-2025-11"
+      }
+    },
+    {
+      "id": "F55",
+      "topic": "experiment",
+      "statement": "EXP-PRC-2025-06 (Upfront fee transparency on the offer screen): accepted 90.98% treatment vs 88.78% control, difference +2.20 pp (95% CI -1.93 to +6.32 pp), p-value 0.2974. Decision: INCONCLUSIVE - underpowered: needed 1,530 users per arm for a 3.0 pp MDE, had 410.",
+      "source": "outputs/experiments/experiment_results.json",
+      "data": {
+        "experiment": "EXP-PRC-2025-06"
+      }
+    },
+    {
+      "id": "F56",
+      "topic": "funnel",
+      "statement": "Onboarding funnel (cohorts at least 30 days old): 76,944 signups, 58.95% completed KYC, 36.80% submitted an application, 17.40% received a loan; the largest single loss is signup to KYC completion (31,589 customers).",
+      "source": "outputs/sql_results/01_funnel_conversion__funnel_overall.csv",
+      "data": {}
+    },
+    {
+      "id": "F57",
+      "topic": "funnel",
+      "statement": "7-day KYC completion by platform: web 43.94%, Android 57.78%, iOS 60.94%; web trails iOS by 17.01 pp.",
+      "source": "outputs/sql_results/02_funnel_dropoff__kyc_dropoff_by_segment.csv",
+      "data": {}
+    },
+    {
+      "id": "F58",
+      "topic": "unit_economics",
+      "statement": "LTV/CAC by channel (cohorts with 12+ months of history): referral 9.4x (CAC per borrower ₹869); partnerships 9.0x (CAC per borrower ₹520); paid_search 2.5x (CAC per borrower ₹2,460); affiliate 1.4x (CAC per borrower ₹4,330); paid_social 1.3x (CAC per borrower ₹3,427); organic n/a (CAC per borrower ₹0).",
+      "source": "outputs/sql_results/05_customer_ltv__ltv_cac_by_channel.csv",
+      "data": {}
+    },
+    {
+      "id": "F59",
+      "topic": "risk",
+      "statement": "First-loan FPD30 for loans disbursed in the Oct-Nov 2025 festive season vs Jun-Sep 2025: affiliate 4.49% vs 1.71%, paid social 5.42% vs 3.67%, partnerships 2.40% vs 3.25%.",
+      "source": "outputs/sql_results/07_delinquency__festive_season_risk.csv",
+      "data": {}
+    },
+    {
+      "id": "F60",
+      "topic": "repayments",
+      "statement": "Borrowers with autopay pay 86.99% of instalments on time vs 79.89% without (correlation, not causation); 62.82% of borrowers have used autopay.",
+      "source": "outputs/sql_results/10_product_adoption__feature_adoption_impact.csv",
+      "data": {}
+    },
+    {
+      "id": "F61",
+      "topic": "marketing",
+      "statement": "Campaign CMP-202509-AFFNB (Affiliate Network B, Sep 2025): spend ₹5.56 L, 1,258 signups, 4 funded customers, cost per funded customer ₹1.39 L; flagged 'inefficient_spend'.",
+      "source": "outputs/sql_results/13_marketing_cac__campaign_scorecard.csv",
+      "data": {}
+    },
+    {
+      "id": "F62",
+      "topic": "segments",
+      "statement": "Business segments by share of net revenue: High-engagement 14.6% of customers / 52.6% of net revenue; High-value repeat 1.6% of customers / 33.4% of net revenue; Inactive 31.8% of customers / 19.4% of net revenue; Core borrowers 1.8% of customers / 12.3% of net revenue; New customers 5.4% of customers / 1.1% of net revenue; Onboarding drop-off 37.0% of customers / 0.0% of net revenue; Verified, never borrowed 7.3% of customers / 0.0% of net revenue; High-risk 0.6% of customers / -19.0% of net revenue.",
+      "source": "outputs/segments/segmentation_summary.json",
+      "data": {}
+    },
+    {
+      "id": "F63",
+      "topic": "segments",
+      "statement": "K-Means (k=6, silhouette 0.200) borrower clusters: High-value borrowers 24.9% of borrowers / 69.2% of net revenue; Loyal repeat borrowers 8.6% of borrowers / 18.7% of net revenue; New & ramping 26.4% of borrowers / 13.7% of net revenue; Chronic late payers 10.7% of borrowers / 10.3% of net revenue; Lapsed one-time borrowers 27.4% of borrowers / 8.9% of net revenue; Credit-stressed 2.0% of borrowers / -20.8% of net revenue.",
+      "source": "outputs/segments/segmentation_summary.json",
+      "data": {}
+    },
+    {
+      "id": "F64",
+      "topic": "data_quality",
+      "statement": "Data quality: DQ score 92.0 on the raw extract and 99.1 on the curated layer; critical failures 22 -> 0; 9 warnings remain (documented open issues); 27 of 27 planted defect types detected.",
+      "source": "outputs/data_quality/dq_summary.json",
+      "data": {}
+    },
+    {
+      "id": "F65",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): marketing_campaigns.budget_inr,spend_inr cross_field:spend_within_budget - 1 rows (spend_inr <= 1.5 * budget_inr).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F66",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): customers.city not_null - 974 rows (nulls in a non-nullable column).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F67",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): customers.age not_null - 65 rows (nulls in a non-nullable column).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F68",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): customers.monthly_income not_null - 1,624 rows (nulls in a non-nullable column).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F69",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): customers.monthly_income outlier_robust_z - 9 rows (robust z > 5 on log scale (median 37500)).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F70",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): applications.decision_ts conditional:decided_has_timestamp - 31 rows (when decision.notna() then decision_ts is required).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F71",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): loans.application_id not_null - 6 rows (nulls in a non-nullable column).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F72",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): support_tickets.first_response_minutes outlier_robust_z - 30 rows (robust z > 5 on log scale (median 5)).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    },
+    {
+      "id": "F73",
+      "topic": "data_quality",
+      "statement": "Open data-quality issue (warning): product_events.event_name reconciliation:kyc_events_vs_backend - 18 rows (days where tracked kyc_completed events < 90% of backend KYC completions (instrumentation gap, not a business change)).",
+      "source": "outputs/data_quality/dq_results_clean.csv",
+      "data": {
+        "severity": "warning"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+rfm_segment,borrowers,share_of_borrowers_pct,avg_loans,avg_net_revenue,share_of_net_revenue_pct,avg_days_since_last_loan,with_open_loan_pct
+Champions,1167,8.33,2.65,10361.0,18.77,67.0,85.95
+Loyal repeat borrowers,2202,15.71,2.42,7818.0,26.72,248.0,44.5
+Dormant one-timers,4075,29.08,1.0,6970.0,44.08,483.0,20.32
+Developing,5698,40.66,1.18,3283.0,29.03,129.0,64.11
+At risk of churn,381,2.72,2.24,633.0,0.37,438.0,0.26
+Credit risk watchlist,491,3.5,1.26,-24896.0,-18.97,331.0,39.31
