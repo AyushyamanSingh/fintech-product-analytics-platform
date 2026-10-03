@@ -1,0 +1,4 @@
+# GitHub language stats: count the hand-written source, not generated notebooks, reports or the dashboard build
+*.ipynb linguist-documentation
+outputs/** linguist-generated
+dashboard/index.html linguist-generated
