@@ -55,9 +55,9 @@ def text_of(content: List[Dict]) -> str:
 def create_message(system: List[Dict], messages: List[Dict], json_schema: Optional[Dict] = None,
                    tools: Optional[List[Dict]] = None, effort: str = "medium", max_tokens: int = 16000) -> Dict:
     """One Messages API call. Returns {"content": [...dicts], "stop_reason": str, "usage": {...}, "model": str}."""
+    client = _client()  # first, so a missing SDK becomes LLMUnavailable rather than an ImportError
     import anthropic
 
-    client = _client()
     output_config: Dict[str, Any] = {"effort": effort}
     if json_schema:
         output_config["format"] = {"type": "json_schema", "schema": json_schema}
@@ -84,6 +84,12 @@ def create_message(system: List[Dict], messages: List[Dict], json_schema: Option
         raise LLMUnavailable("API error %s" % getattr(exc, "status_code", "?")) from exc
     except anthropic.APIConnectionError as exc:
         raise LLMUnavailable("network error reaching the Claude API") from exc
+    except TypeError as exc:
+        # With no API key, auth token or login profile the SDK fails while building the request, before
+        # any HTTP call (e.g. in CI when the ANTHROPIC_API_KEY secret is missing and arrives as "").
+        if "authentication" in str(exc).lower():
+            raise LLMUnavailable("no Claude credentials - set ANTHROPIC_API_KEY or run `ant auth login`") from exc
+        raise
 
     stop = getattr(resp, "stop_reason", None)
     if stop == "refusal":

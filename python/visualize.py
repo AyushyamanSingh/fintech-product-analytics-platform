@@ -22,6 +22,7 @@ import matplotlib.dates as mdates  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+from matplotlib import font_manager  # noqa: E402
 from matplotlib.colors import LinearSegmentedColormap  # noqa: E402
 
 from python.config import Settings, get_settings  # noqa: E402
@@ -33,8 +34,11 @@ DIV = LinearSegmentedColormap.from_list("div_blue_red", ["#2a78d6", "#9ec5f4", "
 STATUS = {"good": "#0ca30c", "warning": "#fab219", "serious": "#ec835a", "critical": "#d03b3b"}
 DE_EMPH = "#c9c8c2"
 
+_INSTALLED_FONTS = {f.name for f in font_manager.fontManager.ttflist}
 plt.rcParams.update({
-    "font.family": ["Segoe UI", "DejaVu Sans"], "font.size": 10, "axes.facecolor": SURFACE, "figure.facecolor": SURFACE,
+    # Only list fonts that exist: a missing family logs a warning for every text element (Segoe UI on Linux CI).
+    "font.family": [f for f in ("Segoe UI", "DejaVu Sans") if f in _INSTALLED_FONTS] or ["sans-serif"],
+    "font.size": 10, "axes.facecolor": SURFACE, "figure.facecolor": SURFACE,
     "savefig.facecolor": SURFACE, "axes.edgecolor": BASE, "axes.labelcolor": INK2, "axes.titlecolor": INK,
     "axes.titlesize": 12, "axes.titleweight": "semibold", "axes.titlelocation": "left", "axes.spines.top": False,
     "axes.spines.right": False, "axes.grid": True, "axes.grid.axis": "y", "grid.color": GRID, "grid.linewidth": 0.6,

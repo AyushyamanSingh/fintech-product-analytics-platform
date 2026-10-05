@@ -21,11 +21,11 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -35,19 +35,26 @@ jobs:
   pipeline:
     needs: test
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
       - run: pip install -r requirements.txt
       - name: Run pipeline (extract -> validate -> transform -> KPIs -> AI summary)
-        run: python pipeline.py --generate
+        # An unset secret arrives as an empty string, so choose the summariser explicitly.
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            python pipeline.py --generate
+          else
+            echo "::notice::ANTHROPIC_API_KEY secret not set - using the deterministic (offline) AI summary"
+            python pipeline.py --generate --offline-ai
+          fi
       - name: Publish run summary
         if: always()
         run: |
@@ -55,7 +62,7 @@ jobs:
           cat outputs/ai/executive_summary.md >> "$GITHUB_STEP_SUMMARY" || true
           echo "## Data quality" >> "$GITHUB_STEP_SUMMARY"
           cat outputs/data_quality/data_quality_summary.md >> "$GITHUB_STEP_SUMMARY" || true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: analytics-run-${{ github.run_number }}
